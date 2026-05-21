@@ -1,6 +1,8 @@
 ﻿---
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection';
+import Marquee from '../components/Marquee';
+import AboutSection from '../components/AboutSection';
 ---
 
 <Layout
@@ -8,4 +10,6 @@ import HeroSection from '../components/HeroSection';
   description="An unreal engine developer working on simulations, games, and AI-native workflows."
 >
   <HeroSection client:load />
+  <Marquee client:load />
+  <AboutSection client:load />
 </Layout>
