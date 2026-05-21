@@ -1,0 +1,67 @@
+﻿import FadeIn from './FadeIn';
+import Magnet from './Magnet';
+import ContactButton from './ContactButton';
+import Character3D from './Character3D';
+
+export default function HeroSection() {
+  return (
+    <section
+      className="relative h-screen flex flex-col"
+      style={{ overflowX: 'clip' }}
+    >
+      <FadeIn as="nav" delay={0} y={-20}>
+        <nav className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8">
+          <a href="#about" className="text-sm md:text-lg lg:text-[1.4rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
+            About
+          </a>
+          <a href="#projects" className="text-sm md:text-lg lg:text-[1.4rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
+            Projects
+          </a>
+          <a href="#blog" className="text-sm md:text-lg lg:text-[1.4rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
+            Blog
+          </a>
+          <a href="#contact" className="text-sm md:text-lg lg:text-[1.4rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
+            Contact
+          </a>
+        </nav>
+      </FadeIn>
+
+      <div className="overflow-hidden">
+        <FadeIn delay={0.15} y={40}>
+          <h1
+            className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center mt-6 sm:mt-4 md:-mt-5"
+            style={{ fontSize: 'clamp(3rem, 16vw, 17.5vw)' }}
+          >
+            Hi, I&apos;m JJ
+          </h1>
+        </FadeIn>
+      </div>
+
+      <FadeIn
+        delay={0.6}
+        y={30}
+        className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0"
+      >
+        <div className="w-[360px] sm:w-[460px] md:w-[560px] lg:w-[680px] aspect-[3/4]">
+          <Character3D />
+        </div>
+      </FadeIn>
+
+      <div className="mt-auto flex justify-between items-end px-6 md:px-10 pb-7 sm:pb-8 md:pb-10">
+        <FadeIn delay={0.35} y={20}>
+          <p
+            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[300px]"
+            style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
+          >
+            an unreal engine developer working on simulations, games,
+            and AI-native workflows
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.5} y={20}>
+          <ContactButton />
+        </FadeIn>
+      </div>
+    </section>
+  );
+}
