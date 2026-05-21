@@ -42,16 +42,16 @@ export default function AboutSection() {
     <section
       id="about"
       ref={containerRef}
-      className="relative px-6 md:px-10 lg:px-20 py-32 md:py-48 overflow-hidden"
+      className="relative w-full px-6 md:px-12 lg:px-24 py-16 md:py-24"
     >
-      <div className="max-w-6xl mx-auto">
-        <p className="text-[#646973] uppercase tracking-[0.3em] text-xs md:text-sm mb-10 md:mb-16">
+      <div className="w-full max-w-6xl mx-auto">
+        <p className="text-[#646973] uppercase tracking-[0.3em] text-xs md:text-sm mb-5 md:mb-8 text-center">
           / About
         </p>
 
         <div
-          className="text-[#D7E2EA] font-light leading-[1.35] tracking-tight"
-          style={{ fontSize: 'clamp(1.5rem, 3.6vw, 3.25rem)' }}
+          className="text-[#D7E2EA] font-light leading-[1.35] tracking-tight text-center max-w-4xl mx-auto"
+          style={{ fontSize: 'clamp(1.25rem, 2.8vw, 2.5rem)' }}
         >
           {PARAGRAPHS.map((paragraph, pi) => {
             const paragraphWords = paragraph.split(' ');

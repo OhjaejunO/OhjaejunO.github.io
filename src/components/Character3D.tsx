@@ -33,7 +33,7 @@ function Model() {
 
     return (
         <group ref={groupRef}>
-            <primitive object={scene} scale={1.5} position={[0, -1.5, 0]} />
+            <primitive object={scene} scale={1.5} position={[0, -1.0, 0]} />
         </group>
     );
 }

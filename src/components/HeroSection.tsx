@@ -50,10 +50,11 @@ export default function HeroSection() {
       <div className="absolute inset-x-0 bottom-0 z-20 flex justify-between items-end px-6 md:px-10 pb-5 sm:pb-6 md:pb-8 pointer-events-none">
         <FadeIn delay={0.35} y={20} className="pointer-events-auto">
           <p
-            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[300px]"
+            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug"
             style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
           >
-            an unreal engine developer working on simulations, games,
+            an unreal engine developer<br />
+            working on simulations, games,<br />
             and AI-native workflows
           </p>
         </FadeIn>
