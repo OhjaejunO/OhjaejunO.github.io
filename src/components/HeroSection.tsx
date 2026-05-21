@@ -6,10 +6,10 @@ import Character3D from './Character3D';
 export default function HeroSection() {
   return (
     <section
-      className="relative h-screen flex flex-col"
-      style={{ overflowX: 'clip' }}
+      className="relative h-screen"
+      style={{ overflow: 'hidden' }}
     >
-      <FadeIn as="nav" delay={0} y={-20}>
+      <FadeIn as="nav" delay={0} y={-20} className="relative z-30">
         <nav className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8">
           <a href="#about" className="text-sm md:text-lg lg:text-[1.4rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
             About
@@ -26,7 +26,7 @@ export default function HeroSection() {
         </nav>
       </FadeIn>
 
-      <div className="overflow-hidden">
+      <div className="relative z-20 overflow-hidden">
         <FadeIn delay={0.15} y={40}>
           <h1
             className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center mt-6 sm:mt-4 md:-mt-5"
@@ -40,15 +40,15 @@ export default function HeroSection() {
       <FadeIn
         delay={0.6}
         y={30}
-        className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0"
+        className="absolute left-1/2 -translate-x-1/2 z-10 bottom-0"
       >
         <div className="w-[360px] sm:w-[460px] md:w-[560px] lg:w-[680px] aspect-[3/4]">
           <Character3D />
         </div>
       </FadeIn>
 
-      <div className="mt-auto flex justify-between items-end px-6 md:px-10 pb-7 sm:pb-8 md:pb-10">
-        <FadeIn delay={0.35} y={20}>
+      <div className="absolute inset-x-0 bottom-0 z-20 flex justify-between items-end px-6 md:px-10 pb-5 sm:pb-6 md:pb-8 pointer-events-none">
+        <FadeIn delay={0.35} y={20} className="pointer-events-auto">
           <p
             className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[300px]"
             style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
@@ -58,7 +58,7 @@ export default function HeroSection() {
           </p>
         </FadeIn>
 
-        <FadeIn delay={0.5} y={20}>
+        <FadeIn delay={0.5} y={20} className="pointer-events-auto">
           <ContactButton />
         </FadeIn>
       </div>
