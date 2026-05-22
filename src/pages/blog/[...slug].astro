@@ -1,0 +1,332 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { findSeriesNeighbors, formatDate } from '../../lib/blog';
+import { getSeriesMeta } from '../../data/series';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+  return posts.map((post) => {
+    const { prev, next } = findSeriesNeighbors(post, posts);
+    return {
+      params: { slug: post.id },
+      props: { post, prev, next },
+    };
+  });
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  prev: CollectionEntry<'blog'> | null;
+  next: CollectionEntry<'blog'> | null;
+}
+
+const { post, prev, next } = Astro.props;
+const { Content } = await render(post);
+
+const formattedDate = formatDate(post.data.date);
+const seriesMeta = post.data.series ? getSeriesMeta(post.data.series) : null;
+---
+
+<Layout
+  title={`${post.data.title} — JJ.Dev`}
+  description={post.data.description}
+>
+  <article class="relative w-full px-6 md:px-12 lg:px-24 py-16 md:py-24">
+    <div class="max-w-3xl mx-auto">
+
+      <div class="flex items-center justify-between gap-4 mb-12 md:mb-16 flex-wrap">
+        <a
+          href="/blog"
+          class="group inline-flex items-center gap-3 text-[#9aa5af] uppercase tracking-wider hover:text-[#D7E2EA] transition-colors duration-200"
+          style="font-size: clamp(0.8125rem, 0.95vw, 0.9375rem);"
+        >
+          <span
+            aria-hidden="true"
+            class="transition-transform duration-200 group-hover:-translate-x-1"
+          >←</span>
+          Back to Blog
+        </a>
+        {post.data.originalUrl && (
+          <a
+            href={post.data.originalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group inline-flex items-center gap-2 text-[#9aa5af] uppercase tracking-wider hover:text-[#D7E2EA] transition-colors duration-200 border border-[#1f1f1f] hover:border-[#2a2a2a] rounded-full px-4 py-1.5"
+            style="font-size: clamp(0.75rem, 0.85vw, 0.875rem);"
+          >
+            원본 글
+            <span aria-hidden="true">↗</span>
+          </a>
+        )}
+      </div>
+
+      {post.data.heroImage && (
+        <img
+          src={post.data.heroImage}
+          alt=""
+          class="w-full h-auto rounded-2xl border border-[#1f1f1f] mb-10 md:mb-14"
+        />
+      )}
+
+      <div class="flex flex-wrap items-center gap-3 mb-5 md:mb-6">
+        <span
+          class="inline-flex items-center text-[#D7E2EA] uppercase tracking-[0.2em] border border-[#2a2a2a] rounded-full px-3 py-1"
+          style="font-size: clamp(0.6875rem, 0.85vw, 0.8125rem);"
+        >
+          {post.data.category}
+        </span>
+        <time
+          datetime={post.data.date.toISOString()}
+          class="text-[#646973] tabular-nums uppercase tracking-[0.2em]"
+          style="font-size: clamp(0.6875rem, 0.85vw, 0.8125rem);"
+        >
+          {formattedDate}
+        </time>
+      </div>
+
+      {seriesMeta && (
+        <div
+          class="mb-6 md:mb-7 text-[#9aa5af] font-light flex flex-wrap items-baseline gap-2"
+          style="font-size: clamp(0.875rem, 1vw, 1rem);"
+        >
+          <span class="text-[#646973] uppercase tracking-[0.3em] text-[10px] md:text-xs">
+            Series
+          </span>
+          <a
+            href={`/blog/series/${seriesMeta.slug}`}
+            class="text-[#D7E2EA] border-b border-[#2a2a2a] hover:border-[#9aa5af] hover:text-[#9aa5af] transition-colors duration-200 pb-0.5"
+          >
+            {seriesMeta.name}
+          </a>
+          {post.data.seriesPart && (
+            <span class="text-[#646973] tabular-nums">#{post.data.seriesPart}</span>
+          )}
+        </div>
+      )}
+
+      <h1
+        class="font-light tracking-tight text-[#D7E2EA] leading-[1.05] mb-5 md:mb-6"
+        style="font-size: clamp(2.25rem, 6vw, 4.5rem);"
+      >
+        {post.data.title}
+      </h1>
+
+      <p
+        class="text-[#9aa5af] font-light leading-relaxed mb-6 md:mb-8"
+        style="font-size: clamp(1rem, 1.2vw, 1.25rem);"
+      >
+        {post.data.description}
+      </p>
+
+      {post.data.tags.length > 0 && (
+        <ul class="flex flex-wrap gap-2 mb-12 md:mb-14">
+          {post.data.tags.map((tag) => (
+            <li
+              class="text-[#9aa5af] text-[11px] md:text-xs lowercase tracking-wide"
+              style="font-family: inherit;"
+            >
+              #{tag}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <hr class="border-0 border-t border-[#1f1f1f] mb-12 md:mb-14" />
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      {(prev || next) && (
+        <nav
+          aria-label="Series navigation"
+          class="mt-20 md:mt-28 grid sm:grid-cols-2 gap-4 md:gap-5"
+        >
+          {prev ? (
+            <a
+              href={`/blog/${prev.id}`}
+              class="group flex flex-col gap-2 bg-[#141414] border border-[#1f1f1f] rounded-2xl p-5 md:p-6 hover:border-[#2a2a2a] hover:bg-[#181818] transition-all duration-300"
+            >
+              <span class="text-[#646973] uppercase tracking-[0.3em] text-[10px] md:text-xs inline-flex items-center gap-2">
+                <span aria-hidden="true" class="transition-transform duration-200 group-hover:-translate-x-1">←</span>
+                Prev
+              </span>
+              <span
+                class="text-[#D7E2EA] font-light leading-snug"
+                style="font-size: clamp(0.9375rem, 1.05vw, 1.0625rem);"
+              >
+                {prev.data.title}
+              </span>
+            </a>
+          ) : (
+            <span class="hidden sm:block" />
+          )}
+          {next ? (
+            <a
+              href={`/blog/${next.id}`}
+              class="group flex flex-col gap-2 sm:items-end sm:text-right bg-[#141414] border border-[#1f1f1f] rounded-2xl p-5 md:p-6 hover:border-[#2a2a2a] hover:bg-[#181818] transition-all duration-300"
+            >
+              <span class="text-[#646973] uppercase tracking-[0.3em] text-[10px] md:text-xs inline-flex items-center gap-2">
+                Next
+                <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1">→</span>
+              </span>
+              <span
+                class="text-[#D7E2EA] font-light leading-snug"
+                style="font-size: clamp(0.9375rem, 1.05vw, 1.0625rem);"
+              >
+                {next.data.title}
+              </span>
+            </a>
+          ) : (
+            <span class="hidden sm:block" />
+          )}
+        </nav>
+      )}
+
+      <div class="mt-12 md:mt-16">
+        <a
+          href="/blog"
+          class="group inline-flex items-center gap-3 text-[#D7E2EA] uppercase tracking-wider hover:opacity-70 transition-opacity duration-200"
+          style="font-size: clamp(0.875rem, 1.05vw, 1rem);"
+        >
+          <span
+            aria-hidden="true"
+            class="transition-transform duration-200 group-hover:-translate-x-1"
+          >←</span>
+          Back to Blog
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  .prose {
+    color: #c4ccd5;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: clamp(1rem, 1.1vw, 1.125rem);
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  .prose > * + * {
+    margin-top: 1.15em;
+  }
+  .prose h2 {
+    color: #D7E2EA;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    line-height: 1.25;
+    margin-top: 2.4em;
+    margin-bottom: 0.65em;
+    padding-top: 1.5em;
+    border-top: 1px solid #1f1f1f;
+  }
+  .prose h3 {
+    color: #D7E2EA;
+    font-weight: 500;
+    font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+    line-height: 1.3;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+  }
+  .prose p,
+  .prose li {
+    color: #c4ccd5;
+  }
+  .prose strong {
+    color: #D7E2EA;
+    font-weight: 500;
+  }
+  .prose em {
+    color: #D7E2EA;
+    font-style: italic;
+  }
+  .prose a {
+    color: #D7E2EA;
+    border-bottom: 1px solid #2a2a2a;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .prose a:hover {
+    color: #9aa5af;
+    border-bottom-color: #9aa5af;
+  }
+  .prose ul,
+  .prose ol {
+    padding-left: 1.5em;
+  }
+  .prose ul { list-style: disc; }
+  .prose ol { list-style: decimal; }
+  .prose li::marker { color: #646973; }
+  .prose li + li { margin-top: 0.4em; }
+  .prose code:not(pre code) {
+    background: #1a1a1a;
+    color: #D7E2EA;
+    padding: 0.15em 0.45em;
+    border-radius: 0.3em;
+    font-size: 0.92em;
+    border: 1px solid #2a2a2a;
+    word-break: break-word;
+  }
+  .prose pre {
+    background: #0a0a0a !important;
+    border: 1px solid #1f1f1f;
+    border-radius: 0.85rem;
+    padding: 1.25rem 1.5rem;
+    overflow-x: auto;
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+  .prose pre code {
+    background: transparent !important;
+    padding: 0;
+    border: 0;
+    font-size: inherit;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  .prose blockquote {
+    border-left: 2px solid #2a2a2a;
+    padding: 0.4em 0 0.4em 1.25em;
+    color: #9aa5af;
+    font-style: italic;
+  }
+  .prose blockquote p { color: #9aa5af; }
+  .prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    border: 1px solid #1f1f1f;
+    margin: 1.5em auto;
+    display: block;
+  }
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+    display: block;
+    overflow-x: auto;
+  }
+  .prose th,
+  .prose td {
+    border-bottom: 1px solid #1f1f1f;
+    padding: 0.7em 0.9em;
+    text-align: left;
+    vertical-align: top;
+  }
+  .prose th {
+    color: #646973;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85em;
+    font-weight: 500;
+  }
+  .prose hr {
+    border: 0;
+    border-top: 1px solid #1f1f1f;
+    margin: 2.5em 0;
+  }
+</style>

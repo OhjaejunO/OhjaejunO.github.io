@@ -1,0 +1,76 @@
+<svg width="680" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg" style="background:#fff;font-family:sans-serif">
+
+<!-- Title -->
+<text x="340" y="28" text-anchor="middle" font-size="16" font-weight="500" fill="#2C2C2A">FInterpTo — 선형 보간(Linear Interpolation)</text>
+<text x="340" y="48" text-anchor="middle" font-size="12" fill="#5F5E5A">현재값에서 목표값으로 부드럽게 수렴하는 함수</text>
+
+<!-- === 좌측: 보간 없음 === -->
+<text x="170" y="82" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A">보간 없음 (즉시 변경)</text>
+<text x="170" y="100" text-anchor="middle" font-size="12" fill="#5F5E5A">Value = Target</text>
+
+<!-- Graph axes -->
+<line x1="60" y1="260" x2="285" y2="260" stroke="#5F5E5A" stroke-width="1"/>
+<polygon points="290,260 280,256 280,264" fill="#5F5E5A"/>
+<line x1="60" y1="260" x2="60" y2="120" stroke="#5F5E5A" stroke-width="1"/>
+<polygon points="60,115 56,125 64,125" fill="#5F5E5A"/>
+<text x="290" y="278" font-size="12" fill="#5F5E5A">시간</text>
+<text x="42" y="120" font-size="12" fill="#5F5E5A">값</text>
+
+<!-- Target line -->
+<line x1="60" y1="140" x2="280" y2="140" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="4 3"/>
+<text x="285" y="144" font-size="12" fill="#888780">목표값</text>
+
+<!-- Step function -->
+<line x1="60" y1="230" x2="140" y2="230" stroke="#E24B4A" stroke-width="2.5"/>
+<line x1="140" y1="230" x2="140" y2="140" stroke="#E24B4A" stroke-width="2.5"/>
+<line x1="140" y1="140" x2="280" y2="140" stroke="#E24B4A" stroke-width="2.5"/>
+<text x="148" y="195" font-size="12" fill="#E24B4A" font-weight="500">뚝!</text>
+<text x="42" y="234" font-size="12" fill="#888780">현재값</text>
+
+<!-- Problem badge -->
+<rect x="85" y="288" width="170" height="36" rx="6" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+<text x="170" y="302" text-anchor="middle" font-size="14" font-weight="500" fill="#791F1F" dominant-baseline="central">급격한 변화</text>
+<text x="170" y="318" text-anchor="middle" font-size="12" fill="#A32D2D" dominant-baseline="central">팽이 현상, FOV 튐</text>
+
+<!-- === 우측: FInterpTo === -->
+<text x="500" y="82" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A">FInterpTo (부드러운 보간)</text>
+<text x="500" y="100" text-anchor="middle" font-size="12" fill="#5F5E5A">Value = FInterpTo(Current, Target, DT, Speed)</text>
+
+<!-- Graph axes -->
+<line x1="380" y1="260" x2="615" y2="260" stroke="#5F5E5A" stroke-width="1"/>
+<polygon points="620,260 610,256 610,264" fill="#5F5E5A"/>
+<line x1="380" y1="260" x2="380" y2="120" stroke="#5F5E5A" stroke-width="1"/>
+<polygon points="380,115 376,125 384,125" fill="#5F5E5A"/>
+<text x="620" y="278" font-size="12" fill="#5F5E5A">시간</text>
+<text x="362" y="120" font-size="12" fill="#5F5E5A">값</text>
+
+<!-- Target line -->
+<line x1="380" y1="140" x2="610" y2="140" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="4 3"/>
+<text x="615" y="144" font-size="12" fill="#888780">목표값</text>
+
+<!-- Smooth curve -->
+<path d="M380 230 C 420 230, 440 200, 460 180 S 500 155, 530 148 S 570 142, 610 140" fill="none" stroke="#1D9E75" stroke-width="2.5"/>
+<text x="362" y="234" font-size="12" fill="#888780">현재값</text>
+<text x="438" y="208" font-size="12" fill="#1D9E75">Speed 높음 → 빠르게 수렴</text>
+
+<!-- Good badge -->
+<rect x="415" y="288" width="170" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="500" y="302" text-anchor="middle" font-size="14" font-weight="500" fill="#085041" dominant-baseline="central">부드러운 전환</text>
+<text x="500" y="318" text-anchor="middle" font-size="12" fill="#0F6E56" dominant-baseline="central">자연스러운 회전, FOV</text>
+
+<!-- === 하단: 적용 사례 === -->
+<line x1="60" y1="345" x2="620" y2="345" stroke="#D3D1C7" stroke-width="0.5"/>
+<text x="340" y="372" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A">코드에서의 활용</text>
+
+<rect x="40" y="388" width="185" height="40" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="132" y="402" text-anchor="middle" font-size="14" font-weight="500" fill="#0C447C" dominant-baseline="central">각속도 보간</text>
+<text x="132" y="418" text-anchor="middle" font-size="12" fill="#185FA5" dominant-baseline="central">Speed = 10.0</text>
+
+<rect x="245" y="388" width="185" height="40" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text x="337" y="402" text-anchor="middle" font-size="14" font-weight="500" fill="#3C3489" dominant-baseline="central">속도 방향 보정</text>
+<text x="337" y="418" text-anchor="middle" font-size="12" fill="#534AB7" dominant-baseline="central">Speed = 1.5~5.0</text>
+
+<rect x="450" y="388" width="185" height="40" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text x="542" y="402" text-anchor="middle" font-size="14" font-weight="500" fill="#633806" dominant-baseline="central">FOV 전환</text>
+<text x="542" y="418" text-anchor="middle" font-size="12" fill="#854F0B" dominant-baseline="central">Speed = 3.0</text>
+</svg>

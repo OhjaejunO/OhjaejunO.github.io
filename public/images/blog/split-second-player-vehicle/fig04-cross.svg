@@ -1,0 +1,86 @@
+<svg width="680" viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg" style="background:#fff;font-family:sans-serif">
+
+<!-- Title -->
+<text x="340" y="30" text-anchor="middle" font-size="16" font-weight="500" fill="#2C2C2A">Cross Product — 드리프트 방향 판별</text>
+<text x="340" y="50" text-anchor="middle" font-size="12" fill="#5F5E5A">Forward × Velocity의 Z값으로 좌/우 드리프트 구분</text>
+
+<!-- === Case 1: 좌측 드리프트 === -->
+<text x="170" y="85" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A">좌측 드리프트</text>
+<text x="170" y="103" text-anchor="middle" font-size="12" fill="#5F5E5A">CrossProduct.Z &gt; 0</text>
+
+<!-- Road -->
+<rect x="70" y="120" width="200" height="180" rx="8" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5" stroke-dasharray="4 4"/>
+
+<!-- Car (rotated left) -->
+<g transform="translate(170, 210) rotate(20)">
+  <rect x="-25" y="-40" width="50" height="80" rx="8" fill="none" stroke="#5F5E5A" stroke-width="1.5"/>
+  <rect x="-20" y="-34" width="40" height="16" rx="3" fill="#D3D1C7" opacity="0.4"/>
+  <rect x="-30" y="-32" width="7" height="16" rx="2" fill="#888780"/>
+  <rect x="23" y="-32" width="7" height="16" rx="2" fill="#888780"/>
+  <rect x="-30" y="16" width="7" height="16" rx="2" fill="#888780"/>
+  <rect x="23" y="16" width="7" height="16" rx="2" fill="#888780"/>
+</g>
+
+<!-- Forward vector (angled) -->
+<line x1="170" y1="168" x2="155" y2="113" stroke="#378ADD" stroke-width="2.5"/>
+<polygon points="152,104 148,118 160,114" fill="#378ADD"/>
+<text x="115" y="118" font-size="12" fill="#378ADD" font-weight="500">Forward</text>
+
+<!-- Velocity vector (straight) -->
+<line x1="170" y1="168" x2="170" y2="113" stroke="#639922" stroke-width="2.5"/>
+<polygon points="170,103 164,115 176,115" fill="#639922"/>
+<text x="184" y="118" font-size="12" fill="#639922" font-weight="500">Velocity</text>
+
+<!-- Curved arrow showing left drift -->
+<path d="M 120 260 Q 95 215, 118 172" fill="none" stroke="#D85A30" stroke-width="2"/>
+<polygon points="115,165 110,177 124,175" fill="#D85A30"/>
+<text x="80" y="220" font-size="12" fill="#D85A30" font-weight="500">좌회전</text>
+
+<!-- Result -->
+<rect x="100" y="318" width="140" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="170" y="334" text-anchor="middle" font-size="14" font-weight="500" fill="#0C447C" dominant-baseline="central">Z &gt; 0</text>
+<text x="170" y="352" text-anchor="middle" font-size="12" fill="#185FA5" dominant-baseline="central">카운터스티어 → 우측</text>
+
+<!-- === Case 2: 우측 드리프트 === -->
+<text x="500" y="85" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A">우측 드리프트</text>
+<text x="500" y="103" text-anchor="middle" font-size="12" fill="#5F5E5A">CrossProduct.Z &lt; 0</text>
+
+<!-- Road -->
+<rect x="400" y="120" width="200" height="180" rx="8" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5" stroke-dasharray="4 4"/>
+
+<!-- Car (rotated right) -->
+<g transform="translate(500, 210) rotate(-20)">
+  <rect x="-25" y="-40" width="50" height="80" rx="8" fill="none" stroke="#5F5E5A" stroke-width="1.5"/>
+  <rect x="-20" y="-34" width="40" height="16" rx="3" fill="#D3D1C7" opacity="0.4"/>
+  <rect x="-30" y="-32" width="7" height="16" rx="2" fill="#888780"/>
+  <rect x="23" y="-32" width="7" height="16" rx="2" fill="#888780"/>
+  <rect x="-30" y="16" width="7" height="16" rx="2" fill="#888780"/>
+  <rect x="23" y="16" width="7" height="16" rx="2" fill="#888780"/>
+</g>
+
+<!-- Forward vector (angled right) -->
+<line x1="500" y1="168" x2="515" y2="113" stroke="#378ADD" stroke-width="2.5"/>
+<polygon points="518,104 522,118 510,114" fill="#378ADD"/>
+<text x="530" y="118" font-size="12" fill="#378ADD" font-weight="500">Forward</text>
+
+<!-- Velocity vector (straight) -->
+<line x1="500" y1="168" x2="500" y2="113" stroke="#639922" stroke-width="2.5"/>
+<polygon points="500,103 494,115 506,115" fill="#639922"/>
+<text x="465" y="118" font-size="12" fill="#639922" font-weight="500">Velocity</text>
+
+<!-- Curved arrow showing right drift -->
+<path d="M 550 260 Q 575 215, 552 172" fill="none" stroke="#D85A30" stroke-width="2"/>
+<polygon points="555,165 560,177 546,175" fill="#D85A30"/>
+<text x="582" y="220" font-size="12" fill="#D85A30" font-weight="500">우회전</text>
+
+<!-- Result -->
+<rect x="430" y="318" width="140" height="44" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text x="500" y="334" text-anchor="middle" font-size="14" font-weight="500" fill="#3C3489" dominant-baseline="central">Z &lt; 0</text>
+<text x="500" y="352" text-anchor="middle" font-size="12" fill="#534AB7" dominant-baseline="central">카운터스티어 → 좌측</text>
+
+<!-- Formula -->
+<line x1="60" y1="385" x2="620" y2="385" stroke="#D3D1C7" stroke-width="0.5"/>
+<text x="340" y="412" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A">코드에서의 활용</text>
+<text x="340" y="435" text-anchor="middle" font-size="12" fill="#5F5E5A" font-family="monospace">CrossProduct = Forward × Velocity.Normalize()</text>
+<text x="340" y="455" text-anchor="middle" font-size="12" fill="#5F5E5A">CrossProduct.Z의 부호로 드리프트 방향을 판별 → 자동 카운터스티어 적용</text>
+</svg>

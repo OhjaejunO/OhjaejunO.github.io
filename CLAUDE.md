@@ -206,3 +206,86 @@ Let's build the next-generation tools together.
    ```
 
 6. **결과 확인 후 다음 섹션 (About) 진행**
+
+---
+
+## 블로그 시스템 (Astro Content Collections)
+
+블로그는 `src/content/blog/` 하위의 마크다운 파일을 Astro Content Collection으로 로드합니다.
+파일을 추가하면 자동으로 `/blog/[slug]` 경로의 정적 페이지가 생성되고, 시리즈 그룹·단편·메인 카드도 자동 갱신됩니다.
+
+### 핵심 파일
+
+| 파일 | 역할 |
+|------|------|
+| `src/content.config.ts` | Zod 기반 frontmatter 스키마 |
+| `src/data/series.ts` | 시리즈 슬러그 → 이름/설명/카테고리 매핑 |
+| `src/lib/blog.ts` | `loadPublishedPosts`, `groupPosts`, `findSeriesNeighbors`, `formatDate` 헬퍼 |
+| `src/content/blog/*.md` | 글 본문 (단편) |
+| `src/content/blog/<series>/*.md` | 시리즈 글 (디렉토리로 묶어도 되고, frontmatter `series` 필드만으로도 동작) |
+| `src/pages/blog/[...slug].astro` | 개별 글 페이지 (prev/next, prose 스타일 포함) |
+| `src/pages/blog/series/[seriesSlug].astro` | 시리즈 글 목록 페이지 |
+
+### 새 글 작성
+
+1. **파일 생성:** `src/content/blog/<slug>.md`
+   - 시리즈 글은 폴더로 묶어도 OK: `src/content/blog/<series-slug>/<part-slug>.md`
+   - 파일 경로가 URL이 됩니다. 예: `src/content/blog/wp-4th/01-setup.md` → `/blog/wp-4th/01-setup`
+2. **Frontmatter 작성:**
+
+   ```yaml
+   ---
+   title: "글 제목"
+   description: "한 줄 요약 (블로그 카드와 메타 영역에 노출)"
+   date: 2026-05-22                       # YYYY-MM-DD
+   category: 회고                          # 회고 | UE5 | 디지털트윈 | AI | 도구
+   series: wp-4th                          # (선택) 시리즈 슬러그 — src/data/series.ts 의 키와 일치
+   seriesPart: 1                           # (선택) 시리즈 내 순서 (정렬 + 표시용)
+   tags: [UE5, multiplayer, networking]    # (선택) 본문 하단 #태그
+   originalUrl: "https://velog.io/@..."    # (선택) Velog/Tistory 등 원본 글 링크
+   heroImage: "/images/blog/foo.png"       # (선택) 글 상단 큰 이미지 (public/ 기준)
+   draft: false                            # 기본 false. true면 빌드/목록에서 제외
+   ---
+   ```
+
+3. **본문 마크다운 작성:**
+   - 헤딩(`##`/`###`), 리스트, 표, 인용(`>`), 코드 블록(```` ``` `lang` ````) 모두 동작
+   - 코드 블록 syntax highlighting: Shiki `github-dark` 테마
+   - 이미지: `public/` 폴더에 두고 `/path` 형태로 참조 (예: `public/images/blog/foo.png` → `/images/blog/foo.png`)
+   - 외부 링크/내부 링크 모두 일반 마크다운 문법
+
+4. **새 시리즈 추가:**
+   - 글의 frontmatter `series` 필드에 슬러그(kebab-case) 입력
+   - `src/data/series.ts`의 `SERIES_META`에 같은 슬러그 키로 항목 추가
+     (이름/설명/카테고리). 미등록 시 슬러그가 그대로 이름이 됩니다.
+
+5. **확인 → 푸시:**
+
+   ```bash
+   npm run dev        # 로컬에서 /blog, /blog/<slug> 동작 확인
+   npm run build      # 전체 정적 빌드 검증
+   git add src/content/blog/... src/data/series.ts
+   git commit -m "Add blog post: <slug>"
+   git push origin main   # GitHub Actions가 자동 배포
+   ```
+
+### 시리즈/단편 분류 규칙
+
+- frontmatter에 `series` 있음 → 시리즈 글로 그룹핑되어 `/blog` 시리즈 카드에 노출
+- frontmatter에 `series` 없음 → `/blog` 하단 **Singles** 섹션에 노출
+- 시리즈 글 내부 정렬은 `seriesPart` 오름차순, 없으면 파일명 순
+- 메인 페이지 BlogSection은 시리즈 4개까지만 노출 (등록 순서 우선, 미등록은 최신순)
+
+### draft
+
+- `draft: true` 글은 빌드/목록/시리즈 어디에도 노출되지 않음
+- 작성 중인 글은 draft로 두고, 발행 시점에 `false`로 바꿔서 푸시
+
+### URL 패턴
+
+| 경로 | 출처 |
+|------|------|
+| `/blog` | `src/pages/blog.astro` (전체 시리즈 + 단편) |
+| `/blog/<post-id>` | `src/pages/blog/[...slug].astro` (개별 글) |
+| `/blog/series/<series-slug>` | `src/pages/blog/series/[seriesSlug].astro` (시리즈 목록) |
+| `/projects`, `/projects/<slug>` | (기존 Projects 라우트, 별도 시스템) |

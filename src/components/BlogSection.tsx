@@ -1,75 +1,24 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-interface Episode {
-  title: string;
-  href: string;
-}
+type Category = '회고' | 'UE5' | '디지털트윈' | 'AI' | '도구';
 
-interface Series {
+export interface BlogSeriesProp {
   number: string;
-  category: '회고' | 'UE5' | '디지털트윈' | 'AI' | '도구';
-  title: string;
+  slug: string;
+  name: string;
   description: string;
-  episodes: Episode[];
+  category: Category;
   href: string;
+  episodes: Array<{ title: string; href: string }>;
 }
 
-const SERIES: Series[] = [
-  {
-    number: '01',
-    category: '회고',
-    title: 'Apex Legends Mock — WP_4th 회고',
-    description:
-      'UE5 멀티플레이어 FPS를 처음부터 끝까지 만들면서 부딪힌 네트워킹·GAS·UMG 이슈와 해결 과정을 시리즈로 정리했습니다.',
-    episodes: [
-      { title: '01 · 프로젝트 셋업과 Listen Server 결정', href: '/blog/wp-4th/01-setup' },
-      { title: '02 · Replication과 RPC 설계', href: '/blog/wp-4th/02-replication' },
-      { title: '03 · GAS 어빌리티 시스템 구조', href: '/blog/wp-4th/03-gas' },
-      { title: '04 · UMG 인게임 UI와 마무리', href: '/blog/wp-4th/04-umg' },
-    ],
-    href: '/blog/series/wp-4th',
-  },
-  {
-    number: '02',
-    category: '회고',
-    title: 'Split/Second Mock 회고',
-    description:
-      'Chaos Vehicles로 아케이드 레이싱 차량 물리를 만든 과정. Power Play 이벤트 시스템을 모킹하면서 배운 것들.',
-    episodes: [
-      { title: '단편 · 차량 핸들링과 Power Play 모킹', href: '/blog/split-second/recap' },
-    ],
-    href: '/blog/series/split-second',
-  },
-  {
-    number: '03',
-    category: '디지털트윈',
-    title: 'DigitalTwinFactory 일지',
-    description:
-      '실제 공정 라인을 가상 환경으로 옮기는 작업 일지. MQTT·WebSocket 실시간 스트리밍과 시뮬레이션 통합 기록.',
-    episodes: [
-      { title: 'Day 01 · 라인 측정과 모델링 기준 잡기', href: '/blog/dtf/day-01' },
-      { title: 'Day 02 · MQTT 브리지와 WebSocket 채널', href: '/blog/dtf/day-02' },
-      { title: 'Day 03 · 시뮬레이션 루프 통합', href: '/blog/dtf/day-03' },
-    ],
-    href: '/blog/series/dtf',
-  },
-  {
-    number: '04',
-    category: 'AI',
-    title: 'AI-Native Dev Workflow',
-    description:
-      'Hermes Agent · Claude Code · MCP로 1인 개발자가 팀처럼 일하는 워크플로우를 만들어가는 과정.',
-    episodes: [
-      { title: '01 · Claude Code와 MCP 시작하기', href: '/blog/ai-native/01-mcp' },
-      { title: '02 · Hermes Agent로 자동화 파이프라인', href: '/blog/ai-native/02-hermes' },
-    ],
-    href: '/blog/series/ai-native',
-  },
-];
+interface BlogSectionProps {
+  series: BlogSeriesProp[];
+}
 
 interface SeriesCardProps {
-  series: Series;
+  series: BlogSeriesProp;
 }
 
 function SeriesCard({ series }: SeriesCardProps) {
@@ -109,7 +58,7 @@ function SeriesCard({ series }: SeriesCardProps) {
         className="font-light uppercase tracking-tight text-[#D7E2EA] leading-[1.1] mb-4 md:mb-5"
         style={{ fontSize: 'clamp(1.375rem, 2.4vw, 2rem)' }}
       >
-        {series.title}
+        {series.name}
       </motion.h3>
 
       <p
@@ -157,7 +106,7 @@ function SeriesCard({ series }: SeriesCardProps) {
 
 const CATEGORIES = ['회고', 'UE5', '디지털트윈', 'AI', '도구'] as const;
 
-export default function BlogSection() {
+export default function BlogSection({ series }: BlogSectionProps) {
   return (
     <section
       id="blog"
@@ -191,11 +140,22 @@ export default function BlogSection() {
           ))}
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-5 md:gap-6 lg:gap-8">
-          {SERIES.map((series) => (
-            <SeriesCard key={series.number} series={series} />
-          ))}
-        </div>
+        {series.length > 0 ? (
+          <div className="grid md:grid-cols-2 gap-5 md:gap-6 lg:gap-8">
+            {series.map((s) => (
+              <SeriesCard key={s.slug} series={s} />
+            ))}
+          </div>
+        ) : (
+          <div className="bg-[#141414] border border-dashed border-[#1f1f1f] rounded-2xl p-8 md:p-12 text-center">
+            <p
+              className="text-[#9aa5af] font-light leading-relaxed"
+              style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.0625rem)' }}
+            >
+              아직 시리즈가 없습니다. 첫 글이 곧 추가됩니다.
+            </p>
+          </div>
+        )}
 
         <div className="mt-12 md:mt-16 flex justify-end">
           <a

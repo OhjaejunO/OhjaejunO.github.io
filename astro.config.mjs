@@ -9,6 +9,13 @@ import react from '@astrojs/react';
 export default defineConfig({
   site: 'https://ojaejun1995-sys.github.io',
 
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+      wrap: false,
+    },
+  },
+
   vite: {
     plugins: [tailwindcss()]
   },
