@@ -1,13 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AllBlogSection, {
+  type PostItem,
   type SeriesData,
-  type SingleData,
 } from '../components/AllBlogSection';
 import { loadPublishedPosts, groupPosts, formatDate } from '../lib/blog';
+import { getSeriesMeta } from '../data/series';
 
 const posts = await loadPublishedPosts();
-const { series, singles } = groupPosts(posts);
+const { series } = groupPosts(posts);
+
+const allPostsData: PostItem[] = posts.map((p) => ({
+  title: p.data.title,
+  description: p.data.description,
+  date: formatDate(p.data.date),
+  category: p.data.category,
+  href: `/blog/${p.id}`,
+  series: p.data.series
+    ? {
+        slug: p.data.series,
+        name: getSeriesMeta(p.data.series).name,
+        part: p.data.seriesPart ?? 0,
+      }
+    : undefined,
+}));
 
 const seriesData: SeriesData[] = series.map((group, i) => ({
   number: String(i + 1).padStart(2, '0'),
@@ -16,24 +32,13 @@ const seriesData: SeriesData[] = series.map((group, i) => ({
   description: group.meta.description || group.posts[0].data.description,
   category: group.meta.category,
   href: `/blog/series/${group.slug}`,
-  episodes: group.posts.map((p) => ({
-    title: p.data.title,
-    href: `/blog/${p.id}`,
-  })),
-}));
-
-const singlesData: SingleData[] = singles.map((p) => ({
-  title: p.data.title,
-  description: p.data.description,
-  date: formatDate(p.data.date),
-  category: p.data.category,
-  href: `/blog/${p.id}`,
+  episodeCount: group.posts.length,
 }));
 ---
 
 <Layout
   title="Blog — JJ.Dev"
-  description="UE5 게임 회고, 디지털 트윈 작업 일지, AI 워크플로우 실험을 시리즈 단위로 묶은 JJ.Dev 블로그."
+  description="UE5 게임 개발, 디지털 트윈 작업 일지, AI 워크플로우 실험. JJ.Dev의 블로그."
 >
-  <AllBlogSection client:load series={seriesData} singles={singlesData} />
+  <AllBlogSection client:load posts={allPostsData} series={seriesData} />
 </Layout>

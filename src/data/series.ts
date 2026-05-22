@@ -23,13 +23,6 @@ export const SERIES_META: Record<string, SeriesMeta> = {
       'UE5 멀티플레이어 FPS를 처음부터 끝까지 만들면서 부딪힌 네트워킹·GAS·UMG 이슈와 해결 과정을 시리즈로 정리합니다.',
     category: '회고',
   },
-  'split-second': {
-    slug: 'split-second',
-    name: 'Split/Second Mock 회고',
-    description:
-      'Chaos Vehicles로 아케이드 레이싱 차량 물리를 만든 과정. Power Play 이벤트 시스템을 모킹하면서 배운 것들.',
-    category: '회고',
-  },
   dtf: {
     slug: 'dtf',
     name: 'DigitalTwinFactory 일지',
