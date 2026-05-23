@@ -25,3 +25,5 @@ pnpm-debug.log*
 
 # oh-my-claudecode state
 .omc/
+
+.claude/
