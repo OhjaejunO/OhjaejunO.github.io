@@ -1,0 +1,482 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { findProjectNeighbors } from '../../data/projects';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects', ({ data }) => !data.draft);
+  projects.sort((a, b) => a.data.order - b.data.order);
+
+  return projects.map((project) => {
+    const { prev, next } = findProjectNeighbors(project.id, projects);
+    return {
+      params: { slug: project.id },
+      props: { project, prev, next },
+    };
+  });
+}
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+  prev: CollectionEntry<'projects'> | null;
+  next: CollectionEntry<'projects'> | null;
+}
+
+const { project, prev, next } = Astro.props;
+const { Content } = await render(project);
+const data = project.data;
+
+const statusColor =
+  data.status === 'Live'
+    ? '#7ee787'
+    : data.status === '진행 중'
+      ? '#d2a8ff'
+      : '#9aa5af';
+
+// Build an action-buttons list from links
+type ActionLink = { href: string; label: string; external: boolean };
+const actions: ActionLink[] = [];
+if (data.links.github) {
+  actions.push({
+    href: data.links.github,
+    label: data.links.githubLabel ?? 'GitHub',
+    external: true,
+  });
+}
+if (data.links.blog) {
+  actions.push({
+    href: data.links.blog,
+    label: data.links.blogLabel ?? 'Blog',
+    external: false,
+  });
+}
+if (data.links.demo) {
+  actions.push({
+    href: data.links.demo,
+    label: 'Demo',
+    external: true,
+  });
+}
+if (data.links.live) {
+  actions.push({
+    href: data.links.live,
+    label: 'Live',
+    external: true,
+  });
+}
+---
+
+<Layout
+  title={`${data.title} — JJ.Dev`}
+  description={data.description}
+>
+  <article class="relative w-full px-6 md:px-12 lg:px-24 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto">
+
+      <div class="flex items-center justify-between gap-4 mb-12 md:mb-16 flex-wrap">
+        <a
+          href="/projects"
+          class="group inline-flex items-center gap-3 text-[#9aa5af] uppercase tracking-wider hover:text-[#D7E2EA] transition-colors duration-200"
+          style="font-size: clamp(0.8125rem, 0.95vw, 0.9375rem);"
+        >
+          <span
+            aria-hidden="true"
+            class="transition-transform duration-200 group-hover:-translate-x-1"
+          >←</span>
+          Back to Projects
+        </a>
+        <span
+          class="text-[#646973] uppercase tracking-[0.3em] text-[10px] md:text-xs tabular-nums"
+        >
+          / PROJECT · {data.category}
+        </span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3 mb-5 md:mb-6">
+        <span
+          class="inline-flex items-center text-[#D7E2EA] uppercase tracking-[0.2em] border border-[#2a2a2a] rounded-full px-3 py-1"
+          style="font-size: clamp(0.6875rem, 0.85vw, 0.8125rem);"
+        >
+          {data.badgeCategory}
+        </span>
+        <span
+          class="inline-flex items-center gap-2 text-[#9aa5af] uppercase tracking-[0.2em]"
+          style="font-size: clamp(0.6875rem, 0.85vw, 0.8125rem);"
+        >
+          <span
+            class="inline-block w-1.5 h-1.5 rounded-full"
+            style={`background:${statusColor};`}
+          ></span>
+          {data.status}
+        </span>
+      </div>
+
+      <h1
+        class="font-light tracking-tight text-[#D7E2EA] leading-[1.05] uppercase mb-5 md:mb-6"
+        style="font-size: clamp(2.25rem, 6vw, 4.5rem);"
+      >
+        {data.title}
+      </h1>
+
+      <p
+        class="text-[#D7E2EA] font-light leading-snug mb-6 md:mb-8"
+        style="font-size: clamp(1.125rem, 1.6vw, 1.625rem);"
+      >
+        {data.subtitle}
+      </p>
+
+      {actions.length > 0 && (
+        <div class="flex flex-wrap gap-3 mb-12 md:mb-14">
+          {actions.map((a) => (
+            <a
+              href={a.href}
+              target={a.external ? '_blank' : undefined}
+              rel={a.external ? 'noopener noreferrer' : undefined}
+              class="inline-flex items-center gap-2 px-4 py-2 border border-[#1f1f1f] hover:border-[#D7E2EA] text-[#D7E2EA] uppercase tracking-wider transition-colors duration-200"
+              style="font-size: clamp(0.6875rem, 0.85vw, 0.8125rem);"
+            >
+              <span>{a.label}</span>
+              <span aria-hidden="true">{a.external ? '↗' : '→'}</span>
+            </a>
+          ))}
+        </div>
+      )}
+
+      <hr class="border-0 border-t border-[#1f1f1f] mb-12 md:mb-14" />
+
+      <section class="mb-14 md:mb-20">
+        <p
+          class="text-[#9aa5af] font-light leading-relaxed mb-8 md:mb-10"
+          style="font-size: clamp(1rem, 1.2vw, 1.1875rem);"
+        >
+          {data.description}
+        </p>
+
+        <div class="bg-[#141414] border border-[#1f1f1f] rounded-2xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
+          <div>
+            <div class="text-[#646973] uppercase tracking-[0.3em] text-[10px] mb-1.5">Period</div>
+            <div class="text-[#D7E2EA] font-light leading-snug" style="font-size: clamp(0.8125rem, 0.95vw, 0.9375rem);">{data.period}</div>
+          </div>
+          <div>
+            <div class="text-[#646973] uppercase tracking-[0.3em] text-[10px] mb-1.5">Role</div>
+            <div class="text-[#D7E2EA] font-light leading-snug" style="font-size: clamp(0.8125rem, 0.95vw, 0.9375rem);">{data.role}</div>
+          </div>
+          <div>
+            <div class="text-[#646973] uppercase tracking-[0.3em] text-[10px] mb-1.5">Team</div>
+            <div class="text-[#D7E2EA] font-light leading-snug" style="font-size: clamp(0.8125rem, 0.95vw, 0.9375rem);">{data.teamSize}</div>
+          </div>
+          <div>
+            <div class="text-[#646973] uppercase tracking-[0.3em] text-[10px] mb-1.5">Status</div>
+            <div class="text-[#D7E2EA] font-light leading-snug inline-flex items-center gap-2" style="font-size: clamp(0.8125rem, 0.95vw, 0.9375rem);">
+              <span class="inline-block w-1.5 h-1.5 rounded-full" style={`background:${statusColor};`}></span>
+              {data.status}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-14 md:mb-20">
+        <h2
+          class="text-[#646973] uppercase tracking-[0.3em] text-xs md:text-sm mb-6 md:mb-8"
+        >
+          / Tech Stack
+        </h2>
+
+        <div class="bg-[#141414] border border-[#1f1f1f] rounded-2xl p-6 md:p-8">
+          <ul class="divide-y divide-[#1f1f1f]">
+            {data.techStack.map((t) => (
+              <li class="grid grid-cols-[110px_1fr] md:grid-cols-[160px_1fr] gap-4 py-3 md:py-4 first:pt-0 last:pb-0">
+                <span class="text-[#646973] uppercase tracking-[0.2em] text-[11px] md:text-xs">{t.label}</span>
+                <span class="text-[#D7E2EA] font-light" style="font-size: clamp(0.875rem, 1.05vw, 1rem);">{t.value}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mt-6 md:mt-8">
+            {data.badges.map((b) => (
+              <span class="px-3 py-1.5 border border-[#2a2a2a] rounded-full text-[10px] md:text-[11px] uppercase tracking-wider text-[#9aa5af]">{b}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-14 md:mb-20">
+        <h2
+          class="text-[#646973] uppercase tracking-[0.3em] text-xs md:text-sm mb-6 md:mb-8"
+        >
+          / Key Features
+        </h2>
+
+        <ul class="space-y-3 md:space-y-4">
+          {data.keyFeatures.map((feature, i) => (
+            <li class="flex gap-4 md:gap-5">
+              <span class="text-[#646973] tabular-nums font-light pt-0.5" style="font-size: clamp(0.75rem, 0.85vw, 0.8125rem);">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <span class="text-[#D7E2EA] font-light leading-relaxed" style="font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);">
+                {feature}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-14 md:mb-20">
+        <h2
+          class="text-[#646973] uppercase tracking-[0.3em] text-xs md:text-sm mb-6 md:mb-8"
+        >
+          / Highlights
+        </h2>
+
+        <div class="bg-[#141414] border border-dashed border-[#2a2a2a] rounded-2xl p-10 md:p-16 flex flex-col items-center justify-center gap-3 text-center">
+          <span class="text-[#646973] uppercase tracking-[0.3em] text-[10px] md:text-xs">
+            Coming Soon
+          </span>
+          <span class="text-[#9aa5af] font-light" style="font-size: clamp(0.875rem, 1.05vw, 1rem);">
+            GIF · 스크린샷 추가 예정
+          </span>
+        </div>
+      </section>
+
+      {data.keyLearnings && data.keyLearnings.length > 0 && (
+        <section class="mb-14 md:mb-20">
+          <h2
+            class="text-[#646973] uppercase tracking-[0.3em] text-xs md:text-sm mb-6 md:mb-8"
+          >
+            / Key Learnings
+          </h2>
+
+          <div class="grid gap-4 md:gap-5">
+            {data.keyLearnings.map((kl) => (
+              <article class="bg-[#141414] border border-[#1f1f1f] rounded-2xl p-6 md:p-8 hover:border-[#2a2a2a] transition-colors duration-300">
+                <h3
+                  class="text-[#D7E2EA] font-light leading-snug mb-2 md:mb-3"
+                  style="font-size: clamp(1.0625rem, 1.4vw, 1.25rem);"
+                >
+                  {kl.title}
+                </h3>
+                <p
+                  class="text-[#9aa5af] font-light leading-relaxed"
+                  style="font-size: clamp(0.9375rem, 1.05vw, 1rem);"
+                >
+                  {kl.description}
+                </p>
+                {kl.blogLink && (
+                  <a
+                    href={kl.blogLink}
+                    class="group/learn mt-4 inline-flex items-center gap-2 text-[#D7E2EA] uppercase tracking-wider border-b border-[#2a2a2a] hover:border-[#D7E2EA] pb-0.5 transition-colors duration-200"
+                    style="font-size: clamp(0.6875rem, 0.85vw, 0.8125rem);"
+                  >
+                    자세히
+                    <span aria-hidden="true" class="transition-transform duration-200 group-hover/learn:translate-x-1">→</span>
+                  </a>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section class="mb-14 md:mb-20">
+        <h2
+          class="text-[#646973] uppercase tracking-[0.3em] text-xs md:text-sm mb-6 md:mb-8"
+        >
+          / Notes
+        </h2>
+
+        <div class="prose">
+          <Content />
+        </div>
+      </section>
+
+      {(prev || next) && (
+        <nav
+          aria-label="Project navigation"
+          class="mt-20 md:mt-28 grid sm:grid-cols-2 gap-4 md:gap-5"
+        >
+          {prev ? (
+            <a
+              href={`/projects/${prev.id}`}
+              class="group flex flex-col gap-2 bg-[#141414] border border-[#1f1f1f] rounded-2xl p-5 md:p-6 hover:border-[#2a2a2a] hover:bg-[#181818] transition-all duration-300"
+            >
+              <span class="text-[#646973] uppercase tracking-[0.3em] text-[10px] md:text-xs inline-flex items-center gap-2">
+                <span aria-hidden="true" class="transition-transform duration-200 group-hover:-translate-x-1">←</span>
+                Previous Project
+              </span>
+              <span
+                class="text-[#D7E2EA] font-light uppercase tracking-tight leading-snug"
+                style="font-size: clamp(0.9375rem, 1.1vw, 1.125rem);"
+              >
+                {prev.data.title}
+              </span>
+            </a>
+          ) : (
+            <span class="hidden sm:block" />
+          )}
+          {next ? (
+            <a
+              href={`/projects/${next.id}`}
+              class="group flex flex-col gap-2 sm:items-end sm:text-right bg-[#141414] border border-[#1f1f1f] rounded-2xl p-5 md:p-6 hover:border-[#2a2a2a] hover:bg-[#181818] transition-all duration-300"
+            >
+              <span class="text-[#646973] uppercase tracking-[0.3em] text-[10px] md:text-xs inline-flex items-center gap-2">
+                Next Project
+                <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1">→</span>
+              </span>
+              <span
+                class="text-[#D7E2EA] font-light uppercase tracking-tight leading-snug"
+                style="font-size: clamp(0.9375rem, 1.1vw, 1.125rem);"
+              >
+                {next.data.title}
+              </span>
+            </a>
+          ) : (
+            <span class="hidden sm:block" />
+          )}
+        </nav>
+      )}
+
+      <div class="mt-12 md:mt-16">
+        <a
+          href="/projects"
+          class="group inline-flex items-center gap-3 text-[#D7E2EA] uppercase tracking-wider hover:opacity-70 transition-opacity duration-200"
+          style="font-size: clamp(0.875rem, 1.05vw, 1rem);"
+        >
+          <span
+            aria-hidden="true"
+            class="transition-transform duration-200 group-hover:-translate-x-1"
+          >←</span>
+          Back to Projects
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  .prose {
+    color: #c4ccd5;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: clamp(1rem, 1.1vw, 1.125rem);
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  .prose > * + * {
+    margin-top: 1.15em;
+  }
+  .prose h2 {
+    color: #D7E2EA;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    line-height: 1.25;
+    margin-top: 2.4em;
+    margin-bottom: 0.65em;
+    padding-top: 1.5em;
+    border-top: 1px solid #1f1f1f;
+  }
+  .prose h3 {
+    color: #D7E2EA;
+    font-weight: 500;
+    font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+    line-height: 1.3;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+  }
+  .prose p,
+  .prose li {
+    color: #c4ccd5;
+  }
+  .prose strong {
+    color: #D7E2EA;
+    font-weight: 500;
+  }
+  .prose em {
+    color: #D7E2EA;
+    font-style: italic;
+  }
+  .prose a {
+    color: #D7E2EA;
+    border-bottom: 1px solid #2a2a2a;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .prose a:hover {
+    color: #9aa5af;
+    border-bottom-color: #9aa5af;
+  }
+  .prose ul,
+  .prose ol {
+    padding-left: 1.5em;
+  }
+  .prose ul { list-style: disc; }
+  .prose ol { list-style: decimal; }
+  .prose li::marker { color: #646973; }
+  .prose li + li { margin-top: 0.4em; }
+  .prose code:not(pre code) {
+    background: #1a1a1a;
+    color: #D7E2EA;
+    padding: 0.15em 0.45em;
+    border-radius: 0.3em;
+    font-size: 0.92em;
+    border: 1px solid #2a2a2a;
+    word-break: break-word;
+  }
+  .prose pre {
+    background: #0a0a0a !important;
+    border: 1px solid #1f1f1f;
+    border-radius: 0.85rem;
+    padding: 1.25rem 1.5rem;
+    overflow-x: auto;
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+  .prose pre code {
+    background: transparent !important;
+    padding: 0;
+    border: 0;
+    font-size: inherit;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  .prose blockquote {
+    border-left: 2px solid #2a2a2a;
+    padding: 0.4em 0 0.4em 1.25em;
+    color: #9aa5af;
+    font-style: italic;
+  }
+  .prose blockquote p { color: #9aa5af; }
+  .prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    border: 1px solid #1f1f1f;
+    margin: 1.5em auto;
+    display: block;
+  }
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+    display: block;
+    overflow-x: auto;
+  }
+  .prose th,
+  .prose td {
+    border-bottom: 1px solid #1f1f1f;
+    padding: 0.7em 0.9em;
+    text-align: left;
+    vertical-align: top;
+  }
+  .prose th {
+    color: #646973;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85em;
+    font-weight: 500;
+  }
+  .prose hr {
+    border: 0;
+    border-top: 1px solid #1f1f1f;
+    margin: 2.5em 0;
+  }
+</style>

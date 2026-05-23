@@ -1,11 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AllProjectsSection from '../components/AllProjectsSection';
+import AllProjectsSection, {
+  type ProjectCardData,
+} from '../components/AllProjectsSection';
+import { loadPublishedProjects } from '../data/projects';
+
+const projects = await loadPublishedProjects();
+
+const projectCards: ProjectCardData[] = projects.map((p) => ({
+  number: String(p.data.order).padStart(2, '0'),
+  category: p.data.category,
+  title: p.data.title,
+  tagline: p.data.subtitle,
+  description: p.data.description,
+  stack: p.data.badges.slice(0, 5),
+  link: { label: 'View Details', href: `/projects/${p.id}` },
+}));
 ---
 
 <Layout
   title="Projects — JJ.Dev"
   description="UE5 게임, 디지털 트윈, AI 워크플로우 — JJ가 만들고 있는 모든 프로젝트."
 >
-  <AllProjectsSection client:load />
+  <AllProjectsSection client:load projects={projectCards} />
 </Layout>

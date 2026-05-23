@@ -4,10 +4,11 @@ import HeroSection from '../components/HeroSection';
 import Marquee from '../components/Marquee';
 import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
-import ProjectsSection from '../components/ProjectsSection';
+import ProjectsSection, { type ProjectItem } from '../components/ProjectsSection';
 import BlogSection, { type BlogSeriesProp } from '../components/BlogSection';
 import ContactSection from '../components/ContactSection';
 import { loadPublishedPosts, groupPosts } from '../lib/blog';
+import { loadPublishedProjects } from '../data/projects';
 
 const posts = await loadPublishedPosts();
 const { series } = groupPosts(posts);
@@ -28,6 +29,17 @@ const blogSeries: BlogSeriesProp[] = series
       href: `/blog/${p.id}`,
     })),
   }));
+
+const allProjects = await loadPublishedProjects();
+const homeProjects: ProjectItem[] = allProjects
+  .map((p) => ({
+    number: String(p.data.order).padStart(2, '0'),
+    category: p.data.category,
+    title: p.data.title,
+    description: p.data.description,
+    stack: p.data.badges.slice(0, 5),
+    link: { label: 'View Details', href: `/projects/${p.id}` },
+  }));
 ---
 
 <Layout
@@ -38,7 +50,7 @@ const blogSeries: BlogSeriesProp[] = series
   <Marquee client:load />
   <AboutSection client:load />
   <ServicesSection client:load />
-  <ProjectsSection client:load />
+  <ProjectsSection client:load projects={homeProjects} />
   <BlogSection client:load series={blogSeries} />
   <ContactSection client:load />
 </Layout>

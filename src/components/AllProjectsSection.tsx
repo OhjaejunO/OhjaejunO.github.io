@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-interface Project {
+export interface ProjectCardData {
   number: string;
   category: string;
   title: string;
@@ -11,61 +11,8 @@ interface Project {
   link: { label: string; href: string };
 }
 
-const PROJECTS: Project[] = [
-  {
-    number: '01',
-    category: 'Game / Racing',
-    title: 'Split/Second Mock',
-    tagline: 'UE5 아케이드 레이싱 데모 — Chaos Vehicles 기반 차량 물리',
-    description:
-      'UE5 기반 아케이드 레이싱 데모. Chaos Vehicles로 차량 물리·핸들링을 재구성하고, Power Play 인터랙티브 이벤트 시스템을 모킹했습니다.',
-    stack: ['UE5', 'C++', 'Chaos Vehicles', 'Niagara'],
-    link: { label: 'View Details', href: '/projects/split-second' },
-  },
-  {
-    number: '02',
-    category: 'Game / Multiplayer FPS',
-    title: 'Apex Legends Mock (WP_4th)',
-    tagline: 'UE5 멀티플레이어 FPS — Listen Server · GAS · UMG 풀스택',
-    description:
-      'UE5 멀티플레이어 FPS. Listen Server·Replication 기반 네트워킹, GAS 어빌리티 시스템, UMG 인게임 UI까지 풀스택 구현.',
-    stack: ['UE5', 'C++', 'GAS', 'Replication', 'UMG'],
-    link: { label: 'View Details', href: '/projects/wp-4th' },
-  },
-  {
-    number: '03',
-    category: 'Digital Twin / Smart Factory',
-    title: 'DigitalTwinFactory',
-    tagline: '실제 공정 라인 디지털 트윈 — MQTT · WebSocket 실시간 스트리밍',
-    description:
-      '실제 공정 라인의 디지털 트윈. MQTT·WebSocket으로 IoT 센서 데이터를 실시간 스트리밍하고, 시뮬레이션·예측을 통합한 운영 환경.',
-    stack: ['UE5', 'MQTT', 'WebSocket', 'Python', 'IoT'],
-    link: { label: 'View Details', href: '/projects/dtf' },
-  },
-  {
-    number: '04',
-    category: 'AI Workflow / Tooling',
-    title: 'AI-Native Dev Workflow',
-    tagline: 'Hermes Agent · Claude Code · MCP 기반 1인 개발 워크플로우',
-    description:
-      'Hermes Agent · Claude Code · MCP 기반의 1인 개발 워크플로우. 자동화·문서화·코드 리뷰까지 에이전트가 담당하는 도구 체계.',
-    stack: ['Claude Code', 'MCP', 'Hermes Agent', 'Python', 'Obsidian'],
-    link: { label: 'Live Project', href: 'https://github.com/ojaejun1995-sys' },
-  },
-  {
-    number: '05',
-    category: 'Personal Project · UE5 · Action Combat',
-    title: 'Scarlet Nexus: Karen — 보스 전투',
-    tagline: 'UE5 보스 전투 프로젝트 — Karen Travers 캐릭터 기반',
-    description:
-      'StateTree·Behavior Tree 기반 보스 패턴, 콤보 시스템, 카메라 워크 학습을 위한 보스 전투 모작.',
-    stack: ['UE5', 'C++', 'GAS', 'Behavior Tree', 'Action Combat'],
-    link: { label: 'View Details', href: '/projects/scarlet-nexus-karen' },
-  },
-];
-
 interface ProjectCardProps {
-  project: Project;
+  project: ProjectCardData;
   index: number;
   total: number;
 }
@@ -167,7 +114,11 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
   );
 }
 
-export default function AllProjectsSection() {
+export default function AllProjectsSection({
+  projects,
+}: {
+  projects: ProjectCardData[];
+}) {
   return (
     <section className="relative w-full">
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-24 pt-16 md:pt-24 pb-12 md:pb-16">
@@ -206,12 +157,12 @@ export default function AllProjectsSection() {
       </div>
 
       <div className="relative">
-        {PROJECTS.map((project, i) => (
+        {projects.map((project, i) => (
           <ProjectCard
             key={project.number}
             project={project}
             index={i}
-            total={PROJECTS.length}
+            total={projects.length}
           />
         ))}
       </div>
@@ -234,7 +185,7 @@ export default function AllProjectsSection() {
         <span
           className="text-[#646973] uppercase tracking-[0.3em] text-[10px] md:text-xs tabular-nums"
         >
-          {PROJECTS.length} projects
+          {projects.length} projects
         </span>
       </div>
     </section>
