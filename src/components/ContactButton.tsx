@@ -18,7 +18,7 @@ export default function ContactButton(props: ContactButtonProps) {
   const label = props.label ?? 'Contact Me';
   const className = props.className ?? '';
 
-  const baseClass = 'inline-block rounded-full px-12 py-5 sm:px-16 sm:py-6 md:px-20 md:py-8 lg:px-24 lg:py-9 text-base sm:text-lg md:text-2xl lg:text-3xl text-white font-medium uppercase tracking-widest transition-transform duration-300 hover:scale-105';
+  const baseClass = 'inline-block rounded-full px-7 py-3 sm:px-9 sm:py-4 md:px-12 md:py-5 lg:px-15 lg:py-5 text-xs sm:text-sm md:text-base lg:text-xl text-white font-medium uppercase tracking-widest transition-transform duration-300 hover:scale-105';
 
   return (
     <a

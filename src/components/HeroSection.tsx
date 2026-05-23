@@ -11,16 +11,16 @@ export default function HeroSection() {
     >
       <FadeIn as="nav" delay={0} y={-20} className="relative z-30">
         <nav className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8">
-          <a href="#about" className="text-base md:text-xl lg:text-[1.8rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
+          <a href="#about" className="text-xs md:text-base lg:text-[1.05rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
             About
           </a>
-          <a href="#projects" className="text-base md:text-xl lg:text-[1.8rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
+          <a href="#projects" className="text-xs md:text-base lg:text-[1.05rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
             Projects
           </a>
-          <a href="#blog" className="text-base md:text-xl lg:text-[1.8rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
+          <a href="#blog" className="text-xs md:text-base lg:text-[1.05rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
             Blog
           </a>
-          <a href="#contact" className="text-base md:text-xl lg:text-[1.8rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
+          <a href="#contact" className="text-xs md:text-base lg:text-[1.05rem] text-[#D7E2EA] font-medium uppercase tracking-wider hover:opacity-70 transition-opacity duration-200">
             Contact
           </a>
         </nav>
@@ -30,7 +30,7 @@ export default function HeroSection() {
         <FadeIn delay={0.15} y={40}>
           <h1
             className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center mt-6 sm:mt-4 md:-mt-5"
-            style={{ fontSize: 'clamp(4rem, 21vw, 23vw)' }}
+            style={{ fontSize: 'clamp(2.25rem, 12vw, 13rem)' }}
           >
             Hi, I&apos;m JJ
           </h1>
@@ -42,7 +42,7 @@ export default function HeroSection() {
         y={30}
         className="absolute left-1/2 -translate-x-1/2 z-10 bottom-0"
       >
-        <div className="w-[360px] sm:w-[460px] md:w-[560px] lg:w-[680px] aspect-[3/4]">
+        <div className="w-[270px] sm:w-[345px] md:w-[420px] lg:w-[510px] aspect-[3/4]">
           <Character3D />
         </div>
       </FadeIn>
@@ -51,7 +51,7 @@ export default function HeroSection() {
         <FadeIn delay={0.35} y={20} className="pointer-events-auto">
           <p
             className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug"
-            style={{ fontSize: 'clamp(1rem, 1.85vw, 2rem)' }}
+            style={{ fontSize: 'clamp(0.6rem, 1.05vw, 1.15rem)' }}
           >
             an unreal engine developer<br />
             working on simulations, games,<br />
