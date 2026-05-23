@@ -20,11 +20,13 @@ techStack:
   - { label: UI, value: "UMG · Common UI" }
 badges: [UE5, C++, REPLICATION, MULTIPLAYER, UMG]
 
+demoVideo: /videos/projects/wp-4th/gameplay.mp4
+
 links:
   github: https://github.com/Eurlis/WP_4th
   githubLabel: Team Repo · My Role 무기 · 멀티플레이
-  blog: /blog
-  blogLabel: 시리즈 글 작성 중
+  blog: /blog/series/wp-4th
+  blogLabel: 시리즈 글 4편 작성 완료
 
 keyFeatures:
   - 3슬롯 무기 시스템 (Pistol · Main1 · Main2)
@@ -34,12 +36,21 @@ keyFeatures:
   - HP·탄약 HUD
 
 keyLearnings:
-  - title: bAlwaysRelevant Silent Fail 패턴
-    description: Listen Server에서 bAlwaysRelevant 설정 누락 시 클라이언트에서 무기가 보이지 않는 버그. 디버깅 패턴 정리.
   - title: UE_LOG spam → Host Disconnect 트랩
-    description: 매 프레임 UE_LOG가 Listen Server PIE에서 "Host closed connection"의 숨은 원인. 백그라운드 액터 로그 제거로 안정화.
-  - title: 무기 슬롯 분배 버그 (5줄 분기 추가로 해결)
-    description: ServerAddWeaponToSlot에서 Pistol 카테고리 분기 누락. 헬퍼 함수가 있어도 호출 안 하면 무용지물 패턴.
+    description: 매 프레임 UE_LOG가 Listen Server PIE에서 "Host closed the connection"의 숨은 원인. 백그라운드 액터의 매 프레임 로그 제거로 안정화. 시연 환경에서만 발생하는 함정의 대표 사례.
+    blogLink: /blog/wp-4th/01-ue-log-spam-host-disconnect
+
+  - title: bAlwaysRelevant Silent Fail 패턴
+    description: AJunRingActor(자기장)에서 bAlwaysRelevant 누락 시 클라이언트에서 보이지 않는 silent fail. NetUpdateFrequency placebo 함정과 호스트 false negative 패턴 정리.
+    blogLink: /blog/wp-4th/02-balways-relevant-silent-fail
+
+  - title: HUD Update Timing Race + Option A 패턴
+    description: cpp BlueprintImplementableEvent vs BP BeginPlay 타이밍 레이스. Tick 폴링 → Delegate 패턴 → "초기 동기화 + 이벤트 드리븐" 병행으로 진화. 멀티플레이 late join은 Replicated + OnRep + Previous tracker.
+    blogLink: /blog/wp-4th/03-hud-update-timing-race
+
+  - title: PlayerStart PIE 트랩 + D-day BP override 패턴
+    description: APlayerStartPIE 함정 + ChoosePlayerStart BP override로 베타 D-day 30분 전 해결. BlueprintNativeEvent의 진가 = D-day 빌드 의존성 0 안전망이라는 메타 패턴.
+    blogLink: /blog/wp-4th/04-playerstart-pie-trap
 ---
 
 ## 프로젝트 개요

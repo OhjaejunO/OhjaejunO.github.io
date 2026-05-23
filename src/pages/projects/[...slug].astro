@@ -142,6 +142,22 @@ if (data.links.live) {
         </div>
       )}
 
+      {data.demoVideo && (
+        <section class="mb-12 md:mb-14">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full rounded-2xl border border-[#1f1f1f]"
+            src={data.demoVideo}
+          ></video>
+          <p class="text-[#646973] uppercase tracking-[0.3em] text-[10px] md:text-xs mt-3 text-center">
+            Gameplay Demo
+          </p>
+        </section>
+      )}
+
       <hr class="border-0 border-t border-[#1f1f1f] mb-12 md:mb-14" />
 
       <section class="mb-14 md:mb-20">

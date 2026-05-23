@@ -41,6 +41,8 @@ const projects = defineCollection({
     ),
     badges: z.array(z.string()),
 
+    demoVideo: z.string().optional(),
+
     links: z.object({
       github: z.string().optional(),
       githubLabel: z.string().optional(),

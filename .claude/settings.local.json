@@ -3,7 +3,10 @@
     "allow": [
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(npm run *)",
+      "Bash(git check-ignore *)",
+      "Bash(Select-Object -First 5)"
     ]
   }
 }
