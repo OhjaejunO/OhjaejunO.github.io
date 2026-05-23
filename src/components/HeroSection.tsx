@@ -29,7 +29,7 @@ export default function HeroSection() {
       <div className="relative z-20 overflow-hidden">
         <FadeIn delay={0.15} y={40}>
           <h1
-            className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center mt-6 sm:mt-4 md:-mt-5"
+            className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center mt-10 sm:mt-8 md:mt-9"
             style={{ fontSize: 'clamp(2.25rem, 12vw, 13rem)' }}
           >
             Hi, I&apos;m JJ
