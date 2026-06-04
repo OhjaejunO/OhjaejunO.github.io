@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ojaejun1995-sys.github.io',
+  site: 'https://ohjaejuno.github.io',
 
   markdown: {
     shikiConfig: {
