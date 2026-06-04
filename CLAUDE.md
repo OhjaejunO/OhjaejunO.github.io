@@ -7,8 +7,8 @@
 
 ## 프로젝트 개요
 
-- **저장소:** `https://github.com/ojaejun1995-sys/ojaejun1995-sys.github.io`
-- **로컬 경로:** `C:\Dev\Blog\ojaejun1995-sys.github.io`
+- **저장소:** `https://github.com/OhjaejunO/OhjaejunO.github.io`
+- **로컬 경로:** `C:\Users\user\Code\OhjaejunO.github.io`
 - **목표:** GitHub Pages 기반 개인 블로그 + 포트폴리오
 - **디자인:** Jack 3D Creator (motionsites.ai) 톤 기반 변형
 - **사용자:** 재준 (UE5 개발자, 디지털트윈 엔지니어 지망)
@@ -109,7 +109,7 @@ Let's build the next-generation tools together.
 - 거대 텍스트: "LET'S CONNECT."
 - 짧은 카피: "함께 만들 만한 게 있거나 그냥 안부 인사도 환영합니다."
 - Email: ojaejun1995@gmail.com
-- GitHub: ojaejun1995-sys
+- GitHub: OhjaejunO
 - LinkedIn: linkedin.com/in/재준-오-1995abc
 - Footer: Built with Astro · TypeScript · Tailwind
 

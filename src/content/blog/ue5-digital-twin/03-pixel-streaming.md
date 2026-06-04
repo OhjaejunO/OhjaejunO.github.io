@@ -295,7 +295,7 @@ DigitalTwinFactory/
 디지털 트윈은 더 이상 대기업만의 영역이 아닙니다. UE5의 무료 라이선스와 오픈소스 MQTT 생태계 덕분에, 개인 프로젝트에서도 충분히 시작할 수 있습니다.
 
 이 시리즈의 전체 소스코드는 GitHub에서 확인할 수 있습니다:
-[ojaejun1995-sys/DigitalTwinFactory](https://github.com/ojaejun1995-sys/DigitalTwinFactory)
+[OhjaejunO/DigitalTwinFactory](https://github.com/OhjaejunO/DigitalTwinFactory)
 
 ## 참고 자료
 

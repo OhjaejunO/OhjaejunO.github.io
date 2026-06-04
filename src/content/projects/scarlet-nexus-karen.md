@@ -114,4 +114,4 @@ GetWorld()->GetTimerManager().SetTimer(Handle, [WeakWorld, TargetLevel]() {
 - C++ UMG는 진입 비용이 있지만, 한 번 손에 익으면 Designer보다 훨씬 명확하다
 - "위협적인 보스" = 강한 데미지가 아니라 **자기 호흡을 지키는 보스**
 
-자세한 트러블슈팅 회고는 [블로그](https://ojaejun1995-sys.github.io/blog/scarlet-nexus-karen-boss)에 풀버전이 있습니다.
+자세한 트러블슈팅 회고는 [블로그](https://ohjaejuno.github.io/blog/scarlet-nexus-karen-boss)에 풀버전이 있습니다.

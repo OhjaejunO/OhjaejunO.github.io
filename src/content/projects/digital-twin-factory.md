@@ -21,7 +21,7 @@ techStack:
 badges: [UE5, MQTT, WEBSOCKET, PYTHON, PIXEL STREAMING, IOT]
 
 links:
-  github: https://github.com/ojaejun1995-sys/DigitalTwinFactory
+  github: https://github.com/OhjaejunO/DigitalTwinFactory
   githubLabel: My Repo
   blog: /blog/series/ue5-digital-twin
   blogLabel: 시리즈 글 (3편)

@@ -16,8 +16,8 @@ const LINKS: ContactLink[] = [
   },
   {
     label: 'GitHub',
-    value: 'ojaejun1995-sys',
-    href: 'https://github.com/ojaejun1995-sys',
+    value: 'OhjaejunO',
+    href: 'https://github.com/OhjaejunO',
     external: true,
   },
   {

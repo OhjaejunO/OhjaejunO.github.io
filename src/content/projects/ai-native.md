@@ -20,7 +20,7 @@ techStack:
 badges: [CLAUDE CODE, MCP, HERMES AGENT, PYTHON, OBSIDIAN]
 
 links:
-  github: https://github.com/ojaejun1995-sys/Obsidian-Vault
+  github: https://github.com/OhjaejunO/Obsidian-Vault
   githubLabel: Vault Repo (Private)
   blog: /blog
   blogLabel: AI-Native 시리즈 (작성 예정)
