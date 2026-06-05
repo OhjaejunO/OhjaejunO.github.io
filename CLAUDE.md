@@ -269,6 +269,17 @@ Let's build the next-generation tools together.
    git push origin main   # GitHub Actions가 자동 배포
    ```
 
+### ⚠️ 코드 인용 규칙 (기술 글 필수)
+
+블로그 글에 들어가는 **코드 스니펫은 기억/재구성 금지** — 반드시 실제 소스를 읽고 인용한다.
+
+- **factory-space 소스 위치:** `C:\Users\user\Desktop\factory-space\frontend\Source\Wanted_Factory\` (`Public/` 헤더, `Private/` 구현)
+- 글 쓰기 **전에** 해당 편에서 다룰 클래스/함수의 실제 코드를 먼저 읽고, **함수명·시그니처·로직을 원본 그대로** 인용한다.
+- 블로그용으로 단순화(분기 일부 생략 등)할 땐 **"일부 생략" 명시**. 동작이 바뀌는 재구성은 금지.
+- **프로젝트명(Wanted_Factory) 노출 금지 유지.** 네임스페이스(`WANTED_FACTORY_API`)·전체 경로 등 프로젝트를 식별 가능한 부분은 일반화하거나 생략한다.
+  - `AOJJ_*` 클래스 접두사, `/Game/OJJ/...` 에셋 경로는 1~3편에서 이미 공개됐고 프로젝트명이 아니므로 유지 가능.
+- 글의 다른 부분(서사·설계 의도)이 소스와 어긋나면, 추측으로 메우지 말고 소스 기준으로 고치거나 사용자에게 확인받는다.
+
 ### 시리즈/단편 분류 규칙
 
 - frontmatter에 `series` 있음 → 시리즈 글로 그룹핑되어 `/blog` 시리즈 카드에 노출

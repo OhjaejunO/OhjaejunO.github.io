@@ -153,7 +153,7 @@ Phase가 끝날 때마다 5편 안팎으로 묶어서 정리합니다. 그래서
 `GetHitResultUnderCursorByChannel`로 마우스 위치를 월드 좌표로 받고, `WorldToGrid`로 셀 좌표로 환산. Tick마다 호버를 갱신하고, 좌클릭에서 `TryPlaceMachine`을 호출하는 흐름. B키 토글로 빌드/플레이 상태 머신 구성.
 
 **5편 — Codex Adversarial Review로 잡은 silent bug들**
-Phase 1을 만들면서 AI 도구(Codex)로 adversarial review를 돌렸고, 그 과정에서 **숨은 버그 10개**를 잡았습니다. Ghost occupancy, stale weak pointer, multi-grid contamination, viz/placement coupling 같은 — 컴파일은 통과하는데 게임은 망가지는 부류의 버그들이요. AI 도구를 코드 리뷰어로 쓰는 워크플로우 자체에 대한 글입니다.
+Phase 1 그리드 코드부터 그 위에 쌓인 시스템까지, AI 도구(Codex)로 adversarial review를 돌리며 잡은 **숨은 버그들**을 모았습니다. Ghost occupancy, stale weak pointer, multi-grid contamination, viz/placement coupling 같은 — 컴파일은 통과하는데 게임은 조용히 망가지는 부류요. AI 도구를 코드 리뷰어로 쓰는 워크플로우 자체에 대한 글입니다.
 
 ---
 
