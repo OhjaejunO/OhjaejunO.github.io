@@ -100,31 +100,25 @@ Phase가 끝날 때마다 5편 안팎으로 묶어서 정리합니다. 그래서
 코드는 다음 글부터 본격적으로 들어가지만, 큰 그림만 먼저 잡고 가겠습니다. Phase 1 그리드 시스템은 **3축**으로 책임을 나눴습니다.
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                         입력 레이어                          │
-│                AOJJ_BuildController (C++ Actor)              │
-│  · 마우스 호버 추적 (커서 → 그리드 좌표)                     │
-│  · 좌클릭 → 배치 요청                                        │
-│  · B키 → 빌드 모드 토글                                      │
-└──────────────────────────┬──────────────────────────────────┘
-                           │ TryPlaceMachine(machine, origin)
-                           │ UpdateHoverPreview(machine, origin)
-                           ▼
-┌─────────────────────────────────────────────────────────────┐
-│                         데이터 레이어                        │
-│                     AOJJ_Grid (C++ Actor)                    │
-│  · TMap<FIntPoint, Machine*>  셀 ↔ 머신 양방향 매핑          │
-│  · CanPlaceMachine / TryPlaceMachine  트랜잭션 검증·배치     │
-│  · WorldToGrid / GridToWorld  좌표 변환                      │
-└──────────────────────────┬──────────────────────────────────┘
-                           │ 시각화 명령
-                           ▼
-┌─────────────────────────────────────────────────────────────┐
-│                         시각화 레이어                        │
-│         GridFloorMesh + ValidHoverISM + InvalidHoverISM      │
-│  · M_OJJ_GridFloor 머티리얼 (베이스 격자)                    │
-│  · MI 호버용 2종 (녹색 / 빨강 인스턴스드 스태틱 메시)        │
-└─────────────────────────────────────────────────────────────┘
+┌─ 입력 레이어 ───────────────────────────
+│  AOJJ_BuildController (C++ Actor)
+│  · 마우스 호버 추적 (커서 → 그리드 좌표)
+│  · 좌클릭 → 배치 요청
+│  · B키 → 빌드 모드 토글
+        │ TryPlaceMachine(machine, origin)
+        │ UpdateHoverPreview(machine, origin)
+        ▼
+┌─ 데이터 레이어 ─────────────────────────
+│  AOJJ_Grid (C++ Actor)
+│  · TMap<FIntPoint, Machine*>  셀 ↔ 머신 양방향 매핑
+│  · CanPlaceMachine / TryPlaceMachine  트랜잭션 검증·배치
+│  · WorldToGrid / GridToWorld  좌표 변환
+        │ 시각화 명령
+        ▼
+┌─ 시각화 레이어 ─────────────────────────
+│  GridFloorMesh + ValidHoverISM + InvalidHoverISM
+│  · M_OJJ_GridFloor 머티리얼 (베이스 격자)
+│  · MI 호버용 2종 (녹색 / 빨강 인스턴스드 스태틱 메시)
 ```
 
 핵심 원칙은 **책임 분리**입니다.
