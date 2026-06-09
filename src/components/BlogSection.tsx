@@ -25,15 +25,14 @@ function SeriesCard({ series }: SeriesCardProps) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <motion.a
-      href={series.href}
+    <motion.div
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-      className="group block bg-[#141414] border border-[#1f1f1f] rounded-2xl p-6 md:p-8 lg:p-10 hover:border-[#2a2a2a] transition-colors duration-300"
+      className="flex flex-col h-full bg-[#141414] border border-[#1f1f1f] rounded-2xl p-6 md:p-8 lg:p-10 hover:border-[#2a2a2a] transition-colors duration-300"
     >
       <div className="flex items-start justify-between mb-6 md:mb-8">
         <span
@@ -70,37 +69,42 @@ function SeriesCard({ series }: SeriesCardProps) {
 
       <ul className="flex flex-col border-t border-[#1f1f1f]">
         {series.episodes.map((ep) => (
-          <li
-            key={ep.href}
-            className="py-3 md:py-3.5 border-b border-[#1f1f1f] text-[#D7E2EA] font-light flex items-center justify-between gap-4"
-            style={{ fontSize: 'clamp(0.875rem, 1vw, 1rem)' }}
-          >
-            <span className="truncate">{ep.title}</span>
-            <span
-              aria-hidden="true"
-              className="text-[#646973] shrink-0 transition-transform duration-200 group-hover:translate-x-0.5"
+          <li key={ep.href} className="border-b border-[#1f1f1f]">
+            <a
+              href={ep.href}
+              className="group/ep flex items-center justify-between gap-4 py-3 md:py-3.5 text-[#D7E2EA] font-light hover:text-[#9aa5af] transition-colors duration-200"
+              style={{ fontSize: 'clamp(0.875rem, 1vw, 1rem)' }}
             >
-              →
-            </span>
+              <span className="truncate transition-transform duration-200 group-hover/ep:translate-x-0.5">
+                {ep.title}
+              </span>
+              <span
+                aria-hidden="true"
+                className="text-[#646973] shrink-0 transition-all duration-200 group-hover/ep:text-[#9aa5af] group-hover/ep:translate-x-0.5"
+              >
+                →
+              </span>
+            </a>
           </li>
         ))}
       </ul>
 
       <div className="mt-6 md:mt-8 flex items-center justify-end">
-        <span
-          className="inline-flex items-center gap-3 text-[#D7E2EA] uppercase tracking-wider border-b border-[#D7E2EA] pb-1 group-hover:border-[#9aa5af] group-hover:text-[#9aa5af] transition-colors duration-200"
+        <a
+          href={series.href}
+          className="group/series inline-flex items-center gap-3 text-[#D7E2EA] uppercase tracking-wider border-b border-[#D7E2EA] pb-1 hover:border-[#9aa5af] hover:text-[#9aa5af] transition-colors duration-200"
           style={{ fontSize: 'clamp(0.8125rem, 0.95vw, 0.9375rem)' }}
         >
           Read Series
           <span
             aria-hidden="true"
-            className="transition-transform duration-200 group-hover:translate-x-1"
+            className="transition-transform duration-200 group-hover/series:translate-x-1"
           >
             →
           </span>
-        </span>
+        </a>
       </div>
-    </motion.a>
+    </motion.div>
   );
 }
 

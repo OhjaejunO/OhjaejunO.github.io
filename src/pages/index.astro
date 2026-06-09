@@ -23,7 +23,7 @@ const blogSeries: BlogSeriesProp[] = series
     name: group.meta.name,
     description: group.meta.description || group.posts[0].data.description,
     category: group.meta.category,
-    href: group.firstPostHref,
+    href: `/blog/series/${group.slug}`,
     episodes: group.posts.map((p) => ({
       title: p.data.title,
       href: `/blog/${p.id}`,
