@@ -48,7 +48,7 @@ export const SERIES_META: Record<string, SeriesMeta> = {
     slug: 'factory-sim',
     name: '공장 시뮬레이션 게임 개발기',
     description:
-      'UE5로 공장 시뮬레이션 게임을 만들면서 디지털 트윈의 뼈대를 함께 설계하는 기록. 그리드(Phase 1) → 머신(Phase 2) → 자원/생산(Phase 3) → 컨베이어·UI·멀티(Phase 4+) 순서로 자동화 시뮬레이션 장르의 시스템을 한 층씩 쌓아갑니다.',
+      'UE5로 공장 시뮬레이션 게임을 만들면서 디지털 트윈의 뼈대를 함께 설계하는 기록. 그리드(Phase 1) → 머신·컨베이어(Phase 2) → 자원·생산(Phase 3) → 건축·Foundation(Phase 4) 순서로 자동화 시뮬레이션 장르의 시스템을 한 층씩 쌓아갑니다. 행성 환경 같은 곁가지는 막간으로, UI·멀티플레이는 이후 단계로 다룹니다.',
     category: 'UE5',
   },
 };
