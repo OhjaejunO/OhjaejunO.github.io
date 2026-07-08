@@ -136,7 +136,7 @@ StateIndicatorComponent->SetMaterial(0, StateIndicatorMaterialInstance);
 
 ## 5. 두 번째 폭발 — 그리고 이번엔 이중 안전장치
 
-6월 20일에 심어진 화살표 MID와 6월 29일에 심어진 Occluder MID는 7월 6일에 함께 터졌다. 사운드 확장 작업(31편 말미의 그 PR)에서 BP_Conveyor 저장이 막힌 것이다 — 도입으로부터 16일 만이다. 수정 커밋 메시지가 계보를 정확히 참조한다: "MachineBase StateIndicator MID 건과 동일 패턴 — 승인." 코드는 죽었지만 커밋 메시지는 남아서, 두 번째 수정의 근거 문서가 됐다.
+6월 20일에 심어진 화살표 MID와 6월 29일에 심어진 Occluder MID는 7월 6일에 함께 터졌다. 발견의 순간은 사운드 확장 작업(31편 말미의 그 PR)이었다 — 컨베이어 가동 루프 사운드를 달면서 BP_Conveyor에 큐를 지정하고 저장을 누르는 순간, 에디터가 저장을 거부했다. 도입으로부터 16일 만이고, 그 fix가 사운드 PR에 편승해 들어간 이유가 이것이다. 수정 커밋 메시지가 계보를 정확히 참조한다: "MachineBase StateIndicator MID 건과 동일 패턴 — 승인." 코드는 죽었지만 커밋 메시지는 남아서, 두 번째 수정의 근거 문서가 됐다.
 
 수정 자체는 사건 A와 같은 방향에 안전장치가 하나 늘었다:
 
