@@ -32,7 +32,7 @@ draft: false
 
 ## 2. 입력단 ② — UI 이미지 임포트, 그리고 바이너리 위의 협업
 
-로봇이 3D 쪽 입력이라면, 2D 쪽 입력은 UI 이미지들이다. HUD 채팅/날씨/시간 바(`AI_Chat`, `Chat_Bar`, `Day_Time_Bar`, `Weather_ProgressBar`), 대화·패널 세트(`ai_chat_panel`, `panel_main`, `panel_topbar_chip`, `panel_vertical_list`, `status_bar_empty` 등), 버튼(`btn_normal_final`, `btn_hover_final`) — 여러 PR에 걸쳐 이미지 십수 종을 UI 담당 팀원의 폴더로 임포트하고 위젯에 반영했다. (참고로 `AI_Chat`류 이름은 게임 내 "AI 채팅" 기능의 UI라는 뜻이지, 이미지의 생성 도구 표기가 아니다. 이 이미지들을 어떤 도구로 만들었는지는 리포에 기록이 없다.)
+로봇이 3D 쪽 입력이라면, 2D 쪽 입력은 UI 이미지들이다. HUD 채팅/날씨/시간 바(`AI_Chat`, `Chat_Bar`, `Day_Time_Bar`, `Weather_ProgressBar`), 대화·패널 세트(`ai_chat_panel`, `panel_main`, `panel_topbar_chip`, `panel_vertical_list`, `status_bar_empty` 등), 버튼(`btn_normal_final`, `btn_hover_final`) — 여러 PR에 걸쳐 이미지 십수 종을 UI 담당 팀원의 폴더로 임포트하고 위젯에 반영했다. 이 패널·버튼 이미지들은 GPT 이미지 생성으로 제작했다 — 로봇 컨셉 아트를 GPT로 뽑았던 21편과 같은 결이고, 3D는 Meshy·2D는 GPT로 **입력단에 들어오는 재료가 전부 AI 생성물**인 셈이다. (참고로 `AI_Chat`류 이름은 생성 도구 표기가 아니라 게임 내 "AI 채팅" 기능의 UI라는 뜻이다.)
 
 코드 diff가 0인 커밋들이다. 그런데 이 지점이 협업에서 제일 미끄럽다. **UI 에셋 반영은 위젯 `.uasset` 재저장을 동반하고, `.uasset`은 바이너리라 diff도 머지도 안 되기 때문이다.** 실제로 밟은 사례 셋:
 
@@ -197,7 +197,7 @@ UI 이미지 임포트·반영           위젯 C++ (HUD/말풍선/퀘스트)   
 
 UI 에셋 파이프라인에서 한 것 —
 
-- 입력단: Meshy 로봇 임포트 + 자동 머티리얼 절연·수동 보정(21편 규약), UI 이미지 십수 종 임포트·위젯 반영
+- 입력단: Meshy 로봇 임포트 + 자동 머티리얼 절연·수동 보정(21편 규약), GPT 생성 UI 이미지 십수 종 임포트·위젯 반영
 - 바이너리 협업 3사례: 위젯 축소 경고를 PR 본문에 명시, 무심코 저장된 남의 위젯을 출처 커밋으로 정리, 용량 저울질 기록
 - 연결단: 파이썬 수동 스폰 → `UWorldSubsystem` 자동 스폰(가드 4겹 + "자기가 세운 것만 치운다"), `UDeveloperSettings` 레벨 화이트리스트, 생성자 RT 기본 로드
 - 위젯 본체는 팀원 영역으로 유지 — 인수인계 계약은 "머티리얼 붙이고 비율 지키기" 한 장
