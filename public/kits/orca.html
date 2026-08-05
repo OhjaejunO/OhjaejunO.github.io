@@ -1,75 +1,24 @@
-<!doctype html><html lang="ko"><head><title>🐋 Orca 설치 + AI 연결 가이드 — 토망치랩</title>
+<!doctype html><html lang="ko"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🐋 Orca 설치 + AI 연결 가이드 — 토망치랩</title>
+<meta http-equiv="refresh" content="0; url=https://tomangchi-lab.github.io/kits/orca.html">
+<link rel="canonical" href="https://tomangchi-lab.github.io/kits/orca.html">
+<meta name="robots" content="noindex">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--cream:#FCF8F0;--ink:#1C2028;--cyan:#34DCE6;--cyan-d:#1E8C96;--line:#EBE4D7;--gray:#787E88;}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--cream);color:var(--ink);font-family:'Noto Sans KR',-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
-.top{background:var(--ink);color:#fff;padding:14px 20px;display:flex;align-items:center;gap:10px;justify-content:center}
-.top .mark{font-size:20px}
-.top .word{font-weight:900;letter-spacing:.06em;font-size:15px}
-.top .word b{color:var(--cyan)}
-.wrap{max-width:640px;margin:0 auto;padding:28px 20px 60px}
-.badge{display:inline-block;border:2px solid var(--cyan);color:var(--cyan-d);border-radius:999px;padding:4px 16px;font-weight:700;font-size:13px;margin-bottom:14px}
-h1{font-weight:900;font-size:26px;line-height:1.35;margin-bottom:10px}
-.lead{color:#464c56;font-size:15px;margin-bottom:26px}
-.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 20px;margin-bottom:16px;box-shadow:0 4px 14px rgba(28,32,40,.05)}
-.card h2{font-size:18px;font-weight:900;display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--cyan);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:900}
-.card p,.card li{font-size:15px;color:#3a4049}
-.card ol,.card ul{padding-left:22px;display:grid;gap:6px}
-.card .tip{margin-top:12px;background:var(--cream);border-radius:12px;padding:10px 14px;font-size:13.5px;color:var(--cyan-d);font-weight:700}
-pre{background:var(--ink);color:#e8ecf1;border-radius:14px;padding:16px;font-size:13px;line-height:1.6;overflow-x:auto;white-space:pre-wrap;word-break:break-all;margin:12px 0 6px;font-family:'Noto Sans KR',monospace}
-.copy{display:inline-flex;align-items:center;gap:6px;background:var(--cyan);border:none;color:#04343a;font-weight:900;font-family:inherit;font-size:14px;border-radius:999px;padding:9px 18px;cursor:pointer}
-.copy:active{transform:scale(.97)}
-.btn{display:block;text-align:center;background:var(--cyan);color:#04343a;font-weight:900;font-size:17px;text-decoration:none;border-radius:999px;padding:15px;margin:8px 0}
-.warn{border-left:4px solid #D97757;padding-left:14px}
-.foot{text-align:center;margin-top:34px}
-.foot .hammer{font-size:26px}
-.foot p{font-size:14px;color:var(--gray);margin:8px 0 14px}
-.follow{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:900;border-radius:999px;padding:13px 26px;font-size:15px}
-.follow b{color:var(--cyan)}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+body{background:var(--cream);color:var(--ink);font-family:'Noto Sans KR',-apple-system,sans-serif;line-height:1.65;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px;text-align:center}
+.box{max-width:420px}
+.h{font-size:26px;margin-bottom:10px}
+p{font-size:15px;color:#565c66;margin-bottom:18px}
+a.btn{display:inline-block;background:var(--cyan);color:#04343a;font-weight:900;font-size:15px;text-decoration:none;border-radius:999px;padding:13px 24px}
 </style></head><body>
-<header class="top"><span class="mark">🐰🔨</span><span class="word">AI TOMANGCHI <b>LAB</b></span></header>
-<div class="wrap">
-<span class="badge">두드려봄</span>
-<h1>🐋 Orca 설치 + AI 연결 가이드<br>(5분 완성)</h1>
-<p class="lead">AI 에이전트 여러 개를 한 화면에서 부리는 무료 앱, Orca — 직접 쓰면서 정리했어요.</p>
-
-<div class="card"><h2><span class="num">1</span>Orca 설치 (1분)</h2>
-<p><b>윈도우 / 맥 / 리눅스 전부 지원, 완전 무료.</b></p>
-<ol><li>공식 사이트 → <b>onorca.dev/download</b></li>
-<li>내 운영체제 버전 다운로드 (윈도우 <code>.exe</code>, 맥은 Apple Silicon/Intel 구분)</li>
-<li>설치 후 실행 — <b>회원가입 없음.</b> 바로 켜집니다.</li></ol>
-<p class="tip">💡 맥 터미널파: brew install --cask stablyai/orca/orca</p></div>
-
-<div class="card"><h2><span class="num">2</span>AI 에이전트 연결 (2분)</h2>
-<p>Orca는 "사무실"이고, 일할 AI는 내가 쓰던 걸 데려옵니다. <b>기존 구독 그대로 = 추가 비용 0.</b></p>
-<p style="margin-top:12px;font-weight:900">클로드 (Claude Code)</p>
-<pre id="c1">npm install -g @anthropic-ai/claude-code</pre>
-<button class="copy" onclick="cp('c1',this)">명령어 복사</button>
-<p style="margin-top:10px">→ 터미널에 <code>claude</code> 입력 → 브라우저에서 로그인 → 끝. Orca가 자동 인식.</p>
-<p style="margin-top:14px;font-weight:900">코덱스 (ChatGPT)</p>
-<pre id="c2">npm install -g @openai/codex</pre>
-<button class="copy" onclick="cp('c2',this)">명령어 복사</button>
-<p style="margin-top:10px">→ <code>codex</code> 입력 → ChatGPT 계정 로그인. 그록·제미나이도 같은 방식 — 25종 이상 자동 인식.</p></div>
-
-<div class="card"><h2><span class="num">3</span>첫 사용 (2분)</h2>
-<ol><li>Orca 실행 → <b>Open Project</b> → 작업 폴더 선택</li>
-<li><b>New Worktree</b> (+) → 에이전트 선택 (예: Claude Code)</li>
-<li>프롬프트 입력 → AI가 일 시작</li>
-<li><b>병렬의 맛:</b> worktree 하나 더 만들어 다른 AI에게 같은 일 시키기 → 결과 비교 → 승자 채택</li></ol></div>
-
-<div class="card"><h2><span class="num">4</span>폰으로 감시하기 (보너스)</h2>
-<ol><li>폰에 <b>Orca IDE 앱</b> 설치 (앱스토어 / 안드로이드는 GitHub 릴리즈 APK)</li>
-<li>PC Orca에서 페어링 QR → 폰으로 스캔</li>
-<li>침대에서 AI들 실시간 감시 + 지시 (같은 와이파이, 통신 암호화)</li></ol></div>
-
-<div class="card warn"><h2>⚠️ 자주 막히는 곳</h2>
-<ul><li><b>npm 없다고 나옴</b> → nodejs.org에서 LTS 설치 후 터미널 재시작</li>
-<li><b>에이전트가 안 보임</b> → 터미널에서 <code>claude</code> 단독 실행되는지 먼저 확인</li>
-<li><b>Orca는 무료지만</b> 안에서 돌리는 AI는 각자 구독 필요 (클로드 Pro, ChatGPT Plus 등)</li></ul></div>
-<div class="foot"><div class="hammer">🔨</div><p>매일 업데이트되는 AI, 직접 두드려봅니다.<br>다음 실험도 DM으로 받아보세요.</p><a class="follow" href="https://www.instagram.com/ai_tomangchi.lab/" target="_blank">인스타 <b>@ai_tomangchi.lab</b> 팔로우</a></div>
-</div><script>function cp(id,btn){var t=document.getElementById(id).innerText;navigator.clipboard.writeText(t).then(function(){var o=btn.innerText;btn.innerText="복사됨! ✓";setTimeout(function(){btn.innerText=o},1600)})}</script></body></html>
+<div class="box">
+<div class="h">🐰🔨</div>
+<p>토망치랩 키트가 새 주소로 옮겨졌어요. 잠시 후 자동으로 이동합니다.</p>
+<a class="btn" href="https://tomangchi-lab.github.io/kits/orca.html">지금 바로 이동하기 →</a>
+</div>
+<script>location.replace("https://tomangchi-lab.github.io/kits/orca.html");</script>
+</body></html>

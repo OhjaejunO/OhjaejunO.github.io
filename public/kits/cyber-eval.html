@@ -1,165 +1,24 @@
-<!doctype html><html lang="ko"><head><title>🛡️ AI 사이버 평가 사고 2건 — 타임라인 + 공식 원문 — 토망치랩</title>
+<!doctype html><html lang="ko"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🛡️ AI 사이버 평가 사고 2건 — 타임라인 + 공식 원문 — 토망치랩</title>
+<meta http-equiv="refresh" content="0; url=https://tomangchi-lab.github.io/kits/cyber-eval.html">
+<link rel="canonical" href="https://tomangchi-lab.github.io/kits/cyber-eval.html">
+<meta name="robots" content="noindex">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#FCF8F0;--ink:#1C2028;--cyan:#34DCE6;--cyan-d:#1E8C96;--line:#EBE4D7;--gray:#787E88;--coral:#D97757;}
+:root{--cream:#FCF8F0;--ink:#1C2028;--cyan:#34DCE6;--cyan-d:#1E8C96;--line:#EBE4D7;--gray:#787E88;}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--cream);color:var(--ink);font-family:'Noto Sans KR',-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
-.top{background:var(--ink);color:#fff;padding:14px 20px;display:flex;align-items:center;gap:10px;justify-content:center}
-.top .mark{font-size:20px}
-.top .word{font-weight:900;letter-spacing:.06em;font-size:15px}
-.top .word b{color:var(--cyan)}
-.wrap{max-width:640px;margin:0 auto;padding:28px 20px 60px}
-.badge{display:inline-block;border:2px solid var(--cyan);color:var(--cyan-d);border-radius:999px;padding:4px 16px;font-weight:700;font-size:13px;margin-bottom:14px}
-h1{font-weight:900;font-size:26px;line-height:1.35;margin-bottom:10px}
-.lead{color:#464c56;font-size:15px;margin-bottom:26px}
-.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 20px;margin-bottom:16px;box-shadow:0 4px 14px rgba(28,32,40,.05)}
-.card h2{font-size:18px;font-weight:900;display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--cyan);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:900}
-.card p,.card li{font-size:15px;color:#3a4049}
-.card ol,.card ul{padding-left:22px;display:grid;gap:6px}
-.card .tip{margin-top:12px;background:var(--cream);border-radius:12px;padding:10px 14px;font-size:13.5px;color:var(--cyan-d);font-weight:700}
-.btn{display:block;text-align:center;background:var(--cyan);color:#04343a;font-weight:900;font-size:17px;text-decoration:none;border-radius:999px;padding:15px;margin:8px 0}
-.warn{border-left:4px solid var(--coral);padding-left:14px}
-.foot{text-align:center;margin-top:34px}
-.foot .hammer{font-size:26px}
-.foot p{font-size:14px;color:var(--gray);margin:8px 0 14px}
-.follow{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:900;border-radius:999px;padding:13px 26px;font-size:15px}
-.follow b{color:var(--cyan)}
-/* ── 이 페이지 전용 ── */
-.tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.tag{font-size:12.5px;font-weight:900;border-radius:999px;padding:4px 12px}
-.tag.a{background:#E6F9FB;color:var(--cyan-d)}
-.tag.b{background:#FBEDE7;color:#B4522F}
-.tl{list-style:none;padding:0!important;display:grid;gap:0!important}
-.tl li{position:relative;padding:0 0 20px 26px;border-left:2px solid var(--line)}
-.tl li:last-child{border-left-color:transparent;padding-bottom:0}
-.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--line)}
-.tl li.ev-a::before{background:var(--cyan)}
-.tl li.ev-b::before{background:var(--coral)}
-.tl .d{font-size:12.5px;font-weight:900;color:var(--gray);letter-spacing:.02em}
-.tl .t{font-size:15.5px;font-weight:900;margin:2px 0 3px}
-.tl .s{font-size:14px;color:#565c66}
-.tl .chip{display:inline-block;font-size:11.5px;font-weight:900;border-radius:6px;padding:1px 7px;margin-left:6px;vertical-align:1px}
-.chip.a{background:#E6F9FB;color:var(--cyan-d)}
-.chip.b{background:#FBEDE7;color:#B4522F}
-.chip.n{background:#EFEFF2;color:#6B7280}
-.src{list-style:none;padding:0!important;display:grid;gap:10px}
-.src a.x{display:block;text-decoration:none;color:inherit;background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
-.src a.x:active{transform:scale(.99)}
-.src .h{font-size:14.5px;font-weight:900;display:flex;align-items:center;gap:7px}
-.src .h em{font-style:normal;color:var(--cyan-d)}
-.src .m{font-size:13px;color:#565c66;margin-top:3px}
-.src .go{font-size:12.5px;font-weight:900;color:var(--cyan-d);margin-top:6px}
-.docs{margin-top:14px;font-size:13.5px}
-.docs a{color:var(--cyan-d);font-weight:700;word-break:break-all}
-.bal{background:#fff;border:1px solid var(--line);border-left:4px solid var(--coral);border-radius:14px;padding:18px 18px;margin-bottom:16px}
-.bal h3{font-size:16px;font-weight:900;margin-bottom:8px}
-.bal p{font-size:14.5px;color:#3a4049;margin-bottom:8px}
-.bal p:last-child{margin-bottom:0}
-.bal q{font-weight:700;color:#B4522F}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+body{background:var(--cream);color:var(--ink);font-family:'Noto Sans KR',-apple-system,sans-serif;line-height:1.65;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px;text-align:center}
+.box{max-width:420px}
+.h{font-size:26px;margin-bottom:10px}
+p{font-size:15px;color:#565c66;margin-bottom:18px}
+a.btn{display:inline-block;background:var(--cyan);color:#04343a;font-weight:900;font-size:15px;text-decoration:none;border-radius:999px;padding:13px 24px}
 </style></head><body>
-<header class="top"><span class="mark">🐰🔨</span><span class="word">AI TOMANGCHI <b>LAB</b></span></header>
-<div class="wrap">
-<span class="badge">받아가세요</span>
-<h1>🛡️ AI가 평가장 밖<br>실제 시스템에 접근했다</h1>
-<p class="lead">일주일 사이 벌어진 <b>별개의 사건 2건</b>과, 그 뒤에 붙은 업계 공동 대응까지. 날짜순 타임라인과 공식 원문 링크를 한 곳에 모았습니다.</p>
-
-<div class="tags">
-  <span class="tag a">사건 ① Anthropic 자체 리뷰</span>
-  <span class="tag b">사건 ② 영국 AISI 평가</span>
+<div class="box">
+<div class="h">🐰🔨</div>
+<p>토망치랩 키트가 새 주소로 옮겨졌어요. 잠시 후 자동으로 이동합니다.</p>
+<a class="btn" href="https://tomangchi-lab.github.io/kits/cyber-eval.html">지금 바로 이동하기 →</a>
 </div>
-
-<div class="card"><h2><span class="num">1</span>타임라인 (날짜순 · KST)</h2>
-<ul class="tl">
-  <li class="ev-b">
-    <div class="d">7월 28일</div>
-    <div class="t">AISI, 정기 사이버 평가 중 사고 식별<span class="chip b">사건 ②</span></div>
-    <div class="s">영국 AI Security Institute가 루틴 평가 도중 AI 에이전트의 무단 행위를 확인. 이 시점엔 비공개.</div>
-  </li>
-  <li class="ev-a">
-    <div class="d">7월 31일 08:02</div>
-    <div class="t">Anthropic, 자체 리뷰 결과 공개<span class="chip a">사건 ①</span></div>
-    <div class="s">평가 파트너 Irregular와 함께 자사 사이버보안 평가를 재검토. Claude 모델이 제3자 평가 환경에서 인터넷에 도달해 <b>실제 조직 3곳의 시스템에 무단 접근한 사고 3건</b>을 발견했다고 발표.</div>
-  </li>
-  <li class="ev-n">
-    <div class="d">8월 4일 22:01</div>
-    <div class="t">NVIDIA, Open Secure AI Alliance 확대 발표<span class="chip n">업계 대응</span></div>
-    <div class="s">회원 120곳 돌파. 비공개 사고 조사 결과를 생태계 전체의 방어로 전환하기 위한 <b>SAFE 가이드라인</b>을 제안·오픈소스 공개.</div>
-  </li>
-  <li class="ev-b">
-    <div class="d">8월 5일 06:00</div>
-    <div class="t">AISI, 사고 리포트 공개<span class="chip b">사건 ②</span></div>
-    <div class="s">Anthropic·OpenAI 프런티어 모델 기반 에이전트가 대상. 가장 심각한 사례에서 에이전트가 <b>소셜 엔지니어링으로 오픈소스 프로젝트에 악성 코드를 넣으려 시도</b>.</div>
-  </li>
-  <li class="ev-n">
-    <div class="d">8월 5일 06:05</div>
-    <div class="t">OpenAI, 신규 사고 2건 공개<span class="chip n">같은 날 공개</span></div>
-    <div class="s">독립 평가 파트너들이 수행한 외부 사이버 평가 중 발생한 사고 2건. 무슨 일이 있었고 어떻게 봉쇄했는지, 3자 테스트 체계를 어떻게 강화할지 설명.</div>
-  </li>
-  <li class="ev-b">
-    <div class="d">8월 5일 06:07</div>
-    <div class="t">Anthropic, AISI 리포트에 대한 입장<span class="chip b">사건 ②</span></div>
-    <div class="s">AISI와 협력해 자체 조사 진행 중. 평가가 <b>"의도적으로 허용적인 조건"</b>이었으며 프로덕션 모델을 대표하지 않는다고 명시.</div>
-  </li>
-  <li class="ev-n">
-    <div class="d">8월 5일 06:53</div>
-    <div class="t">HuggingFace, 공동 대응 동참<span class="chip n">업계 대응</span></div>
-    <div class="s">NVIDIA 발표를 인용하며 사고 학습(incident learning) 가이드라인 공동 개발을 밝힘.</div>
-  </li>
-</ul>
-<p class="tip">🔎 사건 ①과 ②는 <b>별개 사건</b>입니다. ①은 Anthropic이 스스로 찾아 공개한 3건, ②는 영국 정부기관 평가 중 벌어진 건입니다.</p></div>
-
-<div class="card"><h2><span class="num">2</span>공식 원문 6건 (X 포스트)</h2>
-<ul class="src">
-  <li><a class="x" href="https://x.com/AnthropicAI/status/2082965101083320543" target="_blank" rel="noopener">
-    <div class="h"><em>@AnthropicAI</em> · 7/31 <span class="chip a">사건 ①</span></div>
-    <div class="m">"…실제 조직 3곳의 시스템에 무단 접근한 사고 3건을 발견했다"</div>
-    <div class="go">원문 보기 →</div></a></li>
-
-  <li><a class="x" href="https://x.com/AISecurityInst/status/2084746202579386632" target="_blank" rel="noopener">
-    <div class="h"><em>@AISecurityInst</em> · 8/5 <span class="chip b">사건 ②</span></div>
-    <div class="m">"자율성과 기만 리스크가 현실 세계에서 이렇게 명확히 드러난 건 처음이다"</div>
-    <div class="go">원문 보기 →</div></a></li>
-
-  <li><a class="x" href="https://x.com/AnthropicAI/status/2084748111239344556" target="_blank" rel="noopener">
-    <div class="h"><em>@AnthropicAI</em> · 8/5 <span class="chip b">사건 ② 입장</span></div>
-    <div class="m">"의도적으로 허용적인 조건… 보안 환경을 탈출한 증거는 없다"</div>
-    <div class="go">원문 보기 →</div></a></li>
-
-  <li><a class="x" href="https://x.com/OpenAI/status/2084747580693426555" target="_blank" rel="noopener">
-    <div class="h"><em>@OpenAI</em> · 8/5 <span class="chip n">신규 2건</span></div>
-    <div class="m">"외부 사이버 평가 중 발생한 신규 사고 2건을 상세히 공개합니다"</div>
-    <div class="go">원문 보기 →</div></a></li>
-
-  <li><a class="x" href="https://x.com/nvidia/status/2084625868173820144" target="_blank" rel="noopener">
-    <div class="h"><em>@nvidia</em> · 8/4 <span class="chip n">업계 대응</span></div>
-    <div class="m">"Open Secure AI Alliance 회원 120곳 돌파… SAFE 가이드라인 제안"</div>
-    <div class="go">원문 보기 →</div></a></li>
-
-  <li><a class="x" href="https://x.com/huggingface/status/2084759576692363460" target="_blank" rel="noopener">
-    <div class="h"><em>@huggingface</em> · 8/5 <span class="chip n">업계 대응</span></div>
-    <div class="m">"사고 학습 가이드라인을 공동으로 개발하고 있습니다"</div>
-    <div class="go">원문 보기 →</div></a></li>
-</ul>
-<div class="docs"><b>공식 문서 원문</b><br>
-· <a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals" target="_blank" rel="noopener">anthropic.com — 사이버보안 평가 사고 조사</a><br>
-· <a href="https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing" target="_blank" rel="noopener">aisi.gov.uk — 사고 리포트 전문</a><br>
-· <a href="https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/" target="_blank" rel="noopener">openai.com — 3자 사이버 평가 관련 공개</a>
-</div></div>
-
-<div class="bal">
-<h3>⚖️ 같이 봐야 할 조건</h3>
-<p><b>사건 ②는 안전장치를 의도적으로 해제하고 인터넷 접근을 허용한 테스트 환경이었습니다.</b> AISI는 모델 제공사의 사이버 분류기를 일부러 비활성화했고, 이는 프런티어 모델이 일반에 제공되는 방식과 다르다고 원문에 명시했습니다.</p>
-<p>Anthropic은 사건 ②에 대해 <q>"보안 환경을 탈출한 증거는 없다"</q>고 밝혔고, 평가가 <q>"의도적으로 허용적인 조건"</q>에서 이뤄져 자사 프로덕션 모델을 대표하지 않는다고 덧붙였습니다.</p>
-<p>다만 AISI는 <q>"시험 조건이었음에도 이 사건은 중대하다"</q>고 평가했습니다. 두 문장을 함께 읽어야 이번 건이 제대로 보입니다.</p>
-</div>
-
-<div class="card"><h2><span class="num">3</span>토망치 한 줄</h2>
-<p>"AI가 위험하다"가 아니라 <b>"울타리 설계가 산업이 됐다"</b>는 이야기예요. 사고를 숨기지 않고 공개 → 공동 대응으로 이어진 게 이번 주의 진짜 뉴스입니다.</p>
-<p class="tip">💡 평가 환경 조건까지 같이 봐야 기사 제목에 안 휘둘립니다.</p></div>
-
-<div class="foot"><div class="hammer">🔨</div><p>매일 업데이트되는 AI, 직접 두드려봅니다.<br>다음 실험도 DM으로 받아보세요.</p><a class="follow" href="https://www.instagram.com/ai_tomangchi.lab/" target="_blank" rel="noopener">인스타 <b>@ai_tomangchi.lab</b> 팔로우</a></div>
-</div></body></html>
+<script>location.replace("https://tomangchi-lab.github.io/kits/cyber-eval.html");</script>
+</body></html>
