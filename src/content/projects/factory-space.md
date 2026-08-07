@@ -54,7 +54,7 @@ keyLearnings:
     description: Meshy로 생성한 메시가 셀 크기를 뚫거나 바닥에 절반쯤 박혔다. 생성과 정합은 별개의 문제였다. FBX는 UE5.7 Interchange에서 메시가 유실돼 GLB로 고정했고, 이후 자동 생성 머티리얼이 삭제된 텍스처를 참조해 머신 3종이 컴파일에 실패하는 사고까지 겪었다.
     blogLink: /blog/factory-sim/06-meshy-glb-asset-pipeline
 
-draft: true
+draft: false
 ---
 
 ## 프로젝트 개요
