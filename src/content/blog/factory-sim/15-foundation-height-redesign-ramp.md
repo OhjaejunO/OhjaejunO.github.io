@@ -146,6 +146,8 @@ gap 2+ → 자동 맞춤 램프 (행당 계단 ≤ 45uu 검증 — 걸어 오를
 
 > **호버 = 배치, 한 길.** 이 자동 산출이 *미리보기*와 *실제 배치*에서 다른 결과를 내면 재앙이에요(보이는 램프와 놓이는 램프가 다름). 그래서 풋프린트 결정을 단일 훅(`OJJ_ComputeHoverFootprint`)으로 모아, 호버와 배치가 *같은 함수*를 부르게 했습니다. [4편](/blog/factory-sim/04-mouse-input-build-controller)·[7편](/blog/factory-sim/07-port-cell-unification) 이래 줄곧 지켜온 "미리보기 = 클릭 판정 단일 진실원"이 여기서도 규칙입니다.
 
+<video autoplay muted loop playsinline src="/videos/blog/factory-sim/s09-ramp.mp4"></video>
+
 ---
 
 ## 7. 마치며 — 평면이 자란다
@@ -162,6 +164,5 @@ gap 2+ → 자동 맞춤 램프 (행당 계단 ≤ 45uu 검증 — 걸어 오를
 
 <!-- TODO: 스크린샷 — (좌) 14편 방식: 경사지 인접 판이 제각각 단 / (우) 재설계 후: 한 평면으로 확장 비교 (hero 후보) -->
 <!-- TODO: 스크린샷 — 두 단 사이를 잇는 계단형 램프 (양 끝 턱 0) -->
-<!-- TODO: 스크린샷 — 자동 맞춤 램프 프리뷰: 두 판 사이 틈에 맞춰 산출된 램프 (방향 자동) -->
 
 — JJ

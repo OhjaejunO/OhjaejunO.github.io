@@ -75,6 +75,8 @@ MinZ ->DefaultValue = 0.0f;   MaxZ ->DefaultValue = 100.0f;      // MID가 런�
 
 동작 원리는 마스크 하나다. 픽셀의 월드 Z를 `MinZ~MaxZ`로 정규화한 값(`NormZ`)이 `Progress`보다 아래면 실체(프록시가 투명해져 실제 메시가 보임), 위면 홀로그램. 경계에는 `1 - abs(NormZ - Progress) / ScanlineWidth`로 글로우 라인이 서고, 주사선과 지지직 플리커가 홀로그램 질감을 얹는다.
 
+<video autoplay muted loop playsinline src="/videos/blog/factory-sim/s11-hologram.mp4"></video>
+
 이 Z 마스크는 곧바로 한계를 만났다 — **컨베이어는 가로로 길다.** 아래에서 위로 차오르면 전 구간이 동시에 켜진다. 그래서 마스크의 축을 파라미터로 뽑은 변형(`PathStart`/`PathDir`/`PathLength`에 대한 투영)을 추가해, 컨베이어와 파이프는 **시작점에서 끝점으로** 차오르게 했다. 정규화된 진행도에 경계 글로우를 세우는 뒷단은 두 모드가 공유한다.
 
 사다리(ISM 다중 인스턴스)까지 확장하면서 함정도 하나 밟았다. 인스턴스 추가 직후의 컴포넌트 `Bounds`가 타이밍에 따라 적층 전체를 안 담아서 MinZ/MaxZ 범위가 무너지고, 연출이 차오름 없이 한꺼번에 점등됐다. 컴포넌트가 보고하는 Bounds 대신 **인스턴스들의 월드 AABB를 직접 누적**해서 바닥→꼭대기를 보장하는 것으로 해결.

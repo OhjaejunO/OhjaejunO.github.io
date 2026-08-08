@@ -48,6 +48,8 @@ draft: false
 
 회전도 맞춰야 했다. 방향성 머신은 고스트가 90° 어긋나면 "입구가 어디로 가는지"를 거꾸로 보여준다. 그래서 액터 yaw에 메시 상대 회전(+90° 시각 보정)을 합성해서, 고스트의 방향과 실제 배치 방향을 일치시켰다. R키로 회전하면 고스트가 메시 모양째로 90°씩 돈다.
 
+<video autoplay muted loop playsinline src="/videos/blog/factory-sim/s03-rotate.mp4"></video>
+
 ---
 
 ## 3. 반투명끼리 색이 섞였다 — 그리드 시각 위계 (#215)
