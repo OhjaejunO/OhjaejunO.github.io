@@ -141,6 +141,8 @@ float AMachineBase::GetFinalEfficiency() const
 
 돔 스케일이 `GetShieldRadius() / 50`인 게 중요하다 — **판정에 쓰는 반경과 화면에 보이는 돔이 같은 값 하나에서 나온다.** 반경은 500에서 시작해 700을 거쳐 최종 1200uu(12칸)로 커졌는데, 값이 세 번 바뀌는 동안 판정과 비주얼이 어긋난 적이 없다. 단일 출처의 힘이다.
 
+<video autoplay muted loop playsinline src="/videos/blog/factory-sim/b26-dome.mp4"></video>
+
 ---
 
 ## 4. Kill Box — 돔 안에는 폭풍이 들이치면 안 된다

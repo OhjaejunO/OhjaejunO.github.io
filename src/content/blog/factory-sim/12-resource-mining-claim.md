@@ -116,6 +116,8 @@ weak 포인터는 가리키던 액터가 파괴되면 **자동으로 무효(`IsV
 
 먼저 **배치 자체가 조건부**입니다. 채굴기는 아무 데나 못 놓아요 — 인접에 *캘 수 있는* 광맥이 있어야 합니다.
 
+<video autoplay muted loop playsinline src="/videos/blog/factory-sim/b12-miner.mp4"></video>
+
 ```cpp
 // 배치 가능 판정 — 인접에 미선점 Ore 광맥이 하나라도 있어야 true
 bool AMinerMachine::CanPlaceAdditional(const AOJJ_Grid* Grid, FIntPoint Origin, int32 RotationSteps) const

@@ -63,6 +63,8 @@ draft: false
 
 한계도 사실대로 — 생성 프롬프트·파라미터까지는 리포에 없다. 완성된 mp4 바이너리만 커밋되어 있어서, "어떻게 뽑았나"의 세부는 저장소가 기억하지 못한다. 각 클립의 길이·해상도도 바이너리 메타라 여기선 확정할 수 없다.
 
+<video autoplay muted loop playsinline src="/videos/blog/factory-sim/b28-opening.mp4"></video>
+
 ---
 
 ## 3. 세 번째 막은 영상이 아니다

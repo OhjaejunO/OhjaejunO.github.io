@@ -47,6 +47,8 @@ draft: false
 
 `BeginClimb`에서 캐릭터 무브먼트를 `MOVE_Flying` + `GravityScale=0`으로 바꾼다. 중력을 끄고, W/S로 수직 이동(`ClimbSpeed=250`)을 직접 제어한다. 텔레포트가 아니라 진짜로 한 칸씩 올라간다.
 
+<video autoplay muted loop playsinline src="/videos/blog/factory-sim/b17-ladder.mp4"></video>
+
 ```cpp
 void AOJJ_Player::BeginClimb(AOJJ_Ladder* Ladder)
 {

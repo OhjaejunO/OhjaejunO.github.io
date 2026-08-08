@@ -89,6 +89,8 @@ void AOJJ_Grid::OJJ_SetTileParams(UMaterialInstanceDynamic* MID,
 
 **지형 분류 오버레이.** 그리드 전체를 셀 종류별로 물들인다 — buildable(청), blocked(적), water(파랑), 그리고 캐릭터가 서 있는 셀(노랑). 14편(지형 분류)·16편(물 분류)에서 격자가 셀을 어떻게 나누는지 정했는데, 이건 그 분류를 *눈에 보이게* 하는 면이다. 참고로 캐릭터 셀(노랑)은 시각 전용이라 그리드 점유 장부에는 등록하지 않는다 — 보여주기만 하고 배치 판정에는 안 낀다.
 
+<video autoplay muted loop playsinline src="/videos/blog/factory-sim/b03-grid.mp4"></video>
+
 **철거 하이라이트.** Demolish 서브모드에 들어가 커서를 머신에 올리면, 그 머신이 차지한 **전체 셀**이 빨강으로 칠해진다. 클릭하면 삭제. 여기서 재밌는 건, 이 빨강 하이라이트가 새 코드가 아니라 **배치 호버 ISM을 그대로 재사용**한다는 점이다.
 
 ```cpp

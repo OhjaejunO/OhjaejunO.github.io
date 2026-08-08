@@ -331,7 +331,9 @@ void AOJJ_BuildController::OnLeftClickPressed()
 - **센티넬 가드** — 호버가 한 번도 유효하지 않았으면(`CurrentHoverCell`이 `INT_MIN`) 클릭을 무시합니다. 3절에서 빗맞음/off-grid일 때 이 값을 센티넬로 박아둔 게 여기서 작동해요.
 - **SP-only 정직함** — 맨 위 `HasAuthority` 가드는 이 컨트롤러가 아직 싱글플레이 전용이라는 계약입니다. 헤더에도 멀티플레이 전환 시 "좌클릭 → Server RPC → 서버 spawn/등록 → replication" 으로 가야 한다고 한계를 명시해뒀어요. 멀티는 후속 Phase 숙제로 남겼습니다.
 
-> 📐 (배치 성공/실패 — 녹색 호버에서 좌클릭 → 머신 안착, 빨강에서 좌클릭 → 거부 로그 — 스크린샷 후속 첨부 예정)
+![점유된 셀 위에 고스트를 올리면 풋프린트 전체가 빨강으로 물든다 — 이 상태에서 좌클릭하면 거부된다](/images/blog/factory-sim/s04-invalid-ghost.webp)
+
+> 📐 (배치 *성공* 컷 — 녹색 호버에서 좌클릭 → 머신 안착 — 은 후속 첨부 예정)
 
 ---
 

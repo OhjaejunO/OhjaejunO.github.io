@@ -247,6 +247,8 @@ int32 AConveyor::FindPreviousVisualSlotIndex(int32 VisualId) const
 
 이 한 함수에 보간의 전부가 들어 있습니다. 번호 `42`가 직전에 슬롯 1에 있었으면, 시작점 = 슬롯 1 중심, 끝점 = (지금) 슬롯 2 중심. alpha가 0→1로 가는 1초 동안 `Lerp`가 두 칸 사이를 매끄럽게 채우고, 매 프레임 `Tick`이 이걸 다시 계산해 인스턴스를 다시 깝니다. 슬롯은 1초에 한 번 점프하지만, *화면 속 큐브*는 60fps로 미끄러져요. 진실은 이산, 그림은 연속 — 두 시계가 동시에 도는 그림이 완성됩니다.
 
+<video autoplay muted loop playsinline src="/videos/blog/factory-sim/b09-conveyor.mp4"></video>
+
 ---
 
 ## 6. 가장자리 두 장면 — 인입 슬라이드와 막힘 정지

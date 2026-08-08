@@ -61,6 +61,8 @@ float CornerToYaw90(FIntPoint PreviousDirection, FIntPoint NextDirection)
 
 이 개편이 끝나자 구 박스 메시와 전용 머티리얼·텍스처 10여 종을 삭제했다. 그리고 이 시점엔 몰랐지만 — **세그먼트가 "균일 스케일 + 쿼터니언 자세"로 정비된 것이 경사의 선행 조건이었다.** 자세가 쿼터니언 합성이면, 경사는 그 합성에 pitch 쿼터니언 하나를 끼워 넣는 문제가 된다.
 
+<video autoplay muted loop playsinline src="/videos/blog/factory-sim/b23-slope.mp4"></video>
+
 ---
 
 ## 2. 계획 — 남의 코드에는 수식 항등으로 들어간다

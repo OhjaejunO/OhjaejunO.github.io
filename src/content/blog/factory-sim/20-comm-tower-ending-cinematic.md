@@ -51,6 +51,8 @@ draft: false
 
 **컷1 카메라는 하드코딩이 아니라 탑의 Bounds에서 산출한다.** 플레이어마다 공장 규모가 다르니 고정 좌표는 애초에 불가능하다. Bounds 바깥 낮은 높이에서 올려다보는 로우앵글로 규모감을 만들고, 푸시인은 4초 smoothstep 보간이다.
 
+<video autoplay muted loop playsinline src="/videos/projects/factory-space/ending-beam.mp4"></video>
+
 ```cpp
 // 푸시인: 선형 보간의 기계적 등속감 제거
 const float S = FMath::SmoothStep(0.f, 1.f, Alpha);   // Alpha: 0→1 / 4초
