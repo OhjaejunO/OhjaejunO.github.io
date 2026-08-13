@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AX 해커톤 본선 — 인플루언서 시딩 엔진 | 오재준</title>
+<meta name="description" content="성과 귀속을 운영 프로토콜로 확정한 인플루언서 시딩 엔진 시스템 설계 — AX 해커톤 본선 상세 문서">
+<style>
+  :root { --ink:#1a2b33; --sub:#5a6b73; --line:#e3e8ea; --accent:#0f766e; --bg:#ffffff; --box:#f6f8f9; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Noto Sans KR","Apple SD Gothic Neo",sans-serif; color:var(--ink); background:var(--bg); line-height:1.75; }
+  .wrap { max-width:760px; margin:0 auto; padding:56px 24px 96px; }
+  .kicker { font-size:13px; font-weight:700; color:var(--accent); letter-spacing:.08em; }
+  h1 { font-size:26px; font-weight:700; margin:8px 0 6px; }
+  .lede { color:var(--sub); font-size:15px; }
+  hr { border:0; border-top:2px solid var(--ink); margin:28px 0 36px; }
+  h2 { font-size:19px; font-weight:700; margin:44px 0 8px; }
+  h2 .n { color:var(--accent); margin-right:10px; }
+  .tag { font-size:13px; color:var(--sub); font-weight:500; margin-bottom:14px; }
+  h3 { font-size:15px; font-weight:700; margin:22px 0 6px; }
+  p { font-size:15px; margin-bottom:12px; }
+  ul { margin:0 0 12px 20px; font-size:15px; }
+  li { margin-bottom:6px; }
+  .box { background:var(--box); border-radius:10px; padding:20px 22px; margin:16px 0; }
+  code { background:var(--box); border-radius:4px; padding:1px 6px; font-size:13.5px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin:12px 0 16px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-weight:700; white-space:nowrap; }
+  .foot { margin-top:64px; padding-top:16px; border-top:1px solid var(--line); font-size:13px; color:var(--sub); display:flex; justify-content:space-between; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">AX 해커톤 본선 · 3시간 개인전</div>
+  <h1>인플루언서 시딩 엔진 — 성과 귀속을 운영 프로토콜로</h1>
+  <p class="lede">조코딩AX파트너스 · 2026.07 · 메디테라피 트랙. 어떤 인플루언서에게 제품을 보내고, 그 성과를 어떻게 셀 것인가.</p>
+  <hr>
+
+  <h2><span class="n">1</span>과제</h2>
+  <p>인플루언서 시딩(제품 증정 협업)은 "보냈는데 효과가 있었는가"를 답하지 못하면 지속할 수 없습니다. 3시간 안에 선정 → 발송 → 성과 측정까지 이어지는 시스템을 설계하는 과제였습니다.</p>
+
+  <h2><span class="n">2</span>핵심 판단 — 어트리뷰션을 기술이 아니라 운영 공정으로</h2>
+  <div class="box">
+    <p><b>'누가 매출을 만들었는가'를 확률 모델로 추정하지 않고, 인플루언서별 전용 쿠폰 코드(<code>MEDI-&lt;id&gt;</code>)로 확정합니다.</b></p>
+    <p>모델 기반 어트리뷰션은 정확도를 다투지만, 운영 프로토콜은 정의상 100%입니다. 쿠폰 코드가 곧 성과 원장(ledger)이 됩니다.</p>
+  </div>
+  <p>예선(<a href="../ax-prelim/">규정 판정 플러그인 2종</a>)과 같은 원칙입니다 — 신뢰가 필요한 숫자는 추정이 아니라 결정적 규칙·공정으로 만듭니다.</p>
+
+  <h2><span class="n">3</span>산출물 — 설계 문서 5종 + 백테스트 데모 킷</h2>
+  <table>
+    <tr><th>DESIGN.md</th><td>시스템 설계 — 선정 기준, 쿠폰 프로토콜, 성과 집계 파이프라인</td></tr>
+    <tr><th>HYPOTHESIS.md</th><td>가설과 반증 조건 — 무엇이 확인되면 이 설계가 틀린 것인가</td></tr>
+    <tr><th>BRIEF.md</th><td>운영자용 요약 — 비개발자가 그대로 실행할 수 있는 수준</td></tr>
+    <tr><th>HANDOVER.md</th><td>인수인계 — 다음 사람이 이어받기 위한 상태·결정 기록</td></tr>
+    <tr><th>APPENDIX_QA.md</th><td>예상 질문과 답 — 설계 판단의 근거를 문답으로</td></tr>
+  </table>
+  <p>문서만이 아니라 <b>백테스트 데모 킷</b>으로 집계 로직을 코드로 검증했습니다. 판단의 근거를 문서로 남기고 전 과정을 공개 저장소로 운영합니다.</p>
+  <p>저장소: <a href="https://github.com/OhjaejunO/meditherapy-seeding-engine">github.com/OhjaejunO/meditherapy-seeding-engine</a></p>
+
+  <h2><span class="n">4</span>이 경험이 연결되는 곳</h2>
+  <p>콘텐츠·인플루언서 마케팅에서 "성과를 어떻게 셀 것인가"를 설계해 본 경험은, 발행 이후의 성과 데이터 관리 — 무엇을 기록하고 무엇으로 판단할지 정의하는 일 — 와 직결됩니다.</p>
+
+  <div class="foot">
+    <span>오재준 — AI 콘텐츠 제작·운영 포트폴리오</span>
+    <span><a href="https://ohjaejuno.github.io">ohjaejuno.github.io</a></span>
+  </div>
+</div>
+</body>
+</html>
+
