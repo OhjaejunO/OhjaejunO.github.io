@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AX 해커톤 예선 — 규정을 판정 가능한 시스템으로 | 오재준</title>
+<meta name="description" content="기업 실무 문제 2건을 Codex 플러그인으로 설계·구현한 AX 해커톤 예선 통과작 상세 문서">
+<style>
+  :root { --ink:#1a2b33; --sub:#5a6b73; --line:#e3e8ea; --accent:#0f766e; --bg:#ffffff; --box:#f6f8f9; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Noto Sans KR","Apple SD Gothic Neo",sans-serif; color:var(--ink); background:var(--bg); line-height:1.75; }
+  .wrap { max-width:760px; margin:0 auto; padding:56px 24px 96px; }
+  .kicker { font-size:13px; font-weight:700; color:var(--accent); letter-spacing:.08em; }
+  h1 { font-size:26px; font-weight:700; margin:8px 0 6px; }
+  .lede { color:var(--sub); font-size:15px; }
+  hr { border:0; border-top:2px solid var(--ink); margin:28px 0 36px; }
+  h2 { font-size:19px; font-weight:700; margin:44px 0 8px; }
+  h2 .n { color:var(--accent); margin-right:10px; }
+  .tag { font-size:13px; color:var(--sub); font-weight:500; margin-bottom:14px; }
+  h3 { font-size:15px; font-weight:700; margin:22px 0 6px; }
+  p { font-size:15px; margin-bottom:12px; }
+  ul { margin:0 0 12px 20px; font-size:15px; }
+  li { margin-bottom:6px; }
+  .box { background:var(--box); border-radius:10px; padding:20px 22px; margin:16px 0; }
+  code { background:var(--box); border-radius:4px; padding:1px 6px; font-size:13.5px; }
+  .foot { margin-top:64px; padding-top:16px; border-top:1px solid var(--line); font-size:13px; color:var(--sub); display:flex; justify-content:space-between; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">AX 해커톤 예선 · 통과작</div>
+  <h1>규정을 판정 가능한 시스템으로</h1>
+  <p class="lede">기업 실무 문제 2건을 Codex 플러그인으로 설계·구현. 공통 원칙 — 판정은 규칙, LLM은 보조.</p>
+  <hr>
+
+  <h2><span class="n">1</span>마이리얼트립 — 환불 규정 네비게이터</h2>
+  <div class="tag">여행 플랫폼 · CS 자동화</div>
+
+  <h3>문제</h3>
+  <p>여행 상품 환불 규정은 카테고리·항공사·취소 시점·사유에 따라 갈라지고, CS 상담원과 고객 모두 "이 경우 얼마가 환불되는가"를 규정 원문에서 직접 찾아야 합니다. LLM에게 그냥 물으면 그럴듯하지만 틀린 답이 나올 수 있고, 환불액은 틀리면 안 되는 숫자입니다.</p>
+
+  <h3>설계 판단</h3>
+  <div class="box">
+    <p><b>판정·계산은 100% 결정적 룰 엔진. LLM은 입력 변환(정규화)만.</b></p>
+    <p>같은 입력이면 언제나 같은 환불액이 나와야 신뢰할 수 있습니다. 규정 해석을 확률에 맡기지 않았습니다.</p>
+  </div>
+  <ul>
+    <li>헬프센터 원문 12개 문서를 규칙 JSON으로 구조화 — 전 규칙에 <b>출처 링크·확인 일자</b> 부착</li>
+    <li>입력: 카테고리·항공사·취소 시점·사유 → 출력: 예상 환불액·수수료 내역·필요 증빙 + <b>근거 조항 링크</b></li>
+    <li>공식 사이트 403 차단 → Zendesk 공개 API로 우회해 <b>원문만</b> 사용 (추측·요약본 배제)</li>
+  </ul>
+
+  <h3>검증</h3>
+  <ul>
+    <li>경계값 검증 <b>32건 통과</b> (취소 시점 경계·수수료 구간 경계 중심)</li>
+    <li>Codex 교차 리뷰로 로직 버그 <b>3건 발견·수정</b> — 이종 AI 교차 감리를 검증 공정에 포함</li>
+  </ul>
+
+  <h2><span class="n">2</span>메디테라피 — 4개국 규제 온톨로지</h2>
+  <div class="tag">화장품 · 글로벌 진출 검토</div>
+
+  <h3>문제</h3>
+  <p>화장품이 해외에 나가려면 성분과 마케팅 문구가 나라마다 다른 규제를 통과해야 합니다. 한·미·일·아세안 4개 권역의 규제를 사람이 매번 대조하는 것은 느리고, LLM이 "될 것 같다"고 말하는 것은 근거가 아닙니다.</p>
+
+  <h3>설계 판단</h3>
+  <div class="box">
+    <p><b>출처 없으면 '미판정' — 모르는 것을 아는 척하지 않는 설계.</b></p>
+    <p>모든 판정에 법령 원문 출처가 붙습니다. 출처를 못 찾은 항목은 그럴듯한 추정 대신 '미판정'으로 명시합니다.</p>
+  </div>
+  <ul>
+    <li>입력: 전성분(INCI)·마케팅 문구 → 출력: 권역별 규제 리스크 판정 + <b>공식 조항 링크</b></li>
+    <li>성분 규칙 <b>56건</b> · 문구 규칙 <b>26건</b> — 전부 법령 원문 출처 부착</li>
+  </ul>
+
+  <h3>검증</h3>
+  <ul>
+    <li>실제 공개 제품 <b>5종</b>으로 판정 결과를 실물 대조</li>
+  </ul>
+
+  <h2><span class="n">3</span>두 플러그인의 공통 설계 원칙</h2>
+  <div class="tag">판정은 규칙 · LLM은 보조</div>
+  <p>규정 판정이 비결정적이면 신뢰가 무너집니다. LLM은 정규화·플래그까지만 담당하고, 판정과 계산은 출처 추적 가능한 결정적 규칙이 수행합니다. 이 원칙은 본선 설계(<a href="../ax-final/">AX 시딩 엔진</a>)와 AI 콘텐츠 채널의 운영 규칙(이중 출처 교차 확인·출처 우선)으로 그대로 이어집니다.</p>
+
+  <div class="foot">
+    <span>오재준 — AI 콘텐츠 제작·운영 포트폴리오</span>
+    <span><a href="https://ohjaejuno.github.io">ohjaejuno.github.io</a></span>
+  </div>
+</div>
+</body>
+</html>
+
