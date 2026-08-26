@@ -1,335 +1,347 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 2056" width="1280" height="2056" font-family="Pretendard, Noto Sans KR, Malgun Gothic, system-ui, sans-serif" role="img" aria-label="JJ Company 전사 시스템 맵 (세로 흐름)">
-<title>JJ Company — 전사 시스템 맵 (세로 흐름)</title>
-<defs><marker id="m-main" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a78bfa"/></marker><marker id="m-dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b5f95"/></marker><marker id="m-advise" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7dd3fc"/></marker><marker id="m-learn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#fb923c"/></marker><marker id="m-detect" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6ee7d5"/></marker><marker id="m-design" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a92b5"/></marker></defs>
-<rect width="1280" height="2056" fill="#14101f"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 2223" width="1280" height="2223" font-family="Pretendard, Noto Sans KR, Malgun Gothic, system-ui, sans-serif">
+<defs><marker id="m-main" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a78bfa"/></marker><marker id="m-dim" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b5f95"/></marker><marker id="m-advise" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7dd3fc"/></marker><marker id="m-learn" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#fb923c"/></marker><marker id="m-detect" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6ee7d5"/></marker><marker id="m-design" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a92b5"/></marker></defs>
+<rect width="1280" height="2223" fill="#14101f"/>
 <text x="24" y="36" font-size="20" font-weight="700" fill="#e9e6f4">JJ Company — 전사 시스템 맵 (세로 흐름 · 2026-08-26 실물)</text>
-<text x="24" y="56" font-size="12" fill="#9a92b5">위 → 아래 단일 방향: 정본 → 스카우트 유입 → 계약 → 제작 체인 → 게이트 → JJ 휴먼 게이트 → 발행. 역방향은 Learning 회귀(주황) 하나.</text>
-<text x="24" y="72" font-size="11" fill="#8f86ad">노드 33 · 간선 42 전부 산출물 라벨 · 실물 없는 것은 그리지 않는다(유통 워커 점선만 «설계», 본선 밖 «다음» 밴드) · 굵은 보라 = 본선 · 가는 회보라 = 보조 레인 · 파란 점선 = 자문 · 민트 점선 = 감지 · 주황 = Learning · 회색 점선 = 설계</text>
-<rect x="24" y="100" width="1232" height="120" rx="14" fill="#181329" stroke="#2f2745" stroke-dasharray="3 5"/>
+<text x="24" y="56" font-size="12" fill="#9a92b5">위 → 아래 단일 방향: 정본 → 스카우트 유입 → 계약 → 제작 체인 → 게이트 → JJ 휴먼 게이트 → 발행. 역방향은 Learning 회귀(주황) 하나 + 설계 간선(회색 점선).</text>
+<text x="24" y="72" font-size="11" fill="#8f86ad">노드 33 · 간선 42 전부 산출물 라벨 · 굵은 보라 = 본선 · 가는 회보라 = 보조 레인 · 파란 점선 = 자문(비차단) · 민트 점선 = 감지 · 주황 = Learning · 회색 점선 = 설계 · 기하 검사 5종 0건</text>
+<rect x="24" y="100" width="1232" height="124" rx="14" fill="#181329" stroke="#2f2745" stroke-dasharray="3 5"/>
 <text x="36" y="118" font-size="11.5" font-weight="700" fill="#6ee7d5" letter-spacing="1">L1 정본 — 실물이 정본 · 문서는 조회 결과 (참조 노드)</text>
-<g id="n-config">
-<rect x="40" y="130" width="205" height="56" rx="9" fill="#181329" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="49" y="130" width="187" height="3" rx="1.5" fill="#a78bfa" fill-opacity="0.55"/>
-<text x="50" y="150" font-size="11" font-weight="700" fill="#9a92b5">config.md 소스 표</text>
-<text x="50" y="162" font-size="9" fill="#8f86ad">감시 URL 5종 + 단가 2종</text>
-<text x="50" y="174" font-size="9" fill="#8f86ad">실행 시점에 래퍼가 파싱</text>
-</g>
-<g id="n-skill">
-<rect x="255" y="130" width="205" height="56" rx="9" fill="#181329" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="264" y="130" width="187" height="3" rx="1.5" fill="#a78bfa" fill-opacity="0.55"/>
-<text x="265" y="150" font-size="11" font-weight="700" fill="#9a92b5">SKILL.md v3.53 — 제작 규약</text>
-<text x="265" y="162" font-size="9" fill="#8f86ad">§7 제작 순서 단일 목록 11단계</text>
-<text x="265" y="174" font-size="9" fill="#8f86ad">라이브 = origin/main 사본 08f531b</text>
-</g>
-<g id="n-charter">
-<rect x="490" y="130" width="190" height="56" rx="9" fill="#181329" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="499" y="130" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="0.55"/>
-<text x="500" y="150" font-size="11" font-weight="700" fill="#9a92b5">CLAUDE.md — 정관</text>
-<text x="500" y="162" font-size="9" fill="#8f86ad">§0 등급 3단계·머지 4조건</text>
-<text x="500" y="174" font-size="9" fill="#8f86ad">§3 worktree·훅 · §4 스케줄 규약</text>
-</g>
-<g id="n-wdocs">
-<rect x="750" y="130" width="190" height="68" rx="9" fill="#181329" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="759" y="130" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="0.55"/>
-<text x="760" y="150" font-size="11" font-weight="700" fill="#9a92b5">docs/workers 7장 + profiles</text>
-<text x="760" y="162" font-size="9" fill="#8f86ad">양식 4 · FAIL CONDITION</text>
-<text x="760" y="174" font-size="9" fill="#8f86ad">checklists/xreview · profiles/ SO</text>
-<text x="760" y="186" font-size="9" fill="#8f86ad">UL</text>
-</g>
-<g id="n-jobdocs">
-<rect x="1000" y="130" width="172" height="56" rx="9" fill="#181329" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="1009" y="130" width="154" height="3" rx="1.5" fill="#a78bfa" fill-opacity="0.55"/>
-<text x="1010" y="150" font-size="11" font-weight="700" fill="#9a92b5">제출 실물 — 정본은 실값</text>
-<text x="1010" y="162" font-size="9" fill="#8f86ad">/p/ax-portfolio 4쪽 · PDF 4쪽</text>
-<text x="1010" y="174" font-size="9" fill="#8f86ad">docs/ax-final · ax-prelim</text>
-</g>
-<text x="42" y="252" font-size="12" font-weight="700" fill="#a78bfa">본선 — 스카우트 유입 → 제작 체인 → 게이트 → 발행</text>
-<line x1="480" y1="236" x2="480" y2="2076" stroke="#2a2342" stroke-dasharray="4 6"/>
-<text x="492" y="252" font-size="12" font-weight="700" fill="#9a92b5">감사</text>
-<line x1="740" y1="236" x2="740" y2="2076" stroke="#2a2342" stroke-dasharray="4 6"/>
-<text x="752" y="252" font-size="12" font-weight="700" fill="#9a92b5">감시 · 자문</text>
-<line x1="990" y1="236" x2="990" y2="2076" stroke="#2a2342" stroke-dasharray="4 6"/>
-<text x="1002" y="252" font-size="12" font-weight="700" fill="#9a92b5">구직</text>
-<g id="n-srcwatch">
-<rect x="40" y="300" width="260" height="57.5" rx="9" fill="#1c1730" stroke="#6ee7d5" stroke-width="1.1"/>
-<rect x="49" y="300" width="242" height="3" rx="1.5" fill="#6ee7d5" fill-opacity="1"/>
-<text x="50" y="320.5" font-size="11.5" font-weight="700" fill="#e9e6f4">source_watch.py — 래퍼 선실행</text>
-<text x="50" y="333" font-size="9.5" fill="#9a92b5">yt-dlp 로 YouTube 조회</text>
-<text x="50" y="345.5" font-size="9.5" fill="#9a92b5">Threads·IG 는 UNSUPPORTED</text>
-</g>
-<g id="n-scout">
-<rect x="40" y="424" width="260" height="70" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="49" y="424" width="242" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="50" y="444.5" font-size="11.5" font-weight="700" fill="#e9e6f4">tomangchi-scout</text>
-<text x="50" y="457" font-size="9.5" fill="#9a92b5">매일 08:00 · content-scout · sonnet</text>
-<text x="50" y="469.5" font-size="9.5" fill="#9a92b5">acceptEdits + Bash allowlist</text>
-<text x="50" y="482" font-size="9.5" fill="#9a92b5">--add-dir 스캔로그만 쓰기</text>
-</g>
-<g id="n-schema">
-<rect x="40" y="548" width="260" height="57.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="49" y="548" width="242" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="50" y="568.5" font-size="11.5" font-weight="700" fill="#e9e6f4">handoff_schema.py — 노드 계약</text>
-<text x="50" y="581" font-size="9.5" fill="#9a92b5">필수 7 · URL 하한 1/2/2 · 재시도 3</text>
-<text x="50" y="593.5" font-size="9.5" fill="#9a92b5">미기입 허용 · 역검증 9케이스</text>
-</g>
-<g id="n-queue">
-<rect x="40" y="672" width="260" height="45" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="49" y="672" width="242" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="50" y="692.5" font-size="11.5" font-weight="700" fill="#e9e6f4">소재큐 — 인수인계_대기함.md</text>
-<text x="50" y="705" font-size="9.5" fill="#9a92b5">레코드 형식 = 스키마 · 규칙 4 감시표</text>
-</g>
-<g id="n-facts">
-<rect x="40" y="796" width="260" height="45" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="49" y="796" width="242" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="50" y="816.5" font-size="11.5" font-weight="700" fill="#e9e6f4">검증로그 → _facts.py</text>
-<text x="50" y="829" font-size="9.5" fill="#9a92b5">사실·수치·귀속 확정 · 옛 값 PREV</text>
-</g>
-<g id="n-scene">
-<rect x="40" y="920" width="138" height="45" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="49" y="920" width="120" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="50" y="940.5" font-size="11.5" font-weight="700" fill="#e9e6f4">ⓐ 씬</text>
-<text x="50" y="953" font-size="9.5" fill="#9a92b5">scenebuild → _scenes/</text>
-</g>
-<g id="n-shots">
-<rect x="186" y="920" width="138" height="45" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="195" y="920" width="120" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="196" y="940.5" font-size="11.5" font-weight="700" fill="#e9e6f4">ⓑ 캡처·판</text>
-<text x="196" y="953" font-size="9.5" fill="#9a92b5">webshot → shots/0N</text>
-</g>
-<g id="n-kit">
-<rect x="332" y="920" width="138" height="57.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="341" y="920" width="120" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="342" y="940.5" font-size="11.5" font-weight="700" fill="#e9e6f4">ⓒ 킷 체인</text>
-<text x="342" y="953" font-size="9.5" fill="#9a92b5">kitchain shoot → _kit</text>
-<text x="342" y="965.5" font-size="9.5" fill="#9a92b5">_live</text>
-</g>
-<g id="n-build">
-<rect x="40" y="1044" width="260" height="57.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="49" y="1044" width="242" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="50" y="1064.5" font-size="11.5" font-weight="700" fill="#e9e6f4">조립 — build_epNN.py</text>
-<text x="50" y="1077" font-size="9.5" fill="#9a92b5">CARDS·COVER·KIT 선언 → 01~0N</text>
-<text x="50" y="1089.5" font-size="9.5" fill="#9a92b5">kitchain video · caption·pinned</text>
-</g>
-<g id="n-preflight">
-<rect x="40" y="1168" width="260" height="45" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="49" y="1168" width="242" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="50" y="1188.5" font-size="11.5" font-weight="700" fill="#e9e6f4">pre-flight — preflight.py</text>
-<text x="50" y="1201" font-size="9.5" fill="#9a92b5">① 훅 고유명사 ② 판 가독성 ③ 표지 겹침</text>
-</g>
-<g id="n-gate">
-<rect x="40" y="1292" width="260" height="70" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="49" y="1292" width="242" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="50" y="1312.5" font-size="11.5" font-weight="700" fill="#e9e6f4">게이트 24 — epcheck.py (verify)</text>
-<text x="50" y="1325" font-size="9.5" fill="#9a92b5">별도 컨텍스트 · FAIL 이면 안 나간다</text>
-<text x="50" y="1337.5" font-size="9.5" fill="#9a92b5">guard 2/3 ⊂ [8-2] 캡처 최신성 · [8-1] 킷↔FAC</text>
-<text x="50" y="1350" font-size="9.5" fill="#9a92b5">TS</text>
-</g>
-<g id="n-advise">
-<rect x="40" y="1416" width="260" height="45" rx="9" fill="#1c1730" stroke="#7dd3fc" stroke-width="1.8"/>
-<rect x="49" y="1416" width="242" height="3" rx="1.5" fill="#7dd3fc" fill-opacity="1"/>
-<text x="50" y="1436.5" font-size="11.5" font-weight="700" fill="#e9e6f4">xreview 자문 — 비차단</text>
-<text x="50" y="1449" font-size="9.5" fill="#9a92b5">게이트 → 자문 방향 고정 · 🔴 도 판정 불변</text>
-</g>
-<g id="n-pack">
-<rect x="40" y="1540" width="260" height="57.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="49" y="1540" width="242" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="50" y="1560.5" font-size="11.5" font-weight="700" fill="#e9e6f4">발행팩.md + 폰 전달</text>
-<text x="50" y="1573" font-size="9.5" fill="#9a92b5">복붙 세트 · Manychat 문안</text>
-<text x="50" y="1585.5" font-size="9.5" fill="#9a92b5">deliver.py → G: 드라이브 ep 폴더</text>
-</g>
-<g id="n-jj">
-<rect x="40" y="1664" width="1212" height="45" rx="9" fill="#1c1730" stroke="#f87171" stroke-width="1.8"/>
-<rect x="49" y="1664" width="1194" height="3" rx="1.5" fill="#f87171" fill-opacity="1"/>
-<text x="50" y="1684.5" font-size="11.5" font-weight="700" fill="#e9e6f4">JJ — 휴먼 게이트</text>
-<text x="50" y="1697" font-size="9.5" fill="#9a92b5">발행 · 외부 발송 · 과금 · 비가역 git — 등급 무관 · PR 지목 승인 · 소재 컨펌 · 훅 선택 · 리포트 판독</text>
-</g>
-<g id="n-insta">
-<rect x="40" y="1788" width="260" height="45" rx="9" fill="#1c1730" stroke="#e879f9" stroke-width="1.8"/>
-<rect x="49" y="1788" width="242" height="3" rx="1.5" fill="#e879f9" fill-opacity="1"/>
-<text x="50" y="1808.5" font-size="11.5" font-weight="700" fill="#e9e6f4">인스타 @ai_tomangchi.lab</text>
-<text x="50" y="1821" font-size="9.5" fill="#9a92b5">29편 · 게시물 30건 · 발행로그.md</text>
-</g>
-<g id="n-dist">
-<rect x="40" y="1912" width="260" height="54.5" rx="9" fill="#1c1730" stroke="#a78bfa" stroke-width="1.1" stroke-dasharray="5 4"/>
-<rect x="49" y="1912" width="242" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="50" y="1931.5" font-size="10.5" font-weight="700" fill="#e9e6f4">유통 변환 워커 — 설계</text>
-<text x="50" y="1943" font-size="8.5" fill="#9a92b5">Threads 20장·X 4장 초안 → distcheck</text>
-<text x="50" y="1954.5" font-size="8.5" fill="#9a92b5">실행체 미정 · Threads 계정 대기</text>
-</g>
-<g id="n-started">
-<rect x="490" y="300" width="190" height="54.5" rx="9" fill="#1c1730" stroke="#6ee7d5" stroke-width="1.1"/>
-<rect x="499" y="300" width="172" height="3" rx="1.5" fill="#6ee7d5" fill-opacity="1"/>
-<text x="500" y="319.5" font-size="10.5" font-weight="700" fill="#e9e6f4">.started / run_audit.py</text>
-<text x="500" y="331" font-size="8.5" fill="#9a92b5">start 있고 STATUS 없는 회차</text>
-<text x="500" y="342.5" font-size="8.5" fill="#9a92b5">8/26 실값: 8/25 scout·job 무기록 적발</text>
-</g>
-<g id="n-vault">
-<rect x="490" y="424" width="190" height="66" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="499" y="424" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="500" y="443.5" font-size="10.5" font-weight="700" fill="#e9e6f4">morning-vault-health</text>
-<text x="500" y="455" font-size="8.5" fill="#9a92b5">평일 12:30 · ops-auditor · haiku</text>
-<text x="500" y="466.5" font-size="8.5" fill="#9a92b5">권한 default + Edit(reports/**) 시범</text>
-<text x="500" y="478" font-size="8.5" fill="#9a92b5">도구 Read·Glob·Grep·Write</text>
-</g>
-<g id="n-drift">
-<rect x="490" y="548" width="190" height="54.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="499" y="548" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="500" y="567.5" font-size="10.5" font-weight="700" fill="#e9e6f4">skill-drift-audit</text>
-<text x="500" y="579" font-size="8.5" fill="#9a92b5">매일 12:30 · 에이전트 없음</text>
-<text x="500" y="590.5" font-size="8.5" fill="#9a92b5">py 직접(결정적) · 한시적</text>
-</g>
-<g id="n-ewatch">
-<rect x="750" y="300" width="190" height="54.5" rx="9" fill="#1c1730" stroke="#6ee7d5" stroke-width="1.1"/>
-<rect x="759" y="300" width="172" height="3" rx="1.5" fill="#6ee7d5" fill-opacity="1"/>
-<text x="760" y="319.5" font-size="10.5" font-weight="700" fill="#e9e6f4">event_watch.py</text>
-<text x="760" y="331" font-size="8.5" fill="#9a92b5">감시 목록 8건 · 신규/기 발생/기 알림</text>
-<text x="760" y="342.5" font-size="8.5" fill="#9a92b5">침묵 편입은 리포트에 적힌다</text>
-</g>
-<g id="n-sagun">
-<rect x="750" y="424" width="190" height="54.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="759" y="424" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="760" y="443.5" font-size="10.5" font-weight="700" fill="#e9e6f4">hermes-event-watch</text>
-<text x="760" y="455" font-size="8.5" fill="#9a92b5">매일 07:40 · sagun · pin nemotron</text>
-<text x="760" y="466.5" font-size="8.5" fill="#9a92b5">도구 없음 · 메모리 on · 시범</text>
-</g>
-<g id="n-gumsu">
-<rect x="750" y="548" width="190" height="54.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="759" y="548" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="760" y="567.5" font-size="10.5" font-weight="700" fill="#e9e6f4">xreview 봇 — gumsu</text>
-<text x="760" y="579" font-size="8.5" fill="#9a92b5">사람 호출 · 같은 pin · 메모리 off</text>
-<text x="760" y="590.5" font-size="8.5" fill="#9a92b5">도구·레포 접근 없음 · keep 3/6</text>
-</g>
-<g id="n-route">
-<rect x="750" y="1788" width="190" height="43" rx="9" fill="#1c1730" stroke="#fb923c" stroke-width="1.1"/>
-<rect x="759" y="1788" width="172" height="3" rx="1.5" fill="#fb923c" fill-opacity="1"/>
-<text x="760" y="1807.5" font-size="10.5" font-weight="700" fill="#e9e6f4">교정 라우팅 R1~R7</text>
-<text x="760" y="1819" font-size="8.5" fill="#9a92b5">R1 → R6 → R4/R5 → R3 → R7 → R2</text>
-</g>
-<g id="n-job">
-<rect x="1000" y="300" width="172" height="66" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="1009" y="300" width="154" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="1010" y="319.5" font-size="10.5" font-weight="700" fill="#e9e6f4">job-scout</text>
-<text x="1010" y="331" font-size="8.5" fill="#9a92b5">매일 08:30 · job-scout · sonnet</text>
-<text x="1010" y="342.5" font-size="8.5" fill="#9a92b5">acceptEdits + allowlist</text>
-<text x="1010" y="354" font-size="8.5" fill="#9a92b5">도구 Read·Glob·Grep·Write·Web*</text>
-</g>
-<g id="n-portfolio">
-<rect x="1000" y="424" width="172" height="66" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
-<rect x="1009" y="424" width="154" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
-<text x="1010" y="443.5" font-size="10.5" font-weight="700" fill="#e9e6f4">포트폴리오 갱신 — 실값 대조</text>
-<text x="1010" y="455" font-size="8.5" fill="#9a92b5">수치 = 실물 재조회(게이트 24·29편·</text>
-<text x="1010" y="466.5" font-size="8.5" fill="#9a92b5">v3.53)</text>
-<text x="1010" y="478" font-size="8.5" fill="#9a92b5">링크 17/17 200 · QR 디코드</text>
-</g>
-<g id="n-claim">
-<rect x="1000" y="548" width="172" height="54.5" rx="9" fill="#1c1730" stroke="#6ee7d5" stroke-width="1.1"/>
-<rect x="1009" y="548" width="154" height="3" rx="1.5" fill="#6ee7d5" fill-opacity="1"/>
-<text x="1010" y="567.5" font-size="10.5" font-weight="700" fill="#e9e6f4">claim.ps1</text>
-<text x="1010" y="579" font-size="8.5" fill="#9a92b5">같은 주제 두 세션 거부 · -SelfTes</text>
-<text x="1010" y="590.5" font-size="8.5" fill="#9a92b5">t</text>
-</g>
-<g id="n-rguard">
-<rect x="1000" y="672" width="172" height="68" rx="9" fill="#1c1730" stroke="#6ee7d5" stroke-width="1.1"/>
-<rect x="1009" y="672" width="154" height="3" rx="1.5" fill="#6ee7d5" fill-opacity="1"/>
-<text x="1010" y="691.5" font-size="10.5" font-weight="700" fill="#e9e6f4">check-repo-guard + pre-co</text>
-<text x="1010" y="705" font-size="10.5" font-weight="700" fill="#e9e6f4">mmit</text>
-<text x="1010" y="716.5" font-size="8.5" fill="#9a92b5">본 트리 커밋 거부 · main 뒤처짐 FA</text>
-<text x="1010" y="728" font-size="8.5" fill="#9a92b5">IL</text>
-</g>
-<g id="n-apply">
-<rect x="1000" y="1788" width="172" height="43" rx="9" fill="#1c1730" stroke="#e879f9" stroke-width="1.8"/>
-<rect x="1009" y="1788" width="154" height="3" rx="1.5" fill="#e879f9" fill-opacity="1"/>
-<text x="1010" y="1807.5" font-size="10.5" font-weight="700" fill="#e9e6f4">채용 지원 — 외부 발송</text>
-<text x="1010" y="1819" font-size="8.5" fill="#9a92b5">applied.md (gitignore) · C등급</text>
-</g>
-<rect x="24" y="1886" width="1232" height="106.5" rx="12" fill="none" stroke="#2f2745" stroke-dasharray="3 5"/>
-<text x="36" y="1903" font-size="11.5" font-weight="700" fill="#9a92b5" letter-spacing="1">다음 — 설계 단계 (실물 없음, 본선 밖)</text>
-<text x="672" y="296" font-size="9" fill="#6ee7d5" text-anchor="end">감지</text>
-<text x="932" y="296" font-size="9" fill="#6ee7d5" text-anchor="end">감지</text>
-<text x="1164" y="544" font-size="9" fill="#6ee7d5" text-anchor="end">감지</text>
-<text x="1164" y="668" font-size="9" fill="#6ee7d5" text-anchor="end">감지</text>
-<path d="M142.5,186 L142.5,204 L170,204 L170,300" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,357.5 L170,424" fill="none" stroke="#6ee7d5" stroke-width="1.7" stroke-dasharray="2 4" marker-end="url(#m-detect)"/>
-<path d="M357.5,186 L357.5,202 L330,202 L330,408 L170,408 L170,424" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,494 L170,548" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,605.5 L170,672" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,494 L170,510 L342,510 L342,1664" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M357.5,186 L357.5,216 L354,216 L354,656 L170,656 L170,672" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,717 L170,796" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,841 L170,859 L109,859 L109,920" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,841 L170,873 L255,873 L255,920" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,841 L170,887 L401,887 L401,920" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M109,965 L109,983 L170,983 L170,1044" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M255,965 L255,997 L170,997 L170,1044" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M401,977.5 L401,1023.5 L170,1023.5 L170,1044" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,1101.5 L170,1168" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,1213 L170,1292" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,841 L170,857 L366,857 L366,1276 L170,1276 L170,1292" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,1362 L170,1416" fill="none" stroke="#7dd3fc" stroke-width="1.7" stroke-dasharray="6 5" marker-end="url(#m-advise)"/>
-<path d="M845,602.5 L845,620.5 L950,620.5 L950,1386 L340,1386 L340,1438.5 L302,1438.5" fill="none" stroke="#7dd3fc" stroke-width="1.7" stroke-dasharray="6 5" marker-end="url(#m-advise)"/>
-<path d="M845,198 L845,214 L962,214 L962,532 L845,532 L845,548" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M170,1362 L170,1378 L378,1378 L378,1524 L170,1524 L170,1540" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,1461 L170,1477 L390,1477 L390,1664" fill="none" stroke="#7dd3fc" stroke-width="1.7" stroke-dasharray="6 5" marker-end="url(#m-advise)"/>
-<path d="M170,1597.5 L170,1664" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M646,1709 L646,1727 L170,1727 L170,1788" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
-<path d="M170,1833 L170,1912" fill="none" stroke="#9a92b5" stroke-width="1.7" stroke-dasharray="4 4" marker-end="url(#m-design)"/>
-<path d="M300,1939.25 L430,1939.25 L430,1709" fill="none" stroke="#9a92b5" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#m-design)"/>
-<path d="M585,186 L585,202 L690,202 L690,408 L585,408 L585,424" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M460,158 L468,158 L468,234 L702,234 L702,528 L585,528 L585,548" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M585,490 L585,506 L714,506 L714,1664" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M585,602.5 L585,1664" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M845,198 L845,228 L974,228 L974,408 L845,408 L845,424" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M845,478.5 L845,494.5 L986,494.5 L986,1664" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M845,354.5 L845,424" fill="none" stroke="#6ee7d5" stroke-width="1.3" stroke-dasharray="2 4" marker-end="url(#m-detect)"/>
-<path d="M585,354.5 L585,424" fill="none" stroke="#6ee7d5" stroke-width="1.3" stroke-dasharray="2 4" marker-end="url(#m-detect)"/>
-<path d="M1086,602.5 L1086,618.5 L1186,618.5 L1186,1664" fill="none" stroke="#6ee7d5" stroke-width="1.3" stroke-dasharray="2 4" marker-end="url(#m-detect)"/>
-<path d="M1086,740 L1086,1664" fill="none" stroke="#6ee7d5" stroke-width="1.3" stroke-dasharray="2 4" marker-end="url(#m-detect)"/>
-<path d="M1086,366 L1086,382 L1198,382 L1198,1664" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M1086,186 L1086,202 L1210,202 L1210,408 L1086,408 L1086,424" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M1086,490 L1086,506 L1222,506 L1222,1664" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M646,1709 L646,1725 L1234,1725 L1234,1772 L1086,1772 L1086,1788" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
-<path d="M646,1709 L646,1739 L998,1739 L998,1772 L845,1772 L845,1788" fill="none" stroke="#fb923c" stroke-width="1.7" marker-end="url(#m-learn)"/>
-<path d="M940,1809.5 L1260,1809.5 L1260,90 L585,90 L585,130" fill="none" stroke="#fb923c" stroke-width="1.7" marker-end="url(#m-learn)"/>
-<rect x="173" y="279.6" width="180.72" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="290" font-size="10.4" fill="#a78bfa" text-anchor="start">[소스 표 파싱 → sources_&lt;날짜&gt;.txt]</text>
-<rect x="173" y="384.35" width="218.16" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="394.75" font-size="10.4" fill="#6ee7d5" text-anchor="start">[logs/scout-data/sources_&lt;날짜&gt;.txt]</text>
-<rect x="333" y="205.6" width="93.36" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="336" y="216" font-size="10.4" fill="#a78bfa" text-anchor="start">[§5.5 1~3-1단계]</text>
-<rect x="173" y="514.6" width="199.44" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="525" font-size="10.4" fill="#a78bfa" text-anchor="start">[---8&lt;--- 인계 레코드 · 스캔로그 append]</text>
-<rect x="173" y="632.35" width="105.84" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="642.75" font-size="10.4" fill="#a78bfa" text-anchor="start">[검사 🟢 블록만 → 대기함]</text>
-<rect x="345" y="513.6" width="211.92" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="348" y="524" font-size="10.4" fill="#a78bfa" text-anchor="start">[reports/&lt;날짜&gt;_tomangchi-scout.md]</text>
-<rect x="357" y="219.6" width="149.52" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="360" y="230" font-size="10.4" fill="#a78bfa" text-anchor="start">[§7 제작 순서 · 소재 컨펌 뒤 착수]</text>
-<rect x="173" y="750.1" width="155.76" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="760.5" font-size="10.4" fill="#a78bfa" text-anchor="start">[선정 소재 · 원 포스트 _assets/]</text>
-<rect x="112" y="899.6" width="93.36" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="115" y="910" font-size="10.4" fill="#a78bfa" text-anchor="start">[기획안·CARDS 선언]</text>
-<rect x="256" y="901.6" width="105.84" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="259" y="912" font-size="10.4" fill="#a78bfa" text-anchor="start">[COVER·CARDS 선언]</text>
-<rect x="402" y="901.6" width="105.84" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="405" y="912" font-size="10.4" fill="#a78bfa" text-anchor="start">[KIT 선언 + FACTS]</text>
-<rect x="110" y="970.6" width="68.4" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="113" y="981" font-size="10.4" fill="#a78bfa" text-anchor="start">[_scenes/]</text>
-<rect x="256" y="970.6" width="105.84" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="259" y="981" font-size="10.4" fill="#a78bfa" text-anchor="start">[shots/0N_*.png]</text>
-<rect x="402" y="983.1" width="137.04" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="405" y="993.5" font-size="10.4" fill="#a78bfa" text-anchor="start">[shots/_kit_live.png]</text>
-<rect x="173" y="1128.35" width="80.88" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="1138.75" font-size="10.4" fill="#a78bfa" text-anchor="start">[빌더 진입 시 1회]</text>
-<rect x="173" y="1246.1" width="174.48" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="1256.5" font-size="10.4" fill="#a78bfa" text-anchor="start">[01~0N 덱 · 킷 mp4 · caption]</text>
-<rect x="369" y="860.6" width="174.48" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="372" y="871" font-size="10.4" fill="#a78bfa" text-anchor="start">[numeral_vocab() → guard 3]</text>
-<rect x="173" y="1382.6" width="149.52" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="1393" font-size="10.4" fill="#7dd3fc" text-anchor="start">[STATUS: OK 공개 예정 텍스트만]</text>
-<rect x="343" y="1373" width="195" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="346" y="1382" font-size="9" fill="#7dd3fc" text-anchor="start">[reports/&lt;날짜&gt;_xreview_epNN.md ≤10건]</text>
-<rect x="965" y="219" width="168" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="968" y="228" font-size="9" fill="#6b5f95" text-anchor="start">[checklists/xreview.md C1~C12]</text>
-<rect x="381" y="1381.6" width="124.56" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="384" y="1392" font-size="10.4" fill="#a78bfa" text-anchor="start">[verify STATUS: OK]</text>
-<rect x="393" y="1480.6" width="112.08" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="396" y="1491" font-size="10.4" fill="#7dd3fc" text-anchor="start">[자문 리포트 병기 — 비차단]</text>
-<rect x="173" y="1624.35" width="168.24" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="1634.75" font-size="10.4" fill="#a78bfa" text-anchor="start">[발행팩 + G: 드라이브 덱 (양방향 대조)]</text>
-<rect x="173" y="1767.6" width="118.32" height="15.4" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="1778" font-size="10.4" fill="#a78bfa" text-anchor="start">[폰에서 발행 → 발행로그 기입]</text>
-<rect x="173" y="1867.5" width="76.2" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="176" y="1876.5" font-size="9" fill="#9a92b5" text-anchor="start">[발행 완료 편 공개본]</text>
-<rect x="433" y="1880.25" width="195" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="436" y="1889.25" font-size="9" fill="#9a92b5" text-anchor="start">[reports/&lt;날짜&gt;_dist_epNN.md 초안 — 설계]</text>
-<rect x="693" y="207" width="178.8" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="696" y="216" font-size="9" fill="#6b5f95" text-anchor="start">[§4 규약 래퍼·lock·stagger·git-sync]</text>
-<rect x="705" y="513" width="124.8" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="708" y="522" font-size="9" fill="#6b5f95" text-anchor="start">[라이브 사본 ↔ origin/main]</text>
-<rect x="717" y="511" width="211.2" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="720" y="520" font-size="9" fill="#6b5f95" text-anchor="start">[reports/&lt;날짜&gt;_morning-vault-health.md]</text>
-<rect x="588" y="609.5" width="162.6" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="591" y="618.5" font-size="9" fill="#6b5f95" text-anchor="start">[reports/&lt;날짜&gt;_skill-drift.md]</text>
-<rect x="977" y="233" width="151.8" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="980" y="242" font-size="9" fill="#6b5f95" text-anchor="start">[hermes-02 명세 · sagun SOUL]</text>
-<rect x="989" y="499.5" width="189.6" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="992" y="508.5" font-size="9" fill="#6b5f95" text-anchor="start">[reports/&lt;날짜&gt;_event-watch.md 🔴 성립]</text>
-<rect x="848" y="384.25" width="108.6" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="851" y="393.25" font-size="9" fill="#6ee7d5" text-anchor="start">[조건 문자열 적중 · 판정 후보]</text>
-<rect x="588" y="384.25" width="173.4" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="591" y="393.25" font-size="9" fill="#6ee7d5" text-anchor="start">[logs/audit-data/runs_&lt;날짜&gt;.txt]</text>
-<rect x="1031.2" y="623.5" width="151.8" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="1180" y="632.5" font-size="9" fill="#6ee7d5" text-anchor="end">[logs/claims/*.claim 거부·현황]</text>
-<rect x="1089" y="747" width="103.2" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="1092" y="756" font-size="9" fill="#6ee7d5" text-anchor="start">[FAIL 뒤처짐 · 커밋 거부]</text>
-<rect x="1043.2" y="387" width="151.8" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="1192" y="396" font-size="9" fill="#6b5f95" text-anchor="end">[reports/&lt;날짜&gt;_job-scout.md]</text>
-<rect x="1109.2" y="207" width="97.8" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="1204" y="216" font-size="9" fill="#6b5f95" text-anchor="end">[실값 재조회 → 교체본 v2]</text>
-<rect x="1078" y="511" width="141" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="1216" y="520" font-size="9" fill="#6b5f95" text-anchor="end">[PR #8·#9 · v2 PDF 합본 대기]</text>
-<rect x="1144" y="1730" width="87" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="1228" y="1739" font-size="9" fill="#6b5f95" text-anchor="end">[applied.md 기록]</text>
-<rect x="1001" y="1744" width="81.6" height="14" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="1004" y="1753" font-size="9" fill="#fb923c" text-anchor="start">[세션 교정 → R 번호]</text>
-<g transform="translate(1270,954.75) rotate(-90)"><rect x="-108" y="-10" width="216" height="15" rx="4" fill="#14101f" fill-opacity="0.94"/><text x="0" y="0" font-size="10" fill="#fb923c" text-anchor="middle">[조문 PR · FACTS PREV · learnings 후보]</text></g>
+<line x1="448" y1="308" x2="448" y2="2229.5" stroke="#2a2342" stroke-dasharray="4 6"/>
+<line x1="708" y1="308" x2="708" y2="2229.5" stroke="#2a2342" stroke-dasharray="4 6"/>
+<line x1="978" y1="308" x2="978" y2="2229.5" stroke="#2a2342" stroke-dasharray="4 6"/>
+<rect x="24" y="2073" width="1232" height="108.5" rx="12" fill="none" stroke="#2f2745" stroke-dasharray="3 5"/>
+<rect x="40" y="130" width="145" height="54" rx="9" fill="#181329" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="49" y="130" width="127" height="3" rx="1.5" fill="#a78bfa" fill-opacity="0.55"/>
+<rect x="195" y="130" width="150" height="80" rx="9" fill="#181329" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="204" y="130" width="132" height="3" rx="1.5" fill="#a78bfa" fill-opacity="0.55"/>
+<rect x="460" y="130" width="190" height="54" rx="9" fill="#181329" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="469" y="130" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="0.55"/>
+<rect x="720" y="130" width="190" height="54" rx="9" fill="#181329" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="729" y="130" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="0.55"/>
+<rect x="990" y="130" width="180" height="54" rx="9" fill="#181329" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="999" y="130" width="162" height="3" rx="1.5" fill="#a78bfa" fill-opacity="0.55"/>
+<rect x="40" y="346" width="300" height="55.5" rx="9" fill="#1c1730" stroke="#6ee7d5" stroke-width="1.1"/>
+<rect x="49" y="346" width="282" height="3" rx="1.5" fill="#6ee7d5" fill-opacity="1"/>
+<rect x="40" y="486" width="300" height="68" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="49" y="486" width="282" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="40" y="630" width="300" height="55.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="49" y="630" width="282" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="40" y="761.5" width="300" height="43" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="49" y="761.5" width="282" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="40" y="892" width="300" height="43" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="49" y="892" width="282" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="40" y="1055" width="94" height="55.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="49" y="1055" width="76" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="143" y="1055" width="94" height="55.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="152" y="1055" width="76" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="246" y="1055" width="94" height="55.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="255" y="1055" width="76" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="40" y="1230.5" width="300" height="55.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="49" y="1230.5" width="282" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="40" y="1362" width="300" height="43" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="49" y="1362" width="282" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="40" y="1481" width="300" height="55.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="49" y="1481" width="282" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="40" y="1612.5" width="300" height="43" rx="9" fill="#1c1730" stroke="#7dd3fc" stroke-width="1.8"/>
+<rect x="49" y="1612.5" width="282" height="3" rx="1.5" fill="#7dd3fc" fill-opacity="1"/>
+<rect x="40" y="1731.5" width="300" height="55.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="49" y="1731.5" width="282" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="40" y="1863" width="1192" height="43" rx="9" fill="#1c1730" stroke="#f87171" stroke-width="1.8"/>
+<rect x="49" y="1863" width="1174" height="3" rx="1.5" fill="#f87171" fill-opacity="1"/>
+<rect x="40" y="1982" width="300" height="43" rx="9" fill="#1c1730" stroke="#e879f9" stroke-width="1.8"/>
+<rect x="49" y="1982" width="282" height="3" rx="1.5" fill="#e879f9" fill-opacity="1"/>
+<rect x="40" y="2101" width="300" height="52.5" rx="9" fill="#1c1730" stroke="#a78bfa" stroke-width="1.1" stroke-dasharray="5 4"/>
+<rect x="49" y="2101" width="282" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="460" y="346" width="190" height="52.5" rx="9" fill="#1c1730" stroke="#6ee7d5" stroke-width="1.1"/>
+<rect x="469" y="346" width="172" height="3" rx="1.5" fill="#6ee7d5" fill-opacity="1"/>
+<rect x="460" y="486" width="190" height="64" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="469" y="486" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="460" y="630" width="190" height="52.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="469" y="630" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="720" y="346" width="190" height="52.5" rx="9" fill="#1c1730" stroke="#6ee7d5" stroke-width="1.1"/>
+<rect x="729" y="346" width="172" height="3" rx="1.5" fill="#6ee7d5" fill-opacity="1"/>
+<rect x="720" y="486" width="190" height="52.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="729" y="486" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="720" y="630" width="190" height="52.5" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="729" y="630" width="172" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="720" y="1982" width="190" height="41" rx="9" fill="#1c1730" stroke="#fb923c" stroke-width="1.1"/>
+<rect x="729" y="1982" width="172" height="3" rx="1.5" fill="#fb923c" fill-opacity="1"/>
+<rect x="990" y="346" width="180" height="64" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="999" y="346" width="162" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="990" y="486" width="180" height="64" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.1"/>
+<rect x="999" y="486" width="162" height="3" rx="1.5" fill="#a78bfa" fill-opacity="1"/>
+<rect x="990" y="630" width="180" height="41" rx="9" fill="#1c1730" stroke="#6ee7d5" stroke-width="1.1"/>
+<rect x="999" y="630" width="162" height="3" rx="1.5" fill="#6ee7d5" fill-opacity="1"/>
+<rect x="990" y="761.5" width="180" height="54.5" rx="9" fill="#1c1730" stroke="#6ee7d5" stroke-width="1.1"/>
+<rect x="999" y="761.5" width="162" height="3" rx="1.5" fill="#6ee7d5" fill-opacity="1"/>
+<rect x="990" y="1982" width="180" height="41" rx="9" fill="#1c1730" stroke="#e879f9" stroke-width="1.8"/>
+<rect x="999" y="1982" width="162" height="3" rx="1.5" fill="#e879f9" fill-opacity="1"/>
+<text x="50" y="149" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">config.md 소스 표</text>
+<text x="50" y="161" font-size="9" fill="#8f86ad" text-anchor="start">감시 URL 5종 + 단가 2종</text>
+<text x="50" y="173" font-size="9" fill="#8f86ad" text-anchor="start">실행 시점에 래퍼가 파싱</text>
+<text x="205" y="149" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">SKILL.md v3.53 — 제작 </text>
+<text x="205" y="163" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">규약</text>
+<text x="205" y="175" font-size="9" fill="#8f86ad" text-anchor="start">§7 제작 순서 단일 목록 11단계</text>
+<text x="205" y="187" font-size="9" fill="#8f86ad" text-anchor="start">라이브 = origin/main 사본</text>
+<text x="205" y="199" font-size="9" fill="#8f86ad" text-anchor="start">08f531b</text>
+<text x="470" y="149" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">CLAUDE.md — 정관</text>
+<text x="470" y="161" font-size="9" fill="#8f86ad" text-anchor="start">§0 등급 3단계·머지 4조건</text>
+<text x="470" y="173" font-size="9" fill="#8f86ad" text-anchor="start">§3 worktree·훅 · §4 스케줄 규약</text>
+<text x="730" y="149" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">docs/workers 7장 + profiles</text>
+<text x="730" y="161" font-size="9" fill="#8f86ad" text-anchor="start">양식 4 · FAIL CONDITION</text>
+<text x="730" y="173" font-size="9" fill="#8f86ad" text-anchor="start">checklists/xreview · profiles/ SOUL</text>
+<text x="1000" y="149" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">제출 실물 — 정본은 실값</text>
+<text x="1000" y="161" font-size="9" fill="#8f86ad" text-anchor="start">/p/ax-portfolio 4쪽 · PDF 4쪽</text>
+<text x="1000" y="173" font-size="9" fill="#8f86ad" text-anchor="start">docs/ax-final · ax-prelim</text>
+<text x="50" y="365.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">source_watch.py — 래퍼 선실행</text>
+<text x="50" y="378" font-size="9.5" fill="#9a92b5" text-anchor="start">yt-dlp 로 YouTube 조회</text>
+<text x="50" y="390.5" font-size="9.5" fill="#9a92b5" text-anchor="start">Threads·IG 는 UNSUPPORTED</text>
+<text x="50" y="505.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">tomangchi-scout</text>
+<text x="50" y="518" font-size="9.5" fill="#9a92b5" text-anchor="start">매일 08:00 · content-scout · sonnet</text>
+<text x="50" y="530.5" font-size="9.5" fill="#9a92b5" text-anchor="start">acceptEdits + Bash allowlist</text>
+<text x="50" y="543" font-size="9.5" fill="#9a92b5" text-anchor="start">--add-dir 스캔로그만 쓰기</text>
+<text x="50" y="649.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">handoff_schema.py — 노드 계약</text>
+<text x="50" y="662" font-size="9.5" fill="#9a92b5" text-anchor="start">필수 7 · URL 하한 1/2/2 · 재시도 3</text>
+<text x="50" y="674.5" font-size="9.5" fill="#9a92b5" text-anchor="start">미기입 허용 · 역검증 9케이스</text>
+<text x="50" y="781" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">소재큐 — 인수인계_대기함.md</text>
+<text x="50" y="793.5" font-size="9.5" fill="#9a92b5" text-anchor="start">레코드 형식 = 스키마 · 규칙 4 감시표</text>
+<text x="50" y="911.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">검증로그 → _facts.py</text>
+<text x="50" y="924" font-size="9.5" fill="#9a92b5" text-anchor="start">사실·수치·귀속 확정 · 옛 값 PREV</text>
+<text x="50" y="1074.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">ⓐ 씬</text>
+<text x="50" y="1087" font-size="9.5" fill="#9a92b5" text-anchor="start">scenebuild →</text>
+<text x="50" y="1099.5" font-size="9.5" fill="#9a92b5" text-anchor="start">_scenes/</text>
+<text x="153" y="1074.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">ⓑ 캡처·판</text>
+<text x="153" y="1087" font-size="9.5" fill="#9a92b5" text-anchor="start">webshot →</text>
+<text x="153" y="1099.5" font-size="9.5" fill="#9a92b5" text-anchor="start">shots/0N</text>
+<text x="256" y="1074.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">ⓒ 킷 체인</text>
+<text x="256" y="1087" font-size="9.5" fill="#9a92b5" text-anchor="start">kitchain shoot </text>
+<text x="256" y="1099.5" font-size="9.5" fill="#9a92b5" text-anchor="start">→ _kit_live</text>
+<text x="50" y="1250" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">조립 — build_epNN.py</text>
+<text x="50" y="1262.5" font-size="9.5" fill="#9a92b5" text-anchor="start">CARDS·COVER·KIT 선언 → 01~0N</text>
+<text x="50" y="1275" font-size="9.5" fill="#9a92b5" text-anchor="start">kitchain video · caption·pinned</text>
+<text x="50" y="1381.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">pre-flight — preflight.py</text>
+<text x="50" y="1394" font-size="9.5" fill="#9a92b5" text-anchor="start">① 훅 고유명사 ② 판 가독성 ③ 표지 겹침</text>
+<text x="50" y="1500.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">게이트 24 — epcheck.py (verify)</text>
+<text x="50" y="1513" font-size="9.5" fill="#9a92b5" text-anchor="start">별도 컨텍스트 · FAIL 이면 안 나간다</text>
+<text x="50" y="1525.5" font-size="9.5" fill="#9a92b5" text-anchor="start">guard 2/3 ⊂ [8-2] 캡처 최신성 · [8-1] 킷↔FACTS</text>
+<text x="50" y="1632" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">xreview 자문 — 비차단</text>
+<text x="50" y="1644.5" font-size="9.5" fill="#9a92b5" text-anchor="start">게이트 → 자문 방향 고정 · 🔴 도 판정 불변</text>
+<text x="50" y="1751" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">발행팩.md + 폰 전달</text>
+<text x="50" y="1763.5" font-size="9.5" fill="#9a92b5" text-anchor="start">복붙 세트 · Manychat 문안</text>
+<text x="50" y="1776" font-size="9.5" fill="#9a92b5" text-anchor="start">deliver.py → G: 드라이브 ep 폴더</text>
+<text x="50" y="1882.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">JJ — 휴먼 게이트</text>
+<text x="50" y="1895" font-size="9.5" fill="#9a92b5" text-anchor="start">발행 · 외부 발송 · 과금 · 비가역 git — 등급 무관 · PR 지목 승인 · 소재 컨펌 · 훅 선택 · 리포트 판독</text>
+<text x="50" y="2001.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">인스타 @ai_tomangchi.lab</text>
+<text x="50" y="2014" font-size="9.5" fill="#9a92b5" text-anchor="start">29편 · 게시물 30건 · 발행로그.md</text>
+<text x="50" y="2119.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">유통 변환 워커 — 설계</text>
+<text x="50" y="2131" font-size="8.5" fill="#9a92b5" text-anchor="start">Threads 20장·X 4장 초안 → distcheck</text>
+<text x="50" y="2142.5" font-size="8.5" fill="#9a92b5" text-anchor="start">실행체 미정 · Threads 계정 대기</text>
+<text x="470" y="364.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">.started / run_audit.py</text>
+<text x="470" y="376" font-size="8.5" fill="#9a92b5" text-anchor="start">start 있고 STATUS 없는 회차</text>
+<text x="470" y="387.5" font-size="8.5" fill="#9a92b5" text-anchor="start">8/26 실값: 8/25 scout·job 무기록 적발</text>
+<text x="470" y="504.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">morning-vault-health</text>
+<text x="470" y="516" font-size="8.5" fill="#9a92b5" text-anchor="start">평일 12:30 · ops-auditor · haiku</text>
+<text x="470" y="527.5" font-size="8.5" fill="#9a92b5" text-anchor="start">권한 default + Edit(reports/**) 시범</text>
+<text x="470" y="539" font-size="8.5" fill="#9a92b5" text-anchor="start">도구 Read·Glob·Grep·Write</text>
+<text x="470" y="648.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">skill-drift-audit</text>
+<text x="470" y="660" font-size="8.5" fill="#9a92b5" text-anchor="start">매일 12:30 · 에이전트 없음</text>
+<text x="470" y="671.5" font-size="8.5" fill="#9a92b5" text-anchor="start">py 직접(결정적) · 한시적</text>
+<text x="730" y="364.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">event_watch.py</text>
+<text x="730" y="376" font-size="8.5" fill="#9a92b5" text-anchor="start">감시 목록 8건 · 신규/기 발생/기 알림</text>
+<text x="730" y="387.5" font-size="8.5" fill="#9a92b5" text-anchor="start">침묵 편입은 리포트에 적힌다</text>
+<text x="730" y="504.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">hermes-event-watch</text>
+<text x="730" y="516" font-size="8.5" fill="#9a92b5" text-anchor="start">매일 07:40 · sagun · pin nemotron</text>
+<text x="730" y="527.5" font-size="8.5" fill="#9a92b5" text-anchor="start">도구 없음 · 메모리 on · 시범</text>
+<text x="730" y="648.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">xreview 봇 — gumsu</text>
+<text x="730" y="660" font-size="8.5" fill="#9a92b5" text-anchor="start">사람 호출 · 같은 pin · 메모리 off</text>
+<text x="730" y="671.5" font-size="8.5" fill="#9a92b5" text-anchor="start">도구·레포 접근 없음 · keep 3/6</text>
+<text x="730" y="2000.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">교정 라우팅 R1~R7</text>
+<text x="730" y="2012" font-size="8.5" fill="#9a92b5" text-anchor="start">R1 → R6 → R4/R5 → R3 → R7 → R2</text>
+<text x="1000" y="364.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">job-scout</text>
+<text x="1000" y="376" font-size="8.5" fill="#9a92b5" text-anchor="start">매일 08:30 · job-scout · sonnet</text>
+<text x="1000" y="387.5" font-size="8.5" fill="#9a92b5" text-anchor="start">acceptEdits + allowlist</text>
+<text x="1000" y="399" font-size="8.5" fill="#9a92b5" text-anchor="start">도구 Read·Glob·Grep·Write·Web*</text>
+<text x="1000" y="504.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">포트폴리오 갱신 — 실값 대조</text>
+<text x="1000" y="516" font-size="8.5" fill="#9a92b5" text-anchor="start">수치 = 실물 재조회(게이트 24·29편·</text>
+<text x="1000" y="527.5" font-size="8.5" fill="#9a92b5" text-anchor="start">v3.53)</text>
+<text x="1000" y="539" font-size="8.5" fill="#9a92b5" text-anchor="start">링크 17/17 200 · QR 디코드</text>
+<text x="1000" y="648.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">claim.ps1</text>
+<text x="1000" y="660" font-size="8.5" fill="#9a92b5" text-anchor="start">같은 주제 두 세션 거부 · -SelfTest</text>
+<text x="1000" y="780" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">check-repo-guard +</text>
+<text x="1000" y="793.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">pre-commit</text>
+<text x="1000" y="805" font-size="8.5" fill="#9a92b5" text-anchor="start">본 트리 커밋 거부 · main 뒤처짐 FAIL</text>
+<text x="1000" y="2000.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">채용 지원 — 외부 발송</text>
+<text x="1000" y="2012" font-size="8.5" fill="#9a92b5" text-anchor="start">applied.md (gitignore) · C등급</text>
+<path d="M112.5,184 L112.5,346" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M190,401.5 L190,486" fill="none" stroke="#6ee7d5" stroke-width="1.3" stroke-dasharray="2 4" marker-end="url(#m-detect)"/>
+<path d="M232.5,210 L232.5,224 L354,224 L354,472 L215,472 L215,486" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M140,554 L140,630" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M190,685.5 L190,761.5" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M240,554 L240,568 L366,568 L366,1863" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M270,210 L270,234 L378,234 L378,747.5 L215,747.5 L215,761.5" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M190,804.5 L190,892" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M100,935 L100,949 L75.25,949 L75.25,1055" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M160,935 L160,959 L178.25,959 L178.25,1055" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M220,935 L220,969 L281.25,969 L281.25,1055" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M87,1110.5 L87,1230.5" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M190,1110.5 L190,1230.5" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M293,1110.5 L293,1230.5" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M190,1286 L190,1362" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M190,1405 L190,1481" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M290,935 L290,979 L390,979 L390,1467 L215,1467 L215,1481" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M140,1536.5 L140,1612.5" fill="none" stroke="#7dd3fc" stroke-width="1.7" stroke-dasharray="6 5" marker-end="url(#m-advise)"/>
+<path d="M815,682.5 L815,696.5 L924,696.5 L924,1634 L340,1634" fill="none" stroke="#7dd3fc" stroke-width="1.7" stroke-dasharray="6 5" marker-end="url(#m-advise)"/>
+<path d="M783.333,184 L783.333,218 L936,218 L936,616 L791.25,616 L791.25,630" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M240,1536.5 L240,1550.5 L402,1550.5 L402,1717.5 L152.5,1717.5 L152.5,1731.5" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M190,1655.5 L190,1669.5 L414,1669.5 L414,1863" fill="none" stroke="#7dd3fc" stroke-width="1.7" stroke-dasharray="6 5" marker-end="url(#m-advise)"/>
+<path d="M190,1787 L190,1863" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M152.5,1906 L152.5,1982" fill="none" stroke="#a78bfa" stroke-width="2.4" marker-end="url(#m-main)"/>
+<path d="M190,2025 L190,2101" fill="none" stroke="#9a92b5" stroke-width="1.7" stroke-dasharray="4 4" marker-end="url(#m-design)"/>
+<path d="M340,2127.25 L426,2127.25 L426,1906" fill="none" stroke="#9a92b5" stroke-width="1.7" stroke-dasharray="4 4" marker-end="url(#m-design)"/>
+<path d="M555,184 L555,228 L664,228 L664,482 L507.5,482 L507.5,486" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M307.5,210 L307.5,264 L676,264 L676,626 L531.25,626 L531.25,630" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M555,550 L555,574 L688,574 L688,1863" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M555,682.5 L555,1863" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M846.667,184 L846.667,248 L948,248 L948,492 L767.5,492 L767.5,486" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M815,538.5 L815,572.5 L960,572.5 L960,1863" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M815,398.5 L815,486" fill="none" stroke="#6ee7d5" stroke-width="1.3" stroke-dasharray="2 4" marker-end="url(#m-detect)"/>
+<path d="M555,398.5 L555,486" fill="none" stroke="#6ee7d5" stroke-width="1.3" stroke-dasharray="2 4" marker-end="url(#m-detect)"/>
+<path d="M1080,671 L1080,695 L1184,695 L1184,1863" fill="none" stroke="#6ee7d5" stroke-width="1.3" stroke-dasharray="2 4" marker-end="url(#m-detect)"/>
+<path d="M1080,816 L1080,1863" fill="none" stroke="#6ee7d5" stroke-width="1.3" stroke-dasharray="2 4" marker-end="url(#m-detect)"/>
+<path d="M1080,410 L1080,424 L1196,424 L1196,1863" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M1080,184 L1080,258 L1208,258 L1208,502 L1057.5,502 L1057.5,486" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M1080,550 L1080,594 L1220,594 L1220,1863" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M1057.5,1906 L1057.5,1982" fill="none" stroke="#6b5f95" stroke-width="1.3" marker-end="url(#m-dim)"/>
+<path d="M791.25,1906 L791.25,1982" fill="none" stroke="#fb923c" stroke-width="1.7" marker-end="url(#m-learn)"/>
+<path d="M815,2023 L815,2037 L1264,2037 L1264,88 L531.25,88 L531.25,130" fill="none" stroke="#fb923c" stroke-width="1.7" marker-end="url(#m-learn)"/>
+<rect x="21.5" y="320" width="17" height="298.44" rx="4" fill="#14101f"/>
+<text x="0" y="0" font-size="11" fill="#a78bfa" text-anchor="middle">본선 — 스카우트 유입 → 계약 → 제작 체인 → 게이트 → 발행</text>
+<rect x="439.5" y="320" width="17" height="29.2" rx="4" fill="#14101f"/>
+<text x="0" y="0" font-size="11" fill="#9a92b5" text-anchor="middle">감사</text>
+<rect x="699.5" y="320" width="17" height="62.59" rx="4" fill="#14101f"/>
+<text x="0" y="0" font-size="11" fill="#9a92b5" text-anchor="middle">감시 · 자문</text>
+<rect x="969.5" y="320" width="17" height="29.2" rx="4" fill="#14101f"/>
+<text x="0" y="0" font-size="11" fill="#9a92b5" text-anchor="middle">구직</text>
+<rect x="1054.23" y="2077.5" width="193.765" height="17.5" rx="4" fill="#14101f"/>
+<text x="1244" y="2090" font-size="11.5" fill="#9a92b5" text-anchor="end">다음 — 설계 단계 (실물 없음, 본선 밖)</text>
+<rect x="624.51" y="327" width="25.49" height="15" rx="4" fill="#14101f"/>
+<text x="646" y="337" font-size="9" fill="#6ee7d5" text-anchor="end">감지</text>
+<rect x="884.51" y="327" width="25.49" height="15" rx="4" fill="#14101f"/>
+<text x="906" y="337" font-size="9" fill="#6ee7d5" text-anchor="end">감지</text>
+<rect x="1144.51" y="611" width="25.49" height="15" rx="4" fill="#14101f"/>
+<text x="1166" y="621" font-size="9" fill="#6ee7d5" text-anchor="end">감지</text>
+<rect x="1144.51" y="742.5" width="25.49" height="15" rx="4" fill="#14101f"/>
+<text x="1166" y="752.5" font-size="9" fill="#6ee7d5" text-anchor="end">감지</text>
+<rect x="142" y="583.6" width="113.205" height="28.8" rx="4" fill="#14101f"/>
+<text x="146" y="595" font-size="10.4" fill="#a78bfa" text-anchor="start">[---8&lt;--- 인계 레코드 ·</text>
+<text x="146" y="607.4" font-size="10.4" fill="#a78bfa" text-anchor="start">스캔로그 append]</text>
+<rect x="192" y="714.6" width="129.9" height="16.4" rx="4" fill="#14101f"/>
+<text x="196" y="726" font-size="10.4" fill="#a78bfa" text-anchor="start">[검사 🟢 블록만 → 대기함]</text>
+<rect x="192" y="1315.6" width="90.68" height="16.4" rx="4" fill="#14101f"/>
+<text x="196" y="1327" font-size="10.4" fill="#a78bfa" text-anchor="start">[빌더 진입 시 1회]</text>
+<rect x="192" y="1434.6" width="157.725" height="16.4" rx="4" fill="#14101f"/>
+<text x="196" y="1446" font-size="10.4" fill="#a78bfa" text-anchor="start">[01~0N 덱 · 킷 mp4 · caption]</text>
+<rect x="142" y="1565.6" width="119.83" height="28.8" rx="4" fill="#14101f"/>
+<text x="146" y="1577" font-size="10.4" fill="#7dd3fc" text-anchor="start">[STATUS: OK 공개 예정</text>
+<text x="146" y="1589.4" font-size="10.4" fill="#7dd3fc" text-anchor="start">텍스트만]</text>
+<rect x="192" y="1816.6" width="121.155" height="28.8" rx="4" fill="#14101f"/>
+<text x="196" y="1828" font-size="10.4" fill="#a78bfa" text-anchor="start">[발행팩 + G: 드라이브 덱</text>
+<text x="196" y="1840.4" font-size="10.4" fill="#a78bfa" text-anchor="start">(양방향 대조)]</text>
+<rect x="154.5" y="1935.6" width="149.775" height="16.4" rx="4" fill="#14101f"/>
+<text x="158.5" y="1947" font-size="10.4" fill="#a78bfa" text-anchor="start">[폰에서 발행 → 발행로그 기입]</text>
+<rect x="192" y="2056" width="90.68" height="15" rx="4" fill="#14101f"/>
+<text x="196" y="2066" font-size="9" fill="#9a92b5" text-anchor="start">[발행 완료 편 공개본]</text>
+<rect x="1059.5" y="1937" width="85.115" height="15" rx="4" fill="#14101f"/>
+<text x="1063.5" y="1947" font-size="9" fill="#6b5f95" text-anchor="start">[applied.md 기록]</text>
+<rect x="793.25" y="1937" width="90.945" height="15" rx="4" fill="#14101f"/>
+<text x="797.25" y="1947" font-size="9" fill="#fb923c" text-anchor="start">[세션 교정 → R 번호]</text>
+<rect x="192" y="430.6" width="150.04" height="28.8" rx="4" fill="#14101f"/>
+<text x="196" y="442" font-size="10.4" fill="#6ee7d5" text-anchor="start">[logs/scout-data/sources_&lt;</text>
+<text x="196" y="454.4" font-size="10.4" fill="#6ee7d5" text-anchor="start">날짜&gt;.txt]</text>
+<rect x="192" y="833.6" width="110.29" height="28.8" rx="4" fill="#14101f"/>
+<text x="196" y="845" font-size="10.4" fill="#a78bfa" text-anchor="start">[선정 소재 · 원 포스트</text>
+<text x="196" y="857.4" font-size="10.4" fill="#a78bfa" text-anchor="start">_assets/]</text>
+<rect x="686.28" y="429" width="126.72" height="15" rx="4" fill="#14101f"/>
+<text x="809" y="439" font-size="9" fill="#6ee7d5" text-anchor="end">[조건 문자열 적중 · 판정 후보]</text>
+<rect x="415.68" y="429" width="137.32" height="26" rx="4" fill="#14101f"/>
+<text x="549" y="439" font-size="9" fill="#6ee7d5" text-anchor="end">[logs/audit-data/runs_&lt;날짜&gt;</text>
+<text x="549" y="450" font-size="9" fill="#6ee7d5" text-anchor="end">.txt]</text>
+<rect x="89" y="1155.6" width="61.795" height="16.4" rx="4" fill="#14101f"/>
+<text x="93" y="1167" font-size="10.4" fill="#a78bfa" text-anchor="start">[_scenes/]</text>
+<rect x="192" y="1155.6" width="96.51" height="16.4" rx="4" fill="#14101f"/>
+<text x="196" y="1167" font-size="10.4" fill="#a78bfa" text-anchor="start">[shots/0N_*.png]</text>
+<rect x="240.637" y="1179.6" width="104.725" height="28.8" rx="4" fill="#14101f"/>
+<text x="293" y="1191" font-size="10.4" fill="#a78bfa" text-anchor="middle">[shots/_kit_live.pn</text>
+<text x="293" y="1203.4" font-size="10.4" fill="#a78bfa" text-anchor="middle">g]</text>
+<rect x="180.25" y="996.6" width="87.235" height="28.8" rx="4" fill="#14101f"/>
+<text x="184.25" y="1008" font-size="10.4" fill="#a78bfa" text-anchor="start">[COVER·CARDS</text>
+<text x="184.25" y="1020.4" font-size="10.4" fill="#a78bfa" text-anchor="start">선언]</text>
+<rect x="77.25" y="986.6" width="83.79" height="28.8" rx="4" fill="#14101f"/>
+<text x="81.25" y="998" font-size="10.4" fill="#a78bfa" text-anchor="start">[기획안·CARDS</text>
+<text x="81.25" y="1010.4" font-size="10.4" fill="#a78bfa" text-anchor="start">선언]</text>
+<rect x="114.5" y="253.6" width="108.435" height="28.8" rx="4" fill="#14101f"/>
+<text x="118.5" y="265" font-size="10.4" fill="#a78bfa" text-anchor="start">[소스 표 파싱 →</text>
+<text x="118.5" y="277.4" font-size="10.4" fill="#a78bfa" text-anchor="start">sources_&lt;날짜&gt;.txt]</text>
+<rect x="179.56" y="974.6" width="99.69" height="16.4" rx="4" fill="#14101f"/>
+<text x="275.25" y="986" font-size="10.4" fill="#a78bfa" text-anchor="end">[KIT 선언 + FACTS]</text>
+<rect x="428" y="2009" width="132.285" height="26" rx="4" fill="#14101f"/>
+<text x="432" y="2019" font-size="9" fill="#9a92b5" text-anchor="start">[reports/&lt;날짜&gt;_dist_epNN.</text>
+<text x="432" y="2030" font-size="9" fill="#9a92b5" text-anchor="start">md 초안 — 설계]</text>
+<rect x="416" y="1754.6" width="138.38" height="16.4" rx="4" fill="#14101f"/>
+<text x="420" y="1766" font-size="10.4" fill="#7dd3fc" text-anchor="start">[자문 리포트 병기 — 비차단]</text>
+<rect x="258.935" y="325.6" width="93.065" height="16.4" rx="4" fill="#14101f"/>
+<text x="348" y="337" font-size="10.4" fill="#a78bfa" text-anchor="end">[§5.5 1~3-1단계]</text>
+<rect x="557" y="199" width="134.405" height="26" rx="4" fill="#14101f"/>
+<text x="561" y="209" font-size="9" fill="#6b5f95" text-anchor="start">[§4 규약 래퍼·lock·stagger·</text>
+<text x="561" y="220" font-size="9" fill="#6b5f95" text-anchor="start">git-sync]</text>
+<rect x="848.667" y="191" width="115.06" height="26" rx="4" fill="#14101f"/>
+<text x="852.667" y="201" font-size="9" fill="#6b5f95" text-anchor="start">[hermes-02 명세 · sagun</text>
+<text x="852.667" y="212" font-size="9" fill="#6b5f95" text-anchor="start">SOUL]</text>
+<rect x="404" y="1611.6" width="108.435" height="16.4" rx="4" fill="#14101f"/>
+<text x="408" y="1623" font-size="10.4" fill="#a78bfa" text-anchor="start">[verify STATUS: OK]</text>
+<rect x="1082" y="207" width="112.675" height="15" rx="4" fill="#14101f"/>
+<text x="1086" y="217" font-size="9" fill="#6b5f95" text-anchor="start">[실값 재조회 → 교체본 v2]</text>
+<rect x="822.65" y="409" width="111.35" height="26" rx="4" fill="#14101f"/>
+<text x="930" y="419" font-size="9" fill="#6b5f95" text-anchor="end">[checklists/xreview.md</text>
+<text x="930" y="430" font-size="9" fill="#6b5f95" text-anchor="end">C1~C12]</text>
+<rect x="392" y="1208.6" width="146.86" height="28.8" rx="4" fill="#14101f"/>
+<text x="396" y="1220" font-size="10.4" fill="#a78bfa" text-anchor="start">[numeral_vocab() → guard</text>
+<text x="396" y="1232.4" font-size="10.4" fill="#a78bfa" text-anchor="start">3]</text>
+<rect x="380" y="551.6" width="142.355" height="28.8" rx="4" fill="#14101f"/>
+<text x="384" y="563" font-size="10.4" fill="#a78bfa" text-anchor="start">[§7 제작 순서 · 소재 컨펌 뒤</text>
+<text x="384" y="575.4" font-size="10.4" fill="#a78bfa" text-anchor="start">착수]</text>
+<rect x="143.575" y="225" width="125.925" height="15" rx="4" fill="#14101f"/>
+<text x="265.5" y="235" font-size="9" fill="#6b5f95" text-anchor="end">[라이브 사본 ↔ origin/main]</text>
+<rect x="969.035" y="1327" width="108.965" height="15" rx="4" fill="#14101f"/>
+<text x="1074" y="1337" font-size="9" fill="#6ee7d5" text-anchor="end">[FAIL 뒤처짐 · 커밋 거부]</text>
+<rect x="419.655" y="1265" width="133.345" height="26" rx="4" fill="#14101f"/>
+<text x="549" y="1275" font-size="9" fill="#6b5f95" text-anchor="end">[reports/&lt;날짜&gt;_skill-drift.m</text>
+<text x="549" y="1286" font-size="9" fill="#6b5f95" text-anchor="end">d]</text>
+<rect x="1018.76" y="678" width="122.48" height="26" rx="4" fill="#14101f"/>
+<text x="1080" y="688" font-size="9" fill="#6ee7d5" text-anchor="middle">[logs/claims/*.claim 거부·</text>
+<text x="1080" y="699" font-size="9" fill="#6ee7d5" text-anchor="middle">현황]</text>
+<rect x="392" y="1173.6" width="157.99" height="28.8" rx="4" fill="#14101f"/>
+<text x="396" y="1185" font-size="10.4" fill="#a78bfa" text-anchor="start">[reports/&lt;날짜&gt;_tomangchi-s</text>
+<text x="396" y="1197.4" font-size="10.4" fill="#a78bfa" text-anchor="start">cout.md]</text>
+<rect x="690" y="1205" width="132.815" height="26" rx="4" fill="#14101f"/>
+<text x="694" y="1215" font-size="9" fill="#6b5f95" text-anchor="start">[reports/&lt;날짜&gt;_morning-va</text>
+<text x="694" y="1226" font-size="9" fill="#6b5f95" text-anchor="start">ult-health.md]</text>
+<rect x="943.065" y="557" width="134.935" height="15" rx="4" fill="#14101f"/>
+<text x="1074" y="567" font-size="9" fill="#6b5f95" text-anchor="end">[PR #8·#9 · v2 PDF 합본 대기]</text>
+<rect x="746.34" y="545" width="137.32" height="26" rx="4" fill="#14101f"/>
+<text x="815" y="555" font-size="9" fill="#6b5f95" text-anchor="middle">[reports/&lt;날짜&gt;_event-watch</text>
+<text x="815" y="566" font-size="9" fill="#6b5f95" text-anchor="middle">.md 🔴 성립]</text>
+<rect x="1046.54" y="711" width="135.465" height="26" rx="4" fill="#14101f"/>
+<text x="1178" y="721" font-size="9" fill="#6b5f95" text-anchor="end">[reports/&lt;날짜&gt;_job-scout.m</text>
+<text x="1178" y="732" font-size="9" fill="#6b5f95" text-anchor="end">d]</text>
+<rect x="788.655" y="1159" width="133.345" height="26" rx="4" fill="#14101f"/>
+<text x="918" y="1169" font-size="9" fill="#7dd3fc" text-anchor="end">[reports/&lt;날짜&gt;_xreview_ep</text>
+<text x="918" y="1180" font-size="9" fill="#7dd3fc" text-anchor="end">NN.md ≤10건]</text>
+<rect x="1147.47" y="231" width="114.53" height="26" rx="4" fill="#14101f"/>
+<text x="1258" y="241" font-size="9" fill="#fb923c" text-anchor="end">[조문 PR · FACTS PREV ·</text>
+<text x="1258" y="252" font-size="9" fill="#fb923c" text-anchor="end">learnings 후보]</text>
+<g transform="translate(34,324) rotate(-90)"><text font-size="11" font-weight="700" fill="#a78bfa" text-anchor="end">본선 — 스카우트 유입 → 계약 → 제작 체인 → 게이트 → 발행</text></g>
+<g transform="translate(452,324) rotate(-90)"><text font-size="11" font-weight="700" fill="#9a92b5" text-anchor="end">감사</text></g>
+<g transform="translate(712,324) rotate(-90)"><text font-size="11" font-weight="700" fill="#9a92b5" text-anchor="end">감시 · 자문</text></g>
+<g transform="translate(982,324) rotate(-90)"><text font-size="11" font-weight="700" fill="#9a92b5" text-anchor="end">구직</text></g>
 </svg>
