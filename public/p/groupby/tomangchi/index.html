@@ -2,108 +2,13 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>토망치랩 파이프라인 — 게이트가 발행을 막는다 | 오재준</title>
-<link rel="stylesheet" href="../_style.css">
-<style>
-  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 20px 0 8px; }
-  .step { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 15px 16px; position: relative; border-top: 3px solid var(--sc, var(--accent)); }
-  .step .n { font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--sc, var(--accent)); }
-  .step .t { font-size: 14.5px; font-weight: 700; margin: 5px 0 5px; }
-  .step .d { font-size: 12.4px; color: var(--sub); line-height: 1.6; }
-  .gate { border-color: #f87171 !important; }
-  .checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 8px 20px; margin: 14px 0 6px; }
-  .chk { font-size: 13.2px; display: flex; gap: 9px; align-items: baseline; }
-  .chk .id { color: var(--accent2); font-weight: 700; font-family: "Consolas", monospace; font-size: 12.2px; white-space: nowrap; min-width: 44px; }
-  .kit { display: inline-block; margin-top: 6px; padding: 11px 18px; background: #251d3f; border: 1px solid #4b3f75;
-         border-radius: 10px; color: #d9d2ff; text-decoration: none; font-size: 14px; }
-  .kit:hover { background: #322753; border-color: var(--accent); }
-</style>
+<meta http-equiv="refresh" content="0; url=/p/ax-portfolio/tomangchi/">
+<link rel="canonical" href="https://ohjaejuno.github.io/p/ax-portfolio/tomangchi/">
+<title>이동됨 — 토망치랩 파이프라인 | 오재준</title>
+<script>location.replace("/p/ax-portfolio/tomangchi/" + location.hash);</script>
 </head>
-<body>
-<main>
-  <div class="kicker">인스타그램 AI 매거진 · 운영 중</div>
-  <h1>토망치랩 — 만드는 건 AI, 내보낼지는 게이트가 정한다</h1>
-  <p class="lede">소재 수집부터 카드 조립·검증·발행팩까지 한 파이프라인으로 돌립니다. 29편 발행 · 규약 v3.49 · 파이프라인 5,531줄.</p>
-  <hr class="rule">
-
-  <h2><span class="n">1</span>공정</h2>
-  <div class="flow">
-    <div class="step" style="--sc:#6ee7d5">
-      <div class="n">STEP 1</div><div class="t">소재 수집</div>
-      <div class="d">공식 X·제품 페이지·블로그·유튜브·프레스킷 <strong>5소스 전수</strong>. 각 소스에서 「형상 N개 / 0개」를 검증 로그에 적습니다.</div>
-    </div>
-    <div class="step" style="--sc:#a78bfa">
-      <div class="n">STEP 2</div><div class="t">검증 · 집필</div>
-      <div class="d">이중 출처 대조 후 검증 로그가 <strong>사실의 원장</strong>이 됩니다. 카드 문장은 로그를 그대로 옮기지 않고 독자의 언어로 다시 씁니다.</div>
-    </div>
-    <div class="step" style="--sc:#a78bfa">
-      <div class="n">STEP 3</div><div class="t">조립</div>
-      <div class="d">카드·영상 슬라이드를 파이썬으로 렌더합니다. 씬은 생성하되 <strong>선언한 문자열만</strong> 그려지게 두고, 그린 자국을 사이드카에 남깁니다.</div>
-    </div>
-    <div class="step gate">
-      <div class="n" style="color:#f87171">STEP 4 · GATE</div><div class="t">발행 게이트</div>
-      <div class="d"><strong>18개 항목을 검사합니다. 하나라도 걸리면 나가지 않습니다.</strong> 통과 못 한 편은 사람이 설득해도 통과되지 않습니다.</div>
-    </div>
-    <div class="step" style="--sc:#6ee7d5">
-      <div class="n">STEP 5</div><div class="t">발행팩</div>
-      <div class="d">캡션·고정 댓글·해시태그·DM 문안을 복붙 세트로 냅니다. <strong>발행 버튼은 사람이 누릅니다.</strong></div>
-    </div>
-  </div>
-  <div class="note">
-    <strong>여기서 갈리는 것은 «누가 만드는가»가 아니라 «누가 내보낼지 정하는가»입니다.</strong>
-    조립은 자동이고 판정은 규칙입니다. 사람이 하는 일은 게이트를 통과한 것 중에서 고르는 것이지,
-    게이트를 우회하는 것이 아닙니다.
-  </div>
-
-  <h2><span class="n">2</span>게이트 18항목</h2>
-  <p>편 하나를 발행팩으로 만들 때 <code>epcheck.py</code>가 실제로 도는 검사입니다.</p>
-  <div class="checks">
-    <div class="chk"><span class="id">[1]</span><span>덱 규격 — mp4 는 스트림 해상도 + 프레임 회계</span></div>
-    <div class="chk"><span class="id">[1-1]</span><span>표지 텍스트 존 — 하단 1/3 휘도·대비</span></div>
-    <div class="chk"><span class="id">[2]</span><span>뱃지 번호 — 본문 카드만 01부터</span></div>
-    <div class="chk"><span class="id">[3]</span><span>어미 규격</span></div>
-    <div class="chk"><span class="id">[3-1]</span><span>본문 줄 폭 ≤952px · 줄 수 ≤4 · 폰트 ≥24</span></div>
-    <div class="chk"><span class="id">[3-2]</span><span>본문 바닥 ↔ 크레딧 여백 ≥12px</span></div>
-    <div class="chk"><span class="id">[3-3]</span><span>3단 위계 — 핵심 1줄 존재 · 헤드라인 ≤2줄</span></div>
-    <div class="chk"><span class="id">[4]</span><span>출처 크레딧 — 도메인만 / X / @핸들</span></div>
-    <div class="chk"><span class="id">[4-1]</span><span>X 캡처 아바타 원형성 — bbox 비 1.0±0.1</span></div>
-    <div class="chk"><span class="id">[4-2]</span><span>자체 시각화 — 그림 안 근거·자작 표기</span></div>
-    <div class="chk"><span class="id">[5]</span><span>문구 ↔ 검증로그 대조 · 금지 · 필수</span></div>
-    <div class="chk"><span class="id">[5-1]</span><span>집필 후 사실 대조 — 수치·날짜·고유명사</span></div>
-    <div class="chk"><span class="id">[5-2]</span><span>부재 서술 금지 — 검증 노트 언어 검출</span></div>
-    <div class="chk"><span class="id">[6]</span><span>캡션 규격 — 훅 → 이야기 → 마무리</span></div>
-    <div class="chk"><span class="id">[7]</span><span>고정 댓글 규격</span></div>
-    <div class="chk"><span class="id">[7-1]</span><span>채널 시그니처</span></div>
-    <div class="chk"><span class="id">[7-2]</span><span>문안 금지어 — 캡션·댓글·복붙 세트</span></div>
-    <div class="chk"><span class="id">[0]</span><span>판본 적용 범위 — 편 SKILL_VER 기준 소급 판정</span></div>
-  </div>
-  <div class="note">
-    검사를 만들 때 <strong>역검증을 같이 둡니다</strong> — 일부러 걸려야 하는 입력을 넣어 검사가 헛도는지 봅니다.
-    실제로 이것 때문에 살았습니다: 사이드카 문자열만 읽던 검사가 <strong>손으로 쓴 값에 그대로 통과</strong>하고 있었고,
-    지금은 렌더러가 그리기 전후 픽셀 차이를 재서 남긴 값을 게이트가 <strong>발행되는 그림을 직접 열어</strong> 다시 잽니다.
-  </div>
-
-  <h2><span class="n">3</span>산출물 예시</h2>
-  <p>편마다 «더 알아보기» 자리에 킷 페이지를 하나씩 냅니다.
-  아래는 ep27 「AI 티 빼주는 스킬 둘」의 킷으로, <strong>두 수치가 서로 다른 척도임을 먼저 밝히고</strong> 시작합니다 —
-  공식 스킬은 설치 수, 개인 저장소는 GitHub 별입니다. 같은 자로 잰 값이 아니라 나란히 놓으면 「어느 쪽이 크다」가 잘못 읽힙니다.</p>
-  <a class="kit" href="https://tomangchi-lab.github.io/kits/anti-slop-skills.html">ep27 안티 슬롭 킷 열기 →</a>
-
-  <h2><span class="n">4</span>규모 (실측)</h2>
-  <table>
-    <tr><th>항목</th><th>값</th></tr>
-    <tr><td>발행</td><td><strong>29편</strong> (피드 캐러셀 + 릴스 포함, 게시물 단위)</td></tr>
-    <tr><td>제작 규약</td><td>SKILL v3.49 · 1,933줄</td></tr>
-    <tr><td>파이프라인 코드</td><td>5,531줄 · 모듈 19개</td></tr>
-    <tr><td>게이트 검사</td><td>18개 항목</td></tr>
-  </table>
-
-  <div class="foot">
-    <span>오재준 — AX Engineer · AI 콘텐츠 파이프라인 운영</span>
-    <span><a href="https://www.instagram.com/ai_tomangchi.lab">@ai_tomangchi.lab</a></span>
-  </div>
-</main>
+<body style="background:#14101f;color:#e9e6f4;font-family:system-ui,sans-serif;padding:40px">
+<p>이 페이지는 <a href="/p/ax-portfolio/tomangchi/" style="color:#6ee7d5">/p/ax-portfolio/tomangchi/</a> 로 옮겨졌습니다.</p>
 </body>
 </html>

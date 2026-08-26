@@ -2,85 +2,13 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>content-ops — 상태를 시스템이 든다 | 오재준</title>
-<link rel="stylesheet" href="../_style.css">
+<meta http-equiv="refresh" content="0; url=/p/ax-portfolio/content-ops/">
+<link rel="canonical" href="https://ohjaejuno.github.io/p/ax-portfolio/content-ops/">
+<title>이동됨 — content-ops | 오재준</title>
+<script>location.replace("/p/ax-portfolio/content-ops/" + location.hash);</script>
 </head>
-<body>
-<main>
-  <div class="kicker">콘텐츠 상태 관리 백엔드 · Django</div>
-  <h1>content-ops — 상태를 사람이 들고 있다가 사고가 났다</h1>
-  <p class="lede">기능을 늘리는 대신 하나만 합니다. 에피소드의 상태와 그 근거를 기록하고, 판단은 기록을 보고 하게 만드는 것.</p>
-  <hr class="rule">
-
-  <h2><span class="n">1</span>문제 — 사고 세 건, 원인은 하나</h2>
-  <p>혼자 기획하고 만들고 올리다 보면 각 편이 지금 어느 단계인지를 결국 머릿속에서 관리하게 됩니다.
-  소재를 모아둔 곳, 대본을 쓴 곳, 실제로 올린 곳이 흩어져 있으니
-  «이건 올렸던가?»를 판단할 근거가 기억밖에 없습니다.</p>
-  <ul>
-    <li><strong>오판</strong> — 제작만 해두고 발행하지 않은 건을 발행했다고 착각해 그대로 묻어버림</li>
-    <li><strong>중복 노출</strong> — 이미 다룬 소재를 다시 다뤄 같은 내용을 두 번 내보냄</li>
-    <li><strong>취소 이력 증발</strong> — 왜 접었는지가 남지 않아 나중에 같은 판단을 반복</li>
-  </ul>
-  <p>셋 다 원인이 같습니다. <strong>상태를 사람이 들고 있었다는 것.</strong></p>
-
-  <h2><span class="n">2</span>설계 판단 두 개</h2>
-
-  <h3>① 제작완료와 발행완료를 절대 같은 칸에 두지 않는다</h3>
-  <p>오판 사고가 정확히 이 둘을 뭉뚱그린 데서 나왔습니다.
-  <strong>만들어 둔 것과 내보낸 것은 다른 상태</strong>입니다.
-  <code>cancel_reason</code>도 같은 이유로 존재합니다 — 접었다는 사실만으로는
-  다음 판단에 도움이 되지 않고, <strong>왜</strong> 접었는지가 남아야 같은 소재를 다시 집어들 때 근거가 됩니다.</p>
-
-  <table>
-    <tr><th>필드</th><th>설명</th></tr>
-    <tr><td><code>number</code></td><td>에피소드 번호 (고유)</td></tr>
-    <tr><td><code>title</code></td><td>제목</td></tr>
-    <tr><td><code>category</code></td><td>AI소식 / 두드려봄 / 기회 / 꿀팁</td></tr>
-    <tr><td><code>status</code></td><td><strong>제작중 / 제작완료 / 발행완료 / 발행취소</strong></td></tr>
-    <tr><td><code>published_at</code></td><td>발행일 (미발행 시 비어 있음)</td></tr>
-    <tr><td><code>cancel_reason</code></td><td>취소사유 (취소 건이 아니면 비어 있음)</td></tr>
-  </table>
-
-  <h3>② 노출 횟수를 세는 단위는 «소재»가 아니라 «사건»이다</h3>
-  <p>서로 다른 URL 여러 개가 같은 사건을 다루는 것이 실제 중복 노출 사고의 형태였습니다.
-  <strong>URL 단위로 세면 정작 문제가 된 경우가 그대로 통과합니다.</strong></p>
-  <p><code>exposure_count</code>는 연결된 에피소드 중 <strong>발행완료만</strong> 셉니다.
-  제작만 해둔 건과 접은 건은 밖으로 나가지 않았으므로 노출이 아닙니다 —
-  중복 노출의 기준은 «만들었는가»가 아니라 <strong>«내보냈는가»</strong>입니다.</p>
-  <p>접힌 에피소드도 사건에 연결된 채로 남습니다.
-  그래야 «이건 왜 접었나»를 취소사유 텍스트가 아니라 <strong>조회로</strong> 답할 수 있습니다.</p>
-
-  <h2><span class="n">3</span>중복 감지 — 모델은 후보까지, 채택은 사람</h2>
-  <div class="box">
-    <p style="margin:0">새 소재가 이미 다룬 것과 겹치는지를 임베딩으로 <strong>걸러냅니다</strong>.
-    모델은 <code>BAAI/bge-m3</code>이고 <strong>로컬에서 돕니다</strong> —
-    아직 발행하지 않은 기획이 외부 API로 나가지 않게 하려는 것입니다.</p>
-  </div>
-  <p>모델이 하는 일은 <strong>후보를 좁히는 것까지</strong>입니다. 겹친다/아니다의 최종 판정은 사람이 합니다.
-  판정을 모델에 맡기면 «왜 이게 중복인가»를 설명할 수 없고,
-  설명할 수 없는 판정은 다음에 같은 상황이 왔을 때 근거가 되지 못합니다.</p>
-  <p class="note">이것은 다른 프로젝트와 같은 원칙입니다 —
-  <strong>판정은 결정적 규칙, LLM은 보조.</strong>
-  토망치랩의 발행 게이트, jj-company의 자동화 등급, AX 시딩 엔진의 쿠폰 프로토콜이 전부 같은 판단 위에 있습니다.</p>
-
-  <h2><span class="n">4</span>규모 (실측)</h2>
-  <table>
-    <tr><th>항목</th><th>값</th></tr>
-    <tr><td>스택</td><td>Django 6.1 · SQLite · sentence-transformers</td></tr>
-    <tr><td>중복 감지 모델</td><td>BAAI/bge-m3 (로컬 실행)</td></tr>
-    <tr><td>자체 코드</td><td>3,704줄 (venv·migrations 제외)</td></tr>
-    <tr><td>적재 레코드</td><td>에피소드 26 · 소스 22 · 토픽 10</td></tr>
-  </table>
-  <p class="note">선택 의존성 분리 — <code>torch</code>가 무겁고 나머지 기능이 전부 그것 없이 동작하므로
-  <code>requirements-ml.txt</code>로 갈랐습니다. 설치하지 않으면 중복 감지만 안내를 띄우고 멈추며,
-  <strong>나머지는 그대로 돌아갑니다.</strong> GPU가 있으면 쓰고 없으면 CPU로 폴백합니다.</p>
-
-  <div class="foot">
-    <span>오재준 — AX Engineer · AI 콘텐츠 파이프라인 운영</span>
-    <span><a href="https://github.com/OhjaejunO/content-ops">github.com/OhjaejunO/content-ops</a></span>
-  </div>
-</main>
+<body style="background:#14101f;color:#e9e6f4;font-family:system-ui,sans-serif;padding:40px">
+<p>이 페이지는 <a href="/p/ax-portfolio/content-ops/" style="color:#6ee7d5">/p/ax-portfolio/content-ops/</a> 로 옮겨졌습니다.</p>
 </body>
 </html>
