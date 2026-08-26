@@ -12,6 +12,8 @@
   .rung .r { font-size: 11.5px; font-weight: 700; letter-spacing: .1em; color: var(--accent2); }
   .rung .t { font-size: 14.5px; font-weight: 700; margin: 4px 0; }
   .rung .d { font-size: 12.4px; color: var(--sub); line-height: 1.6; }
+  .sysmap { display: block; margin: 14px 0 6px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--bg); }
+  .sysmap img { display: block; width: 100%; height: auto; }
 </style>
 </head>
 <body>
@@ -20,6 +22,16 @@
   <h1>jj-company — 무엇을 맡길지 «등급»으로 정한다</h1>
   <p class="lede">매일 도는 에이전트 3종 · 결정적 감사 1건 · 시범 감시 봇 1건. 판단이 아니라 규칙이 권한을 가릅니다.</p>
   <hr class="rule">
+
+  <h2 id="sysmap"><span class="n">0</span>시스템 맵 — 4층 + 감지층 (2026-08-26 실물)</h2>
+  <p>정본(L1) → 워커·봇 7노드(L2) → 계약·게이트(L3) → 휴먼 게이트(L4), 그리고 그 아래 «조용한 실패를 잡는» 감지층입니다.
+  <strong>화살표마다 산출물 라벨</strong>이 붙어 있고, 노드·간선 25개 전부가 파일·조문·로그와 1:1 로 대조됩니다(실물 없는 것은 그리지 않았습니다 — 유통 변환 워커 점선이 유일한 «설계»).
+  파란 점선은 크로스 모델 <strong>자문(비차단)</strong>, 주황은 교정이 정관으로 되돌아오는 <strong>Learning 폐루프</strong>입니다.</p>
+  <picture class="sysmap">
+    <source media="(max-width: 700px)" srcset="sysmap-mobile.svg">
+    <img src="sysmap-desktop.svg" alt="jj-company 시스템 맵 — L1 정본, L2 워커·봇 7노드, L3 계약·게이트, L4 휴먼 게이트, 감지층" width="1280" height="1240">
+  </picture>
+  <p class="note">데스크톱은 가로형 1280, 모바일은 층별 세로 재배열판(간선은 각 노드의 → 행)입니다. 워커 노드의 시각·에이전트·모델·권한 모드는 래퍼 스크립트와 작업 스케줄러 실값에서 읽었습니다.</p>
 
   <h2><span class="n">1</span>왜 등급인가</h2>
   <p>에이전트에게 일을 맡길 때 가장 위험한 건 «이 정도는 알아서 하겠지»입니다.
