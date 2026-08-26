@@ -340,8 +340,8 @@
 <rect x="1147.47" y="231" width="114.53" height="26" rx="4" fill="#14101f"/>
 <text x="1258" y="241" font-size="9" fill="#fb923c" text-anchor="end">[조문 PR · FACTS PREV ·</text>
 <text x="1258" y="252" font-size="9" fill="#fb923c" text-anchor="end">learnings 후보]</text>
-<g transform="translate(34,324) rotate(-90)"><text font-size="11" font-weight="700" fill="#a78bfa" text-anchor="end">본선 — 스카우트 유입 → 계약 → 제작 체인 → 게이트 → 발행</text></g>
-<g transform="translate(452,324) rotate(-90)"><text font-size="11" font-weight="700" fill="#9a92b5" text-anchor="end">감사</text></g>
-<g transform="translate(712,324) rotate(-90)"><text font-size="11" font-weight="700" fill="#9a92b5" text-anchor="end">감시 · 자문</text></g>
-<g transform="translate(982,324) rotate(-90)"><text font-size="11" font-weight="700" fill="#9a92b5" text-anchor="end">구직</text></g>
+<g transform="translate(34,614.44) rotate(-90)"><text font-size="11" font-weight="700" fill="#a78bfa" text-anchor="start">본선 — 스카우트 유입 → 계약 → 제작 체인 → 게이트 → 발행</text></g>
+<g transform="translate(452,345.2) rotate(-90)"><text font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">감사</text></g>
+<g transform="translate(712,378.59) rotate(-90)"><text font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">감시 · 자문</text></g>
+<g transform="translate(982,345.2) rotate(-90)"><text font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">구직</text></g>
 </svg>
