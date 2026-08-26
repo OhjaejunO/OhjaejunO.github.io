@@ -2,106 +2,13 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>오재준 — AX Engineer 포트폴리오</title>
-<style>
-  :root { --bg:#14101f; --panel:#1c1730; --line:#2f2745; --ink:#e9e6f4; --sub:#9a92b5; --accent:#a78bfa; --accent2:#6ee7d5; color-scheme: dark; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--ink);
-         font-family: "Pretendard","Noto Sans KR","Malgun Gothic",system-ui,sans-serif; line-height: 1.7; }
-  .sheet { max-width: 1100px; margin: 0 auto; padding: 0 0 40px; }
-  .sheet img { width: 100%; height: auto; display: block; }
-  main { max-width: 1100px; margin: 0 auto; padding: 0 22px 96px; }
-  h2 { font-size: 19px; margin: 46px 0 8px; }
-  p.lede { color: var(--sub); font-size: 14px; margin-bottom: 18px; }
-  .links { display: grid; grid-template-columns: repeat(auto-fit,minmax(310px,1fr)); gap: 14px; }
-  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
-  .card h3 { font-size: 15.5px; margin-bottom: 4px; }
-  .card .d { font-size: 13px; color: var(--sub); margin-bottom: 12px; line-height: 1.6; }
-  .card a { display: inline-block; font-size: 12.5px; letter-spacing: .04em; text-decoration: none;
-            color: #d9d2ff; border: 1px solid #4b3f75; border-radius: 999px;
-            padding: 6px 15px; margin: 0 7px 7px 0; background: #251d3f; }
-  .card a:hover { background: #322753; border-color: var(--accent); }
-  .foot { margin-top: 54px; padding-top: 18px; border-top: 1px solid var(--line);
-          font-size: 13px; color: var(--sub); }
-  .foot a { color: var(--accent2); }
-  .note { font-size: 12.5px; color: var(--sub); border-left: 2px solid var(--accent); padding-left: 12px; margin: 20px 0 0; }
-</style>
+<meta http-equiv="refresh" content="0; url=/p/ax-portfolio/">
+<link rel="canonical" href="https://ohjaejuno.github.io/p/ax-portfolio/">
+<title>이동됨 — 오재준 AX Engineer 포트폴리오</title>
+<script>location.replace("/p/ax-portfolio/" + location.hash);</script>
 </head>
-<body>
-
-<div class="sheet" id="top">
-  <img src="onepage.jpg" alt="오재준 AX Engineer 포트폴리오 원페이지" width="1980" height="5560">
-</div>
-
-<main>
-  <h2 id="about">소개</h2>
-  <p class="lede">콘텐츠 발행부터 인프라 감사까지, AI 에이전트가 일하는 파이프라인을 운영합니다.
-  발행 전 게이트 18개, 자동화 등급 3단계, 쿠폰 프로토콜 — 틀렸을 때 걸리는 장치를 먼저 만듭니다.
-  아래 여섯 프로젝트가 그 구조의 실물입니다.</p>
-
-  <h2 id="work">바로 열어볼 수 있는 것</h2>
-  <p class="lede">위 지면에 적힌 프로젝트의 저장소와 문서입니다. 모두 접근 확인을 마쳤습니다.</p>
-
-  <div class="links">
-    <div class="card">
-      <h3>토망치랩 파이프라인</h3>
-      <div class="d">만드는 건 AI, 내보낼지는 게이트 18개 항목이 정합니다. 29편 발행 · 규약 v3.49 · 파이프라인 5,531줄.</div>
-      <a href="tomangchi/">파이프라인과 게이트 18항목</a>
-      <a href="https://tomangchi-lab.github.io/kits/anti-slop-skills.html">ep27 킷</a>
-      <a href="https://github.com/tomangchi-lab/tomangchi-lab.github.io">GitHub</a>
-      <a href="https://www.instagram.com/ai_tomangchi.lab">Instagram</a>
-    </div>
-
-    <div class="card">
-      <h3>jj-company</h3>
-      <div class="d">맡길 범위를 판단이 아니라 「되돌림 비용」으로 가릅니다. 스케줄 4건 · 누적 리포트 62건 · 등급 3단계.</div>
-      <a href="https://github.com/OhjaejunO/jj-company">GitHub</a>
-      <a href="jj-company/">등급 설계와 리포트 실물</a>
-    </div>
-
-    <div class="card">
-      <h3>AX 인재전쟁 — 본선</h3>
-      <div class="d">성과 귀속을 확률 모델이 아니라 전용 쿠폰 코드로 확정했습니다. 3시간 개인전 · 설계 문서 5종 + 백테스트 데모 킷.</div>
-      <a href="https://github.com/OhjaejunO/meditherapy-seeding-engine">GitHub</a>
-      <a href="https://ohjaejuno.github.io/docs/ax-final/">설계 문서</a>
-    </div>
-
-    <div class="card">
-      <h3>content-ops</h3>
-      <div class="d">임베딩은 후보를 좁히는 데까지, 채택은 사람이 합니다. Django 6.1 · bge-m3 로컬 · 자체 3,704줄.</div>
-      <a href="https://github.com/OhjaejunO/content-ops">GitHub</a>
-      <a href="content-ops/">상태 모델 설계</a>
-    </div>
-
-    <div class="card">
-      <h3>factory-space</h3>
-      <div class="d">8인 팀 UE5 프로젝트에서 건설·그리드 시스템을 맡았습니다. 발소리·환경음 구현도 함께 맡았습니다. 이슈 94건 · 커밋 524 / 1,601 · OJJ_ 클래스 25개.</div>
-      <a href="https://youtu.be/nU_uhfK5J7Q">플레이 영상</a>
-      <a href="https://github.com/PU3-Lab/factory-space">GitHub</a>
-      <a href="https://ohjaejuno.github.io/blog/factory-sim/01-grid-system-overview/">개발 기록</a>
-    </div>
-
-    <div class="card">
-      <h3>AX 인재전쟁 — 예선</h3>
-      <div class="d">판정을 전부 결정적 규칙으로 짠 플러그인 3종. 규칙 JSON 8파일 · 온톨로지 82규칙 · 백테스트 1위 적중.</div>
-      <a href="https://github.com/OhjaejunO/musinsa-trend-scout">트렌드 스카우트</a>
-      <a href="https://github.com/OhjaejunO/meditherapy-reg-ontology">규제 온톨로지</a>
-      <a href="https://ohjaejuno.github.io/docs/ax-prelim/">설계 문서</a>
-    </div>
-  </div>
-
-  <p class="note">이 페이지는 검색에 노출되지 않는 비공개 경로입니다(<code>robots.txt</code> 제외 대상).
-  지면에 적은 수치는 전부 실물에서 센 값이고, 확인하지 못한 것은 적지 않았습니다.</p>
-
-  <div class="foot" id="contact">
-    오재준 · AX Engineer · AI 콘텐츠 파이프라인 운영<br>
-    <a href="mailto:ojaejun1995@gmail.com">ojaejun1995@gmail.com</a> ·
-    <a href="https://github.com/OhjaejunO">github.com/OhjaejunO</a> ·
-    <a href="https://ohjaejuno.github.io">ohjaejuno.github.io</a>
-  </div>
-</main>
-
+<body style="background:#14101f;color:#e9e6f4;font-family:system-ui,sans-serif;padding:40px">
+<p>이 페이지는 <a href="/p/ax-portfolio/" style="color:#6ee7d5">/p/ax-portfolio/</a> 로 옮겨졌습니다. 자동으로 이동하지 않으면 링크를 눌러 주세요.</p>
 </body>
 </html>
