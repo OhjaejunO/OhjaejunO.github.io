@@ -32,18 +32,29 @@
   .vocab div { color: var(--sub); } .vocab b { color: var(--ink); font-family: "Consolas", ui-monospace, monospace; font-size: 12.6px; }
   .delta { font-size: 13.2px; color: var(--sub); margin-top: 10px; }
   .delta b { color: var(--accent2); }
+  .cmap { display: block; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--bg); }
+  .cmap img { display: block; width: 100%; height: auto; }
 </style>
 </head>
 <body>
 
-<div class="sheet" id="top">
-  <img src="onepage.jpg" alt="오재준 AX Engineer 포트폴리오 원페이지 (2026-08-24 제출본)" width="1980" height="5560">
-</div>
-
-<main>
-  <p class="note" style="margin:8px 0 22px">위 도식(입력 → AI 실행 → 게이트 → 사람 → 산출)의 상세판 — 정본·워커 7노드·계약/게이트·휴먼 게이트·감지층 4층 지도는
-  <a href="jj-company/#sysmap">시스템 맵 보기 →</a></p>
+<main id="top">
+  <h1 style="font-size:24px;margin:34px 0 4px">오재준 — AX Engineer · AI 콘텐츠 파이프라인 운영</h1>
   <p class="hook">만드는 건 AI, 내보내는 건 규칙입니다.</p>
+  <p class="lede" style="margin-bottom:10px">아래 한 장이 회사 전체입니다 — 스카우트 유입 · 토망치랩 제작·발행 체인 · 감사 · 감시·자문 · 구직 트랙이 정본(L1) → 워커·제작(L2) → 계약·게이트(L3) → 휴먼 게이트(L4) 네 층과 감지층 위에 놓입니다.
+  상단 요약 밴드(입력 → AI 실행 → 게이트 → 사람 → 산출)가 8월 24일 지면의 5칸 도식을 흡수했습니다. 화살표마다 산출물 라벨이 붙어 있고, 노드·간선 전부가 파일·조문·로그와 1:1 로 대조됩니다(실물 없는 것은 그리지 않았습니다 — 유통 변환 워커 점선이 유일한 «설계»).</p>
+  <picture class="cmap">
+    <source media="(max-width: 700px)" srcset="company-map-mobile.svg">
+    <img src="company-map-desktop.svg" alt="JJ Company 전사 시스템 맵 — 5 트랙 × 4층 + 감지층" width="1280" height="1170">
+  </picture>
+  <p class="note" style="margin:8px 0 0">모바일은 층별 세로 재배열판(제작 체인은 한 노드로 접힘). 노드별 실물·간선별 산출물 대조표와 상세 설명은 <a href="jj-company/#sysmap">jj-company 페이지 §0</a>에 있습니다. 인쇄용 export: <a href="company-map-print.png">company-map-print.png</a> (2560×2340).</p>
+
+  <details class="sheet-wrap" style="margin-top:30px">
+    <summary style="cursor:pointer;color:var(--sub);font-size:13.5px">8월 24일 제출 지면(이미지 4쪽) 펼치기 — 지면 안 수치(게이트 18·v3.49)는 제출 시점 값</summary>
+    <div class="sheet" style="margin-top:12px">
+      <img src="onepage.jpg" alt="오재준 AX Engineer 포트폴리오 원페이지 (2026-08-24 제출본)" width="1980" height="5560" loading="lazy">
+    </div>
+  </details>
   <p class="lede">그 규칙이 정말 구조인지는 <strong>가짜 간선 테스트</strong>로 쟀습니다 — 제작 파이프라인의 화살표 12개 중
   «앞 단계 산출물을 실제로 읽는가»로 가르니 절반이 가짜 간선이었고, 병렬화로 얻는 절감은 편당 <strong>1% 미만</strong>(자동화 구간 4~7분 / 편 스팬 2.8~5.8시간)이었습니다.
   대신 그 테스트가 <strong>게이트가 못 보던 수동 <code>cp</code> 간선</strong>(킷 캡처 → 영상)을 드러냈고, 그 간선은 검사를 붙이는 대신

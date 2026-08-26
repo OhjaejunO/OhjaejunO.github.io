@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 2524" width="390" height="2524" font-family="Pretendard, Noto Sans KR, Malgun Gothic, system-ui, sans-serif" role="img" aria-label="JJ Company — 전사 시스템 맵">
+<title>JJ Company — 전사 시스템 맵</title>
+<defs><marker id="m-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a78bfa"/></marker><marker id="m-advise" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7dd3fc"/></marker><marker id="m-learn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#fb923c"/></marker><marker id="m-detect" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6ee7d5"/></marker><marker id="m-design" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a92b5"/></marker></defs>
+<rect width="390" height="10" fill="#14101f"/>
+<rect x="8" y="2052" width="374" height="344" rx="12" fill="none" stroke="#2f2745" stroke-dasharray="3 5"/>
+<rect x="8" y="1723" width="374" height="323" rx="12" fill="none" stroke="#2f2745" stroke-dasharray="3 5"/>
+<rect x="8" y="1427" width="374" height="290" rx="12" fill="none" stroke="#2f2745" stroke-dasharray="3 5"/>
+<rect x="8" y="567" width="374" height="854" rx="12" fill="none" stroke="#2f2745" stroke-dasharray="3 5"/>
+<rect x="8" y="68" width="374" height="493" rx="12" fill="none" stroke="#2f2745" stroke-dasharray="3 5"/>
+<text x="24" y="34" font-size="20" font-weight="700" fill="#e9e6f4">JJ Company — 전사 시스템 맵</text>
+<text x="24" y="56" font-size="12.5" fill="#9a92b5">층별 세로 재배열 · 제작 체인은 한 노드로 접음 · 간선은 → 행</text>
+<text x="14" y="88" font-size="12" font-weight="700" fill="#6ee7d5">L1 정본</text>
+<text x="14" y="102" font-size="9.8" fill="#9a92b5">실물이 정본 · 문서는 조회 결과</text>
+<g id="n-config">
+<rect x="14" y="110" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="110" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="129" font-size="11" font-weight="700" fill="#e9e6f4">config.md 소스 표</text>
+<text x="24" y="142.5" font-size="9" fill="#9a92b5">감시 URL 5종 + 단가 2종</text>
+<text x="24" y="156" font-size="9" fill="#9a92b5">실행 시점에 래퍼가 파싱</text>
+</g>
+<text x="24" y="173" font-size="8.4" fill="#a78bfa">→ source_watch.py  [소스 표 파싱 → sources_&lt;날짜&gt;.txt]</text>
+<g id="n-skill">
+<rect x="14" y="192" width="346" height="100" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="192" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="211" font-size="11" font-weight="700" fill="#e9e6f4">SKILL.md v3.53 — 제작 규약</text>
+<text x="24" y="224.5" font-size="9" fill="#9a92b5">§7 제작 순서 단일 목록 11단계</text>
+<text x="24" y="238" font-size="9" fill="#9a92b5">라이브 = origin/main 사본 08f531b</text>
+</g>
+<text x="24" y="255" font-size="8.4" fill="#a78bfa">→ tomangchi-scout  [§5.5 1~3-1단계]</text>
+<text x="24" y="268" font-size="8.4" fill="#a78bfa">→ 제작 체인  [§7 제작 순서 · 소재 컨펌 뒤 착수]</text>
+<text x="24" y="281" font-size="8.4" fill="#a78bfa">→ skill-drift-audit  [라이브 사본 ↔ origin/main]</text>
+<g id="n-charter">
+<rect x="14" y="300" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="300" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="319" font-size="11" font-weight="700" fill="#e9e6f4">CLAUDE.md — 정관</text>
+<text x="24" y="332.5" font-size="9" fill="#9a92b5">§0 등급 3단계·머지 4조건</text>
+<text x="24" y="346" font-size="9" fill="#9a92b5">§3 worktree·훅 · §4 스케줄 규약</text>
+</g>
+<text x="24" y="363" font-size="8.4" fill="#a78bfa">→ morning-vault-health  [§4 규약 래퍼·lock·stagger·git-sync]</text>
+<g id="n-wdocs">
+<rect x="14" y="382" width="346" height="87" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="382" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="401" font-size="11" font-weight="700" fill="#e9e6f4">docs/workers 7장 + profiles</text>
+<text x="24" y="414.5" font-size="9" fill="#9a92b5">양식 4 · FAIL CONDITION</text>
+<text x="24" y="428" font-size="9" fill="#9a92b5">checklists/xreview · profiles/ SOUL</text>
+</g>
+<text x="24" y="445" font-size="8.4" fill="#a78bfa">→ xreview 봇  [checklists/xreview.md C1~C12]</text>
+<text x="24" y="458" font-size="8.4" fill="#a78bfa">→ hermes-event-watch  [hermes-02 명세 · sagun SOUL]</text>
+<g id="n-jobdocs">
+<rect x="14" y="477" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="477" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="496" font-size="11" font-weight="700" fill="#e9e6f4">제출 실물 — 정본은 실값</text>
+<text x="24" y="509.5" font-size="9" fill="#9a92b5">/p/ax-portfolio 4쪽 · PDF 4쪽</text>
+<text x="24" y="523" font-size="9" fill="#9a92b5">docs/ax-final · ax-prelim</text>
+</g>
+<text x="24" y="540" font-size="8.4" fill="#a78bfa">→ 포트폴리오 갱신  [실값 재조회 → 교체본 v2]</text>
+<text x="14" y="587" font-size="12" font-weight="700" fill="#6ee7d5">L2 워커·제작</text>
+<text x="14" y="601" font-size="9.8" fill="#9a92b5">시각·에이전트·모델·권한 모드</text>
+<g id="n-scout">
+<rect x="14" y="609" width="346" height="101" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="609" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="628" font-size="11" font-weight="700" fill="#e9e6f4">tomangchi-scout</text>
+<text x="24" y="641.5" font-size="9" fill="#9a92b5">매일 08:00 · content-scout · sonnet</text>
+<text x="24" y="655" font-size="9" fill="#9a92b5">acceptEdits + Bash allowlist</text>
+<text x="24" y="668.5" font-size="9" fill="#9a92b5">--add-dir 스캔로그만 쓰기</text>
+</g>
+<text x="24" y="685.5" font-size="8.4" fill="#a78bfa">→ handoff_schema.py  [---8&lt;--- 인계 레코드 · 스캔로그 append]</text>
+<text x="24" y="698.5" font-size="8.4" fill="#a78bfa">→ JJ  [reports/&lt;날짜&gt;_tomangchi-scout.md]</text>
+<g id="n-srcwatch">
+<rect x="14" y="718" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="718" width="328" height="3" rx="1.5" fill="#6ee7d5"/>
+<text x="24" y="737" font-size="11" font-weight="700" fill="#e9e6f4">source_watch.py — 래퍼 선실행</text>
+<text x="24" y="750.5" font-size="9" fill="#9a92b5">yt-dlp 로 YouTube 조회</text>
+<text x="24" y="764" font-size="9" fill="#9a92b5">Threads·IG 는 UNSUPPORTED</text>
+</g>
+<text x="24" y="781" font-size="8.4" fill="#6ee7d5">→ tomangchi-scout 감지  [logs/scout-data/sources_&lt;날짜&gt;.txt]</text>
+<rect x="14" y="800" width="346" height="173" rx="9" fill="#1c1730" stroke="#c4b5fd"/>
+<rect x="23" y="800" width="328" height="3" rx="1.5" fill="#c4b5fd"/>
+<text x="24" y="819" font-size="11" font-weight="700" fill="#e9e6f4">토망치 제작 체인 ▸ (SKILL §7, 접힘 — 데스크톱판에 전개)</text>
+<text x="24" y="833" font-size="9" fill="#9a92b5">1 소재큐 — 인수인계_대기함.md</text>
+<text x="24" y="847" font-size="9" fill="#9a92b5">2 검증로그 → _facts.py</text>
+<text x="24" y="861" font-size="9" fill="#9a92b5">3 3갈래 독립: ⓐ 씬 · ⓑ 캡처·판 · ⓒ 킷 체인 (데이터 간선 0)</text>
+<text x="24" y="875" font-size="9" fill="#9a92b5">4 조립 — build_epNN.py</text>
+<text x="24" y="889" font-size="9" fill="#9a92b5">5 pre-flight — preflight.py</text>
+<text x="24" y="903" font-size="9" fill="#9a92b5">6 게이트 24 — epcheck.py (verify)</text>
+<text x="24" y="917" font-size="9" fill="#9a92b5">7 xreview 자문 — 비차단</text>
+<text x="24" y="931" font-size="9" fill="#9a92b5">8 발행팩.md + 폰 전달</text>
+<text x="24" y="948" font-size="8.4" fill="#7dd3fc">→ JJ 자문  [자문 리포트 병기 — 비차단]</text>
+<text x="24" y="961" font-size="8.4" fill="#a78bfa">→ JJ  [발행팩 + G: 드라이브 덱 (양방향 대조)]</text>
+<g id="n-vault">
+<rect x="14" y="981" width="346" height="88" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="981" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="1000" font-size="11" font-weight="700" fill="#e9e6f4">morning-vault-health</text>
+<text x="24" y="1013.5" font-size="9" fill="#9a92b5">평일 12:30 · ops-auditor · haiku</text>
+<text x="24" y="1027" font-size="9" fill="#9a92b5">권한 default + Edit(reports/**) 시범</text>
+<text x="24" y="1040.5" font-size="9" fill="#9a92b5">도구 Read·Glob·Grep·Write</text>
+</g>
+<text x="24" y="1057.5" font-size="8.4" fill="#a78bfa">→ JJ  [reports/&lt;날짜&gt;_morning-vault-health.md]</text>
+<g id="n-drift">
+<rect x="14" y="1077" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="1077" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="1096" font-size="11" font-weight="700" fill="#e9e6f4">skill-drift-audit</text>
+<text x="24" y="1109.5" font-size="9" fill="#9a92b5">매일 12:30 · 에이전트 없음</text>
+<text x="24" y="1123" font-size="9" fill="#9a92b5">py 직접(결정적) · 한시적</text>
+</g>
+<text x="24" y="1140" font-size="8.4" fill="#a78bfa">→ JJ  [reports/&lt;날짜&gt;_skill-drift.md]</text>
+<g id="n-sagun">
+<rect x="14" y="1159" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="1159" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="1178" font-size="11" font-weight="700" fill="#e9e6f4">hermes-event-watch</text>
+<text x="24" y="1191.5" font-size="9" fill="#9a92b5">매일 07:40 · sagun · pin nemotron</text>
+<text x="24" y="1205" font-size="9" fill="#9a92b5">도구 없음 · 메모리 on · 시범</text>
+</g>
+<text x="24" y="1222" font-size="8.4" fill="#a78bfa">→ JJ  [reports/&lt;날짜&gt;_event-watch.md 🔴 성립]</text>
+<g id="n-gumsu">
+<rect x="14" y="1241" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="1241" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="1260" font-size="11" font-weight="700" fill="#e9e6f4">xreview 봇 — gumsu</text>
+<text x="24" y="1273.5" font-size="9" fill="#9a92b5">사람 호출 · 같은 pin · 메모리 off</text>
+<text x="24" y="1287" font-size="9" fill="#9a92b5">도구·레포 접근 없음 · keep 3/6</text>
+</g>
+<text x="24" y="1304" font-size="8.4" fill="#7dd3fc">→ 제작 체인 자문  [reports/&lt;날짜&gt;_xreview_epNN.md ≤10건]</text>
+<g id="n-job">
+<rect x="14" y="1323" width="346" height="88" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="1323" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="1342" font-size="11" font-weight="700" fill="#e9e6f4">job-scout</text>
+<text x="24" y="1355.5" font-size="9" fill="#9a92b5">매일 08:30 · job-scout · sonnet</text>
+<text x="24" y="1369" font-size="9" fill="#9a92b5">acceptEdits + allowlist</text>
+<text x="24" y="1382.5" font-size="9" fill="#9a92b5">도구 Read·Glob·Grep·Write·Web*</text>
+</g>
+<text x="24" y="1399.5" font-size="8.4" fill="#a78bfa">→ JJ  [reports/&lt;날짜&gt;_job-scout.md]</text>
+<text x="14" y="1447" font-size="12" font-weight="700" fill="#6ee7d5">L3 계약·게이트</text>
+<text x="14" y="1461" font-size="9.8" fill="#9a92b5">결정적 판정이 정본 · LLM 은 자문</text>
+<g id="n-schema">
+<rect x="14" y="1469" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="1469" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="1488" font-size="11" font-weight="700" fill="#e9e6f4">handoff_schema.py — 노드 계약</text>
+<text x="24" y="1501.5" font-size="9" fill="#9a92b5">필수 7 · URL 하한 1/2/2 · 재시도 3</text>
+<text x="24" y="1515" font-size="9" fill="#9a92b5">미기입 허용 · 역검증 9케이스</text>
+</g>
+<text x="24" y="1532" font-size="8.4" fill="#a78bfa">→ 제작 체인  [검사 🟢 블록만 → 대기함]</text>
+<g id="n-dist">
+<rect x="14" y="1551" width="346" height="74" rx="9" fill="#1c1730" stroke="#a78bfa" stroke-width="1.2" stroke-dasharray="5 4"/>
+<rect x="23" y="1551" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="1570" font-size="11" font-weight="700" fill="#e9e6f4">유통 변환 워커 — 설계</text>
+<text x="24" y="1583.5" font-size="9" fill="#9a92b5">Threads 20장·X 4장 초안 → distcheck</text>
+<text x="24" y="1597" font-size="9" fill="#9a92b5">실행체 미정 · Threads 계정 대기</text>
+</g>
+<text x="24" y="1614" font-size="8.4" fill="#9a92b5">→ JJ 설계  [reports/&lt;날짜&gt;_dist_epNN.md 초안 — 설계]</text>
+<g id="n-portfolio">
+<rect x="14" y="1633" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="1633" width="328" height="3" rx="1.5" fill="#a78bfa"/>
+<text x="24" y="1652" font-size="11" font-weight="700" fill="#e9e6f4">포트폴리오 갱신 — 실값 대조</text>
+<text x="24" y="1665.5" font-size="9" fill="#9a92b5">수치 = 실물 재조회(게이트 24·29편·v3.53)</text>
+<text x="24" y="1679" font-size="9" fill="#9a92b5">링크 17/17 200 · QR 디코드</text>
+</g>
+<text x="24" y="1696" font-size="8.4" fill="#a78bfa">→ JJ  [PR #8·#9 · v2 PDF 합본 대기]</text>
+<text x="14" y="1743" font-size="12" font-weight="700" fill="#6ee7d5">L4 휴먼 게이트 · 외부</text>
+<text x="14" y="1757" font-size="9.8" fill="#9a92b5">발행·외부 발송·과금·비가역</text>
+<g id="n-jj">
+<rect x="14" y="1765" width="346" height="86" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="1765" width="328" height="3" rx="1.5" fill="#f87171"/>
+<text x="24" y="1784" font-size="11" font-weight="700" fill="#e9e6f4">JJ — 휴먼 게이트</text>
+<text x="24" y="1797.5" font-size="9" fill="#9a92b5">발행 · 외부 발송 · 과금 · 비가역 git — 등급 무관 · PR 지목 승인 · 소재 컨펌 · 훅 선택 · 리포트 판독</text>
+</g>
+<text x="24" y="1814.5" font-size="8.4" fill="#a78bfa">→ 인스타 @ai_tomangchi.lab  [폰에서 발행 → 발행로그 기입]</text>
+<text x="24" y="1827.5" font-size="8.4" fill="#a78bfa">→ 채용 지원  [applied.md 기록]</text>
+<text x="24" y="1840.5" font-size="8.4" fill="#fb923c">→ 교정 라우팅 R1~R7 Learning  [세션 교정 → R 번호]</text>
+<g id="n-insta">
+<rect x="14" y="1859" width="346" height="60" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="1859" width="328" height="3" rx="1.5" fill="#e879f9"/>
+<text x="24" y="1878" font-size="11" font-weight="700" fill="#e9e6f4">인스타 @ai_tomangchi.lab</text>
+<text x="24" y="1891.5" font-size="9" fill="#9a92b5">29편 · 게시물 30건 · 발행로그.md</text>
+</g>
+<text x="24" y="1908.5" font-size="8.4" fill="#9a92b5">→ 유통 변환 워커 설계  [발행 완료 편 공개본]</text>
+<g id="n-apply">
+<rect x="14" y="1927" width="346" height="41" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="1927" width="328" height="3" rx="1.5" fill="#e879f9"/>
+<text x="24" y="1946" font-size="11" font-weight="700" fill="#e9e6f4">채용 지원 — 외부 발송</text>
+<text x="24" y="1959.5" font-size="9" fill="#9a92b5">applied.md (gitignore) · C등급</text>
+</g>
+<g id="n-route">
+<rect x="14" y="1976" width="346" height="60" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="1976" width="328" height="3" rx="1.5" fill="#fb923c"/>
+<text x="24" y="1995" font-size="11" font-weight="700" fill="#e9e6f4">교정 라우팅 R1~R7</text>
+<text x="24" y="2008.5" font-size="9" fill="#9a92b5">R1 → R6 → R4/R5 → R3 → R7 → R2</text>
+</g>
+<text x="24" y="2025.5" font-size="8.4" fill="#fb923c">→ CLAUDE.md Learning  [조문 PR · FACTS PREV · learnings 후보]</text>
+<text x="14" y="2072" font-size="12" font-weight="700" fill="#6ee7d5">감지층</text>
+<text x="14" y="2086" font-size="9.8" fill="#9a92b5">조용한 실패를 잡는 층</text>
+<g id="n-claim">
+<rect x="14" y="2094" width="346" height="60" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="2094" width="328" height="3" rx="1.5" fill="#6ee7d5"/>
+<text x="24" y="2113" font-size="11" font-weight="700" fill="#e9e6f4">claim.ps1</text>
+<text x="24" y="2126.5" font-size="9" fill="#9a92b5">같은 주제 두 세션 거부 · -SelfTest</text>
+</g>
+<text x="24" y="2143.5" font-size="8.4" fill="#6ee7d5">→ JJ 감지  [logs/claims/*.claim 거부·현황]</text>
+<g id="n-started">
+<rect x="14" y="2162" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="2162" width="328" height="3" rx="1.5" fill="#6ee7d5"/>
+<text x="24" y="2181" font-size="11" font-weight="700" fill="#e9e6f4">.started / run_audit.py</text>
+<text x="24" y="2194.5" font-size="9" fill="#9a92b5">start 있고 STATUS 없는 회차</text>
+<text x="24" y="2208" font-size="9" fill="#9a92b5">8/26 실값: 8/25 scout·job 무기록 적발</text>
+</g>
+<text x="24" y="2225" font-size="8.4" fill="#6ee7d5">→ morning-vault-health 감지  [logs/audit-data/runs_&lt;날짜&gt;.txt]</text>
+<g id="n-ewatch">
+<rect x="14" y="2244" width="346" height="74" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="2244" width="328" height="3" rx="1.5" fill="#6ee7d5"/>
+<text x="24" y="2263" font-size="11" font-weight="700" fill="#e9e6f4">event_watch.py</text>
+<text x="24" y="2276.5" font-size="9" fill="#9a92b5">감시 목록 8건 · 신규/기 발생/기 알림</text>
+<text x="24" y="2290" font-size="9" fill="#9a92b5">침묵 편입은 리포트에 적힌다</text>
+</g>
+<text x="24" y="2307" font-size="8.4" fill="#6ee7d5">→ hermes-event-watch 감지  [조건 문자열 적중 · 판정 후보]</text>
+<g id="n-rguard">
+<rect x="14" y="2326" width="346" height="60" rx="9" fill="#1c1730" stroke="#2f2745" stroke-width="1.2"/>
+<rect x="23" y="2326" width="328" height="3" rx="1.5" fill="#6ee7d5"/>
+<text x="24" y="2345" font-size="11" font-weight="700" fill="#e9e6f4">check-repo-guard + pre-commit</text>
+<text x="24" y="2358.5" font-size="9" fill="#9a92b5">본 트리 커밋 거부 · main 뒤처짐 FAIL</text>
+</g>
+<text x="24" y="2375.5" font-size="8.4" fill="#6ee7d5">→ JJ 감지  [FAIL 뒤처짐 · 커밋 거부]</text>
+<path d="M360,2006 L368,2006 L368,337 L363,337" fill="none" stroke="#fb923c" stroke-width="2.2" marker-end="url(#m-learn)"/>
+<g transform="translate(378,1156.5) rotate(-90)"><text font-size="9.5" fill="#fb923c" text-anchor="middle">Learning 폐루프 → L1 정관 (R1~R7)</text></g>
+<line x1="14" y1="2506" x2="40" y2="2506" stroke="#a78bfa" stroke-width="2"/>
+<text x="46" y="2510" font-size="9.2" fill="#9a92b5">산출물 간선</text>
+<line x1="124.44" y1="2506" x2="150.44" y2="2506" stroke="#7dd3fc" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="156.44" y="2510" font-size="9.2" fill="#9a92b5">자문 — 비차단</text>
+<line x1="252.36" y1="2506" x2="278.36" y2="2506" stroke="#fb923c" stroke-width="2"/>
+<text x="284.36" y="2510" font-size="9.2" fill="#9a92b5">Learning 폐루프 → 정관</text>
+<line x1="458.94" y1="2506" x2="484.94" y2="2506" stroke="#6ee7d5" stroke-width="2" stroke-dasharray="2 4"/>
+<text x="490.94" y="2510" font-size="9.2" fill="#9a92b5">감지 — 조용한 실패를 잡는 층</text>
+<line x1="665.52" y1="2506" x2="691.52" y2="2506" stroke="#9a92b5" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="697.52" y="2510" font-size="9.2" fill="#9a92b5">설계 (실물 없음)</text>
+</svg>
