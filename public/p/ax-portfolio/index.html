@@ -42,7 +42,7 @@
   <h1 style="font-size:24px;margin:34px 0 4px">오재준 — AX Engineer · AI 콘텐츠 파이프라인 운영</h1>
   <p class="hook">만드는 건 AI, 내보내는 건 규칙입니다.</p>
   <p class="lede" style="margin-bottom:10px">아래 한 장이 회사 전체입니다 — 스카우트 유입 · 토망치랩 제작·발행 체인 · 감사 · 감시·자문 · 구직 트랙이 정본(L1) → 워커·제작(L2) → 계약·게이트(L3) → 휴먼 게이트(L4) 네 층과 감지층 위에 놓입니다.
-  상단 요약 밴드(입력 → AI 실행 → 게이트 → 사람 → 산출)가 8월 24일 지면의 5칸 도식을 흡수했습니다. 화살표마다 산출물 라벨이 붙어 있고, 노드·간선 전부가 파일·조문·로그와 1:1 로 대조됩니다(실물 없는 것은 그리지 않았습니다 — 유통 변환 워커 점선이 유일한 «설계»).</p>
+  상단 요약 밴드(입력 → AI 실행 → 게이트 → 사람 → 산출)가 한 줄 요약입니다. 화살표마다 산출물 라벨이 붙어 있고, 노드·간선 전부가 파일·조문·로그와 1:1 로 대조됩니다(실물 없는 것은 그리지 않았습니다 — 유통 변환 워커 점선이 유일한 «설계»).</p>
   <picture class="cmap">
     <source media="(max-width: 700px)" srcset="company-map-mobile.svg">
     <img src="company-map-desktop.svg" alt="JJ Company 전사 시스템 맵 — 5 트랙 × 4층 + 감지층" width="1280" height="1170">
@@ -50,9 +50,9 @@
   <p class="note" style="margin:8px 0 0">모바일은 층별 세로 재배열판(제작 체인은 한 노드로 접힘). 노드별 실물·간선별 산출물 대조표와 상세 설명은 <a href="jj-company/#sysmap">jj-company 페이지 §0</a>에 있습니다. 인쇄용 export: <a href="company-map-print.png">company-map-print.png</a> (2560×2340).</p>
 
   <details class="sheet-wrap" style="margin-top:30px">
-    <summary style="cursor:pointer;color:var(--sub);font-size:13.5px">8월 24일 제출 지면(이미지 4쪽) 펼치기 — 지면 안 수치(게이트 18·v3.49)는 제출 시점 값</summary>
+    <summary style="cursor:pointer;color:var(--sub);font-size:13.5px">지면 버전 보기 (이미지 4쪽)</summary>
     <div class="sheet" style="margin-top:12px">
-      <img src="onepage.jpg" alt="오재준 AX Engineer 포트폴리오 원페이지 (2026-08-24 제출본)" width="1980" height="5560" loading="lazy">
+      <img src="onepage.jpg" alt="오재준 AX Engineer 포트폴리오 지면 버전" width="1980" height="5560" loading="lazy">
     </div>
   </details>
   <p class="lede" style="margin-top:28px">그 규칙이 정말 구조인지는 <strong>가짜 간선 테스트</strong>로 쟀습니다 — 제작 파이프라인의 화살표 12개 중
@@ -62,7 +62,7 @@
 
   <h2 id="about">소개</h2>
   <p class="lede">콘텐츠 발행부터 인프라 감사까지, AI 에이전트가 일하는 파이프라인을 운영합니다.
-  발행 전 게이트 24개 항목(8/22 18 → 8/26 24), 자율성 사다리 5단과 등급 3단계, 노드 계약 스키마 — 틀렸을 때 걸리는 장치를 먼저 만듭니다.
+  발행 전 게이트 24개 항목, 자율성 사다리 5단과 등급 3단계, 노드 계약 스키마 — 틀렸을 때 걸리는 장치를 먼저 만듭니다.
   아래 여섯 프로젝트가 그 구조의 실물입니다.</p>
 
   <h2 id="work">바로 열어볼 수 있는 것</h2>
@@ -116,8 +116,8 @@
     </div>
   </div>
 
-  <h2 id="structure">구조 갱신 — 2026-08-26</h2>
-  <p class="lede">위 지면은 8월 24일 제출본 그대로이고, 그 뒤 이틀 동안 바뀐 것을 여기에 적습니다. 전부 실물에서 다시 센 값입니다.</p>
+  <h2 id="structure">이 구조를 부르는 말</h2>
+  <p class="lede">각 항목의 수치는 전부 실물에서 센 값입니다.</p>
   <div class="vocab">
     <div><b>graph of loops</b> — 파이프라인은 직선이 아니라 되돌아가는 루프의 그래프다. 축 전환 한 번이면 5~12단계를 다시 탄다.</div>
     <div><b>hard verify gate</b> — 결정적 검사 24항. 통과 못 하면 사람이 설득해도 나가지 않는다.</div>
@@ -125,14 +125,13 @@
     <div><b>stop condition</b> — «프로바이더 실패·모델 변경 시 조용한 전환 금지, 중단·보고». 봇마다 FAIL CONDITION 으로 명문화.</div>
     <div><b>anchor</b> — 실물을 조회할 수 있는 것은 실물이 정본이고 문서는 조회 결과. 스케줄 트리거·필드 목록·배포 상태.</div>
     <div><b>fake-edge test</b> — 화살표마다 «앞 산출물을 실제로 읽는가». 12개 중 6개가 가짜였다.</div>
-    <div><b>cost per accepted change</b> — 크로스 모델 자문의 keep rate: 1일차 3/6 = 50%. 50% 미만이면 그 자리를 접는다.</div>
+    <div><b>cost per accepted change</b> — 크로스 모델 자문의 keep rate: 3/6 = 50%. 50% 미만이면 그 자리를 접는다.</div>
     <div><b>decision latency</b> — 편 스팬의 97~98% 는 기계가 아니라 사람 판단과 재작업. 절감은 앞단 pre-flight 에서 난다.</div>
-    <div><b>correction routing</b> — 교정은 R1 낡은 사실 → R6 위험 동작 → R4/R5 기법·시퀀스 → R3 정관 → R7 교훈 → R2 결정 순으로 자리를 찾는다. 등재 전 기존 조문 대조 필수(33건 중 4건이 기등재였다).</div>
+    <div><b>correction routing</b> — 교정은 R1 낡은 사실 → R6 위험 동작 → R4/R5 기법·시퀀스 → R3 정관 → R7 교훈 → R2 결정 순으로 자리를 찾는다. 등재 전 기존 조문 대조 필수(재고 33건 중 4건이 기등재였다).</div>
   </div>
-  <p class="delta"><b>8/25 하루에 PR 10건 머지</b>(정관 조문 9건·규약 v3.50~v3.53·디코드 가드) · 정관 <b>v3.53</b> · 게이트 <b>18 → 24</b>항 · 헤르메스 봇 <b>7자리 승인, 2자리 가동·사흘 시범 중</b>(크로스 모델 검수·사건형 트리거 감시).</p>
 
   <p class="note">이 페이지는 검색에 노출되지 않는 비공개 경로입니다(<code>robots.txt</code> 제외 대상).
-  지면에 적은 수치는 전부 실물에서 센 값이고, 확인하지 못한 것은 적지 않았습니다. 지면 이미지 안의 수치(게이트 18·29편·v3.49)는 8월 24일 제출 시점의 값이며 갱신분은 위 «구조 갱신» 절과 각 문서 페이지에 있습니다.</p>
+  지면에 적은 수치는 전부 실물에서 센 값이고, 확인하지 못한 것은 적지 않았습니다. 최신값은 본문과 각 문서 페이지에 있습니다.</p>
 
   <div class="foot" id="contact">
     오재준 · AX Engineer · AI 콘텐츠 파이프라인 운영<br>
