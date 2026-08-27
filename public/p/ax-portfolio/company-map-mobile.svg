@@ -75,9 +75,9 @@
 <text x="24" y="125" font-size="9" fill="#8f86ad" text-anchor="start">감시 URL 5종 + 단가 2종</text>
 <text x="24" y="137" font-size="9" fill="#8f86ad" text-anchor="start">실행 시점에 래퍼가 파싱</text>
 <text x="24" y="157" font-size="8.4" fill="#a78bfa" text-anchor="start">→ source_watch.py  [소스 표 파싱 → sources_&lt;날짜&gt;.txt]</text>
-<text x="24" y="192" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">SKILL.md v3.53 — 제작 규약</text>
-<text x="24" y="204" font-size="9" fill="#8f86ad" text-anchor="start">§7 제작 순서 단일 목록 11단계</text>
-<text x="24" y="216" font-size="9" fill="#8f86ad" text-anchor="start">라이브 = origin/main 사본 08f531b</text>
+<text x="24" y="192" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">SKILL.md v3.54 — 제작 규약</text>
+<text x="24" y="204" font-size="9" fill="#8f86ad" text-anchor="start">§7 제작 순서 단일 목록 15단계</text>
+<text x="24" y="216" font-size="9" fill="#8f86ad" text-anchor="start">라이브 = origin/main 사본 7685d99</text>
 <text x="24" y="236" font-size="8.4" fill="#a78bfa" text-anchor="start">→ tomangchi-scout  [§5.5 1~3-1단계]</text>
 <text x="24" y="249" font-size="8.4" fill="#a78bfa" text-anchor="start">→ 소재큐  [§7 제작 순서 · 소재 컨펌 뒤 착수]</text>
 <text x="24" y="262" font-size="8.4" fill="#a78bfa" text-anchor="start">→ skill-drift-audit  [라이브 사본 ↔ origin/main]</text>
@@ -116,7 +116,7 @@
 <text x="24" y="946" font-size="8.4" fill="#a78bfa" text-anchor="start">→ 3갈래  [기획안·CARDS 선언]</text>
 <text x="24" y="959" font-size="8.4" fill="#a78bfa" text-anchor="start">→ 3갈래  [COVER·CARDS 선언]</text>
 <text x="24" y="972" font-size="8.4" fill="#a78bfa" text-anchor="start">→ 3갈래  [KIT 선언 + FACTS]</text>
-<text x="24" y="985" font-size="8.4" fill="#a78bfa" text-anchor="start">→ 게이트 24  [numeral_vocab() → guard 3]</text>
+<text x="24" y="985" font-size="8.4" fill="#a78bfa" text-anchor="start">→ 게이트 25  [numeral_vocab() → guard 3]</text>
 <text x="24" y="1020" font-size="11" font-weight="700" fill="#e9e6f4" text-anchor="start">3갈래 독립 제작 (데이터 간선 0)</text>
 <text x="24" y="1032" font-size="9" fill="#9a92b5" text-anchor="start">ⓐ 씬 — scenebuild → _scenes/</text>
 <text x="24" y="1044" font-size="9" fill="#9a92b5" text-anchor="start">ⓑ 캡처·판 — webshot → shots/0N</text>
@@ -130,8 +130,8 @@
 <text x="24" y="1181" font-size="8.4" fill="#a78bfa" text-anchor="start">→ pre-flight  [빌더 진입 시 1회]</text>
 <text x="24" y="1216" font-size="11" font-weight="700" fill="#e9e6f4" text-anchor="start">pre-flight — preflight.py</text>
 <text x="24" y="1228" font-size="9" fill="#9a92b5" text-anchor="start">① 훅 고유명사 ② 판 가독성 ③ 표지 겹침</text>
-<text x="24" y="1248" font-size="8.4" fill="#a78bfa" text-anchor="start">→ 게이트 24  [01~0N 덱 · 킷 mp4 · caption]</text>
-<text x="24" y="1283" font-size="11" font-weight="700" fill="#e9e6f4" text-anchor="start">게이트 24 — epcheck.py (verify)</text>
+<text x="24" y="1248" font-size="8.4" fill="#a78bfa" text-anchor="start">→ 게이트 25  [01~0N 덱 · 킷 mp4 · caption]</text>
+<text x="24" y="1283" font-size="11" font-weight="700" fill="#e9e6f4" text-anchor="start">게이트 25 — epcheck.py (verify)</text>
 <text x="24" y="1295" font-size="9" fill="#9a92b5" text-anchor="start">별도 컨텍스트 · FAIL 이면 안 나간다</text>
 <text x="24" y="1307" font-size="9" fill="#9a92b5" text-anchor="start">guard 2/3 ⊂ [8-2] 캡처 최신성 · [8-1] 킷↔FACTS</text>
 <text x="24" y="1327" font-size="8.4" fill="#7dd3fc" text-anchor="start">→ xreview 자문 자문  [STATUS: OK 공개 예정 텍스트만]</text>
@@ -150,7 +150,7 @@
 <text x="24" y="1578" font-size="8.4" fill="#a78bfa" text-anchor="start">→ 채용 지원  [applied.md 기록]</text>
 <text x="24" y="1591" font-size="8.4" fill="#fb923c" text-anchor="start">→ 교정 라우팅 R1~R7 Learning  [세션 교정 → R 번호]</text>
 <text x="24" y="1626" font-size="11" font-weight="700" fill="#e9e6f4" text-anchor="start">인스타 @ai_tomangchi.lab</text>
-<text x="24" y="1638" font-size="9" fill="#9a92b5" text-anchor="start">29편 · 게시물 30건 · 발행로그.md</text>
+<text x="24" y="1638" font-size="9" fill="#9a92b5" text-anchor="start">32편 · 게시물 33건 · 발행로그.md</text>
 <text x="24" y="1658" font-size="8.4" fill="#9a92b5" text-anchor="start">→ 유통 변환 워커 설계  [발행 완료 편 공개본]</text>
 <text x="24" y="1731" font-size="11" font-weight="700" fill="#e9e6f4" text-anchor="start">.started / run_audit.py</text>
 <text x="24" y="1743" font-size="9" fill="#9a92b5" text-anchor="start">start 있고 STATUS 없는 회차</text>
@@ -186,7 +186,7 @@
 <text x="24" y="2396" font-size="9" fill="#9a92b5" text-anchor="start">도구 Read·Glob·Grep·Write·Web*</text>
 <text x="24" y="2416" font-size="8.4" fill="#a78bfa" text-anchor="start">→ JJ  [reports/&lt;날짜&gt;_job-scout.md]</text>
 <text x="24" y="2451" font-size="11" font-weight="700" fill="#e9e6f4" text-anchor="start">포트폴리오 갱신 — 실값 대조</text>
-<text x="24" y="2463" font-size="9" fill="#9a92b5" text-anchor="start">수치 = 실물 재조회(게이트 24·29편·v3.53)</text>
+<text x="24" y="2463" font-size="9" fill="#9a92b5" text-anchor="start">수치 = 실물 재조회(게이트 25·32편·v3.54)</text>
 <text x="24" y="2475" font-size="9" fill="#9a92b5" text-anchor="start">링크 17/17 200 · QR 디코드</text>
 <text x="24" y="2495" font-size="8.4" fill="#a78bfa" text-anchor="start">→ JJ  [PR #8·#9 · v2 PDF 합본 대기]</text>
 <text x="24" y="2530" font-size="11" font-weight="700" fill="#e9e6f4" text-anchor="start">claim.ps1</text>

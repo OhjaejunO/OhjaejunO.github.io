@@ -79,11 +79,11 @@
 <text x="50" y="149" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">config.md 소스 표</text>
 <text x="50" y="161" font-size="9" fill="#8f86ad" text-anchor="start">감시 URL 5종 + 단가 2종</text>
 <text x="50" y="173" font-size="9" fill="#8f86ad" text-anchor="start">실행 시점에 래퍼가 파싱</text>
-<text x="205" y="149" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">SKILL.md v3.53 — 제작 </text>
+<text x="205" y="149" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">SKILL.md v3.54 — 제작 </text>
 <text x="205" y="163" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">규약</text>
-<text x="205" y="175" font-size="9" fill="#8f86ad" text-anchor="start">§7 제작 순서 단일 목록 11단계</text>
+<text x="205" y="175" font-size="9" fill="#8f86ad" text-anchor="start">§7 제작 순서 단일 목록 15단계</text>
 <text x="205" y="187" font-size="9" fill="#8f86ad" text-anchor="start">라이브 = origin/main 사본</text>
-<text x="205" y="199" font-size="9" fill="#8f86ad" text-anchor="start">08f531b</text>
+<text x="205" y="199" font-size="9" fill="#8f86ad" text-anchor="start">7685d99</text>
 <text x="470" y="149" font-size="11" font-weight="700" fill="#9a92b5" text-anchor="start">CLAUDE.md — 정관</text>
 <text x="470" y="161" font-size="9" fill="#8f86ad" text-anchor="start">§0 등급 3단계·머지 4조건</text>
 <text x="470" y="173" font-size="9" fill="#8f86ad" text-anchor="start">§3 worktree·훅 · §4 스케줄 규약</text>
@@ -121,7 +121,7 @@
 <text x="50" y="1275" font-size="9.5" fill="#9a92b5" text-anchor="start">kitchain video · caption·pinned</text>
 <text x="50" y="1381.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">pre-flight — preflight.py</text>
 <text x="50" y="1394" font-size="9.5" fill="#9a92b5" text-anchor="start">① 훅 고유명사 ② 판 가독성 ③ 표지 겹침</text>
-<text x="50" y="1500.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">게이트 24 — epcheck.py (verify)</text>
+<text x="50" y="1500.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">게이트 25 — epcheck.py (verify)</text>
 <text x="50" y="1513" font-size="9.5" fill="#9a92b5" text-anchor="start">별도 컨텍스트 · FAIL 이면 안 나간다</text>
 <text x="50" y="1525.5" font-size="9.5" fill="#9a92b5" text-anchor="start">guard 2/3 ⊂ [8-2] 캡처 최신성 · [8-1] 킷↔FACTS</text>
 <text x="50" y="1632" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">xreview 자문 — 비차단</text>
@@ -132,7 +132,7 @@
 <text x="50" y="1882.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">JJ — 휴먼 게이트</text>
 <text x="50" y="1895" font-size="9.5" fill="#9a92b5" text-anchor="start">발행 · 외부 발송 · 과금 · 비가역 git — 등급 무관 · PR 지목 승인 · 소재 컨펌 · 훅 선택 · 리포트 판독</text>
 <text x="50" y="2001.5" font-size="11.5" font-weight="700" fill="#e9e6f4" text-anchor="start">인스타 @ai_tomangchi.lab</text>
-<text x="50" y="2014" font-size="9.5" fill="#9a92b5" text-anchor="start">29편 · 게시물 30건 · 발행로그.md</text>
+<text x="50" y="2014" font-size="9.5" fill="#9a92b5" text-anchor="start">32편 · 게시물 33건 · 발행로그.md</text>
 <text x="50" y="2119.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">유통 변환 워커 — 설계</text>
 <text x="50" y="2131" font-size="8.5" fill="#9a92b5" text-anchor="start">Threads 20장·X 4장 초안 → distcheck</text>
 <text x="50" y="2142.5" font-size="8.5" fill="#9a92b5" text-anchor="start">실행체 미정 · Threads 계정 대기</text>
@@ -162,8 +162,8 @@
 <text x="1000" y="387.5" font-size="8.5" fill="#9a92b5" text-anchor="start">acceptEdits + allowlist</text>
 <text x="1000" y="399" font-size="8.5" fill="#9a92b5" text-anchor="start">도구 Read·Glob·Grep·Write·Web*</text>
 <text x="1000" y="504.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">포트폴리오 갱신 — 실값 대조</text>
-<text x="1000" y="516" font-size="8.5" fill="#9a92b5" text-anchor="start">수치 = 실물 재조회(게이트 24·29편·</text>
-<text x="1000" y="527.5" font-size="8.5" fill="#9a92b5" text-anchor="start">v3.53)</text>
+<text x="1000" y="516" font-size="8.5" fill="#9a92b5" text-anchor="start">수치 = 실물 재조회(게이트 25·32편·</text>
+<text x="1000" y="527.5" font-size="8.5" fill="#9a92b5" text-anchor="start">v3.54)</text>
 <text x="1000" y="539" font-size="8.5" fill="#9a92b5" text-anchor="start">링크 17/17 200 · QR 디코드</text>
 <text x="1000" y="648.5" font-size="10.5" font-weight="700" fill="#e9e6f4" text-anchor="start">claim.ps1</text>
 <text x="1000" y="660" font-size="8.5" fill="#9a92b5" text-anchor="start">같은 주제 두 세션 거부 · -SelfTest</text>
