@@ -41,13 +41,12 @@
 <main id="top">
   <h1 style="font-size:24px;margin:34px 0 4px">오재준 — AX Engineer · AI 콘텐츠 파이프라인 운영</h1>
   <p class="hook">만드는 건 AI, 내보내는 건 규칙입니다.</p>
-  <p class="lede" style="margin-bottom:10px">아래 한 장이 회사 전체입니다 — 위에서 아래로 한 방향입니다: 정본(참조) → 스카우트 유입 → 노드 계약 → 제작 체인 → 게이트 → JJ 휴먼 게이트 → 발행. 감사·감시·자문·구직은 본선 옆 세로 레인이고, 되돌아 올라가는 것은 교정이 정관으로 회귀하는 Learning 폐루프(주황) 하나입니다.
-  상단 요약 밴드(입력 → AI 실행 → 게이트 → 사람 → 산출)가 한 줄 요약입니다. 화살표마다 산출물 라벨이 붙어 있고, 노드·간선 전부가 파일·조문·로그와 1:1 로 대조됩니다(실물 없는 것은 그리지 않았습니다 — 유통 변환 워커 점선이 유일한 «설계»).</p>
-  <picture class="cmap">
-    <source media="(max-width: 700px)" srcset="company-map-mobile.svg">
-    <img src="company-map-desktop.svg" alt="JJ Company 전사 시스템 맵 — 세로 흐름: 정본 → 본선(스카우트 → 제작 체인 → 게이트 → JJ → 발행) + 감사·감시·구직 레인" width="1280" height="2223">
-  </picture>
-  <p class="note" style="margin:8px 0 0">모바일은 층별 세로 재배열판(제작 체인은 한 노드로 접힘). 노드별 실물·간선별 산출물 대조표와 상세 설명은 <a href="jj-company/#sysmap">jj-company 페이지 §0</a>에 있습니다. 인쇄용 export: <a href="company-map-print.png">company-map-print.png</a> (2560×4446).</p>
+  <p class="lede" style="margin-bottom:10px">아래 한 장이 회사 전체입니다. 대표실(JJ)에서 지시가 작업장으로 가고, 작업장은 worktree 와 PR 로만 main 에 닿고, 운영 서버는 그것을 pull 로만 받습니다. 운영 서버 안에서 스케줄러가 래퍼를 띄우고, 래퍼가 동기화·권한 프로브를 지나 에이전트 다섯(운영·마케팅·영업·감리·헤르메스)을 부르며, 결과는 STATUS 줄이 붙은 리포트로 쌓입니다. 발행은 채팅이 아니라 <strong>승인 파일</strong>이 서명이고, 인스타그램은 사람이 올리는 C등급으로 따로 그렸습니다. 경계 4개(작업장 · 운영 서버 · 에이전트 · 출장지)와 카드 3장(자동화 3등급 · 정본은 실물 · 경계 규칙)이 정관 §0~§6 을 그대로 옮긴 것입니다.</p>
+  <figure class="cmap" style="margin:14px 0 0">
+    <iframe src="jj-company-structure.html" title="JJ Company OS 회사 구조 도식 (클릭·확대 가능)" loading="lazy"
+            style="width:100%;height:min(920px,82vh);border:1px solid #e3e6ea;border-radius:12px;background:#fff"></iframe>
+    <figcaption class="note" style="margin:8px 0 0">위 도식은 그림이 아니라 <strong>클릭되는 화면</strong>입니다 — 상단의 뷰 3개(아침 회차 · 발행 장치 · 경계와 정본)를 누르면 해당 경로만 밝아지고, 확대·이동·라이트/다크 전환이 됩니다. 화면이 좁으면 <a href="jj-company-structure.html" target="_blank" rel="noopener">새 창에서 전체 화면으로</a> 여세요.</figcaption>
+  </figure>
 
   <details class="sheet-wrap" style="margin-top:30px">
     <summary style="cursor:pointer;color:var(--sub);font-size:13.5px">지면 버전 보기 (이미지 4쪽)</summary>
