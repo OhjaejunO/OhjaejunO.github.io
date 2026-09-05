@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>토망치랩 파이프라인 — 게이트 25항목이 발행을 막는다 | 오재준</title>
+<title>토망치랩 파이프라인 — 게이트 29항목이 발행을 막는다 | 오재준</title>
 <link rel="stylesheet" href="../_style.css">
 <style>
   .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 20px 0 8px; }
@@ -25,7 +25,7 @@
 <main>
   <div class="kicker">인스타그램 AI 매거진 · 운영 중</div>
   <h1>토망치랩 — 만드는 건 AI, 내보낼지는 게이트가 정한다</h1>
-  <p class="lede">소재 수집부터 카드 조립·검증·발행팩까지 한 파이프라인으로 돌립니다. 32편 발행(게시물 33건) · 규약 v3.54 · 파이프라인 4,642줄·모듈 19개.</p>
+  <p class="lede">소재 수집부터 카드 조립·검증·발행팩까지 한 파이프라인으로 돌립니다. 35편 발행(게시물 37건) · 규약 v3.68 · 파이프라인 4,805줄·모듈 19개.</p>
   <hr class="rule">
 
   <h2><span class="n">1</span>공정</h2>
@@ -48,7 +48,7 @@
     </div>
     <div class="step gate">
       <div class="n" style="color:#f87171">STEP 4 · GATE</div><div class="t">발행 게이트</div>
-      <div class="d"><strong>25개 항목을 검사합니다. 하나라도 걸리면 나가지 않습니다.</strong> 통과 못 한 편은 사람이 설득해도 통과되지 않습니다. 킷은 guard 2(캡처 최신성)·guard 3(킷↔FACTS)을 따로 봅니다.</div>
+      <div class="d"><strong>29개 항목을 검사합니다. 하나라도 걸리면 나가지 않습니다.</strong> 통과 못 한 편은 사람이 설득해도 통과되지 않습니다. 킷은 guard 2(캡처 최신성)·guard 3(킷↔FACTS)을 따로 봅니다.</div>
     </div>
     <div class="step" style="--sc:#6ee7d5">
       <div class="n">STEP 5</div><div class="t">발행팩</div>
@@ -61,8 +61,8 @@
     게이트를 우회하는 것이 아닙니다.
   </div>
 
-  <h2><span class="n">2</span>게이트 25항목</h2>
-  <p>편 하나를 발행팩으로 만들 때 <code>epcheck.py</code>가 실제로 도는 검사입니다. <span style="color:#fbbf24">＋</span> 표시는 뒤에 더해진 6항목입니다.</p>
+  <h2><span class="n">2</span>게이트 29항목</h2>
+  <p>편 하나를 발행팩으로 만들 때 <code>epcheck.py</code>가 실제로 도는 검사입니다. <span style="color:#fbbf24">＋</span> 표시는 뒤에 더해진 12항목입니다(2026-09-05 기준 · SKILL v3.54 → v3.68 사이 6항목 추가).</p>
   <div class="checks">
     <div class="chk"><span class="id">[1]</span><span>덱 규격 — mp4 는 스트림 해상도 + 프레임 회계</span></div>
     <div class="chk"><span class="id">[1-1]</span><span>표지 텍스트 존 — 하단 1/3 휘도·대비</span></div>
@@ -87,6 +87,12 @@
     <div class="chk"><span class="id" style="color:#fbbf24">＋[8-1]</span><span>킷 ↔ FACTS 이중 대조 (guard 3) — 덜 싣는 건 자유, 적은 건 맞아야 한다</span></div>
     <div class="chk"><span class="id" style="color:#fbbf24">＋[8-2]</span><span>킷 캡처 최신성 (guard 2) — HTML 을 고치고 캡처를 다시 안 뜬 것</span></div>
     <div class="chk"><span class="id" style="color:#fbbf24">＋[8-3]</span><span>킷 영상 최신성 — 재조회 뒤 영상을 안 구운 것</span></div>
+    <div class="chk"><span class="id" style="color:#fbbf24">＋[0.5]</span><span>표지 훅 — 소재 고유명사 ≥1 · 질문형 또는 수치 선언형 · 이모지 ≤1</span></div>
+    <div class="chk"><span class="id" style="color:#fbbf24">＋[1-2]</span><span>공식 영상 — 있으면 영상 카드로 싣고, 안 실으면 사유가 발행팩에 있어야 한다</span></div>
+    <div class="chk"><span class="id" style="color:#fbbf24">＋[1-3]</span><span>서드파티 자작 시연 영상 — 크레딧 · 검증로그 대조 · 발행팩 승인 절 (공식 «무» 일 때만)</span></div>
+    <div class="chk"><span class="id" style="color:#fbbf24">＋[1-6]</span><span>발표 행위 서술 — 「누가 올렸다·적었다」는 편당 1회, 리드에서만</span></div>
+    <div class="chk"><span class="id" style="color:#fbbf24">＋[5-5]</span><span>자기 보고 수치 — «〈주체〉 팀이 직접 잰 값» 라벨 · 독립 검증 어휘 차단</span></div>
+    <div class="chk"><span class="id" style="color:#fbbf24">＋[7-3]</span><span>캡션·고정 댓글 자기 서술 금지 — 코멘트 블록은 편당 1개 · 2문장 이하</span></div>
     <div class="chk"><span class="id">[0]</span><span>판본 적용 범위 — 편 SKILL_VER 기준 소급 판정</span></div>
   </div>
   <div class="note">
@@ -104,10 +110,10 @@
   <h2><span class="n">4</span>규모 (실측)</h2>
   <table>
     <tr><th>항목</th><th>값</th></tr>
-    <tr><td>발행</td><td><strong>32편 · 게시물 33건</strong> (편 = 기획·제작 단위, 게시물 = 유통 단위 — 캐러셀·릴스 각 1건)</td></tr>
-    <tr><td>제작 규약</td><td>SKILL v3.54 · 2,031줄</td></tr>
-    <tr><td>파이프라인 코드</td><td>4,642줄 · 모듈 19개 (실행 정본 <code>00_브랜드에셋/*.py</code>) + 공용 게이트 <code>epcheck.py</code> 1,639줄</td></tr>
-    <tr><td>게이트 검사</td><td>25개 항목 + guard 2/3 + pre-flight 3검사</td></tr>
+    <tr><td>발행</td><td><strong>35편 · 게시물 37건</strong> (편 = 기획·제작 단위, 게시물 = 유통 단위 — 캐러셀·릴스 각 1건)</td></tr>
+    <tr><td>제작 규약</td><td>SKILL v3.68 · 2,097줄</td></tr>
+    <tr><td>파이프라인 코드</td><td>4,805줄 · 모듈 19개 (실행 정본 <code>00_브랜드에셋/*.py</code>) + 공용 게이트 <code>epcheck.py</code> 2,375줄</td></tr>
+    <tr><td>게이트 검사</td><td>29개 항목 + guard 2/3 + pre-flight 3검사</td></tr>
     <tr><td>크로스 모델 자문</td><td>게이트 뒤 별도 모델 검수(<code>xreview.py</code>) — 1일차 keep rate 3/6</td></tr>
   </table>
   <p class="note">줄 수는 세는 범위를 위에 적었습니다.</p>
